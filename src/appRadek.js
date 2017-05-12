@@ -1,10 +1,19 @@
 import React from 'react'
-import Search from './Search'
+import { form, FormControl, FormGroup } from 'react-bootstrap'
 
 
 class appRadek extends React.Component () {
   render () {
-    return
+    return (
+      <form>
+
+        <FormGroup>
+          <ControlLabel> Wprowadź wyszukiwany produkt </ControlLabel>
+          <FormControl type="text" placaholder="wpisz nazwe produktu"/>
+
+        </FormGroup>
+      </form>
+    )
   }
 
 }
