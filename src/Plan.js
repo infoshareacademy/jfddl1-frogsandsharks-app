@@ -7,6 +7,6 @@ render() {
     <h1>
         Twój plan żywieniowy
     </h1>
-    <Button bsStyle="primary">Primary</Button>
+    <Button> Primary </Button>
 )}}
 export default Plan
