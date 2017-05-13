@@ -1,0 +1,53 @@
+const foods = [
+{
+"id": 1,
+"nazwa": "kalafior",
+"kategoria": "vegetable",
+"kalorie": 111,
+"białko": 2.57,
+"tłuszcze": 0.5,
+"węglowodany": 6,
+"cukry": 12
+
+},
+{
+"id": 2,
+"nazwa": "brokuł",
+"kategoria": "vegetable",
+"kalorie": 111,
+"białko": 2.57,
+"tłuszcze": 0.5,
+"węglowodany": 6,
+"cukry": 12
+},
+{
+"id": 3,
+"nazwa": "burak",
+"kategoria": "vegetable",
+"kalorie": 111,
+"białko": 2.57,
+"tłuszcze": 0.5,
+"węglowodany": 6,
+"cukry": 12
+}
+]
+//[
+//    "id": 1,
+//    "nazwa": "kalafior",
+//    "kategoria": "vegetable",
+//    "kalorie": 111,
+//    "białko": 2.57,
+//    "tłoszcze": 0.5,
+//    "węglowodany": 6,
+//    "cukry": 12
+//
+//    ]
+//
+//warzywa = ['kalafior', 'brokuł', 'ziemniak', 'pomidor', 'papryka', 'ogórek', 'kapusta', 'cebula', 'czosnek', 'brukselka', 'rzodkiewka', 'marchew', 'pietruszka','bataty', 'szpinak', 'pieczarki', 'sałata', 'warzywa na patelnie' ]
+//owoce = ['jabłko', 'gruszka', 'banan', 'czereśnia', 'wiśnia', 'cytryna', 'pomarańcza', 'mandarynka', 'mango', 'kiwi', 'ananas', 'maliny',  'orzechy włoskie', 'orzechy laskowe']
+//mieso = ['kurczak', 'kaczka', 'gęś', 'szynka', 'schab', 'łopatka wieprzowa', 'wołowina', 'cielęcina', 'jaja', 'indyk', 'kotlet schabowy', 'kotlet mielony', 'stek']
+//ryby = ['karp', 'łosoś', 'pstrąg', 'makrela', 'tuńczyk', 'śledź']
+//nabiał = ['mleko 2%', 'mleko 3,2%', 'mleko kozie', 'mleko owcze', 'mleko bez laktozy', 'ser żółty', 'ser pleśniowy', 'ser kozi', 'ser twarogowy', 'twaróg', 'twarożek', 'śmietana 12%', 'śmietana 18%', 'śmietana 32%', 'kefir', 'jogurt naturalny', 'serek wiejski']
+//fast-food = ['pizza', 'kebab', 'spaghetti bolognese', 'hamburger', 'hot-dog', 'zapiekanka' ]
+//dodatki = ['ryż', 'ryż biały', 'ryż basmanti', 'ryż brązowy', 'makaron', 'makaron gryczany', 'makaron pełnoziarnisty', 'kasza jaglana', 'kasz gryczana', 'kuskus']
+//produkty sniadaniowe = ['płatki kukurydziane', 'płatki owsiane', 'płatki czekoladowe', 'walfe ryżowe']
