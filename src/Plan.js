@@ -1,12 +1,174 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
+
 
 class Plan extends React.Component {
-render() {
-    return (
-    <h1>
-        Twój plan żywieniowy
-    </h1>
-    <Button> Primary </Button>
-)}}
+    render() {
+        return (
+            <div>
+                <h1>Counter</h1>
+                <Table>
+                    <thead>
+                    <tr>
+                        <th>
+                            Poniedziałek
+                        </th>
+                        <th>
+                            Wtorek
+                        </th>
+                        <th>
+                            Środa
+                        </th>
+                        <th>
+                            Czwartek
+                        </th>
+                        <th>
+                            Piątek
+                        </th>
+                        <th>
+                            Sobota
+                        </th>
+                        <th>
+                            Niedziela
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </Table>
+            </div>
+        )
+    }
+}
+
 export default Plan
