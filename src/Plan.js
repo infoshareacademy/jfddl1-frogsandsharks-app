@@ -1,10 +1,19 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
+
+
+
 class Plan extends React.Component {
         render() {
+
+            var style = {
+                color: 'black',
+                background: '#49d290'
+
+            };
             return (
-                <Grid fluid>
+                <Grid style={style}>
                     <h1>Twój plan żywieniowy</h1>
                     <Row col={14}>
                         <Col xs={6} md={1}>
