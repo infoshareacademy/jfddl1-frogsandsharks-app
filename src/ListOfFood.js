@@ -1,9 +1,5 @@
 import React from 'react'
 
-import foods from './data/Foods'
-
-
-
 
 class ListOfFood extends React.Component {
 
@@ -11,8 +7,18 @@ class ListOfFood extends React.Component {
         super(props)
 
         this.state = {
-            foods: foods
+            foods: []
         }
+
+      fetch(
+        process.env.PUBLIC_URL + '/data/foods.json'
+      ).then(
+        response => response.json()
+      ).then(
+        foods => this.setState({
+          foods: foods
+        })
+      )
     }
 
     render () {
@@ -23,10 +29,10 @@ class ListOfFood extends React.Component {
         <ul>
             {
                 this.state.foods.filter(
-                    food => food.kategoria === "vegetable"
+                  foodItem => foodItem.category === "owoce"
                 ).map(
-                food => (
-                    <li key={food.id}>{food.nazwa}</li>
+                  foodItem => (
+                    <li key={foodItem.uid}>{foodItem.name}</li>
                 )
             )
             }
