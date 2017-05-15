@@ -1,36 +1,55 @@
 import React from 'react';
-import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
-import SvgIcon from 'react-icons-kit';
-
-import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
-import { ic_business } from 'react-icons-kit/md/ic_business';
-
+import { slide as Menu } from 'react-burger-menu'
+import {
+    Button,
+    Modal,
+    Grid,
+    Col,
+    Row,
+    Nav,
+    Navbar,
+    NavItem
+} from 'react-bootstrap'
 import {
     BrowserRouter as Router,
-    Route
+    Route, Link
 } from 'react-router-dom'
+
+import  './MySideNav.css'
 import {
     IndexLinkContainer,
     LinkContainer
 } from 'react-router-bootstrap'
+import Home from './Home'
+import FirstPage from './FirstPage'
+
+class MySideNav extends React.Component {
+    showSettings (event) {
+        event.preventDefault();
+    }
+
+    render () {
+        return (
+
+            <Grid fluid>
+                <Menu>
+                    <Link to="/" id="home" className="menu-item" href="/">Home</Link>
+                    <Link to="/firstpage" id="about" className="menu-item" href="/about">About</Link>
+                    <a id="contact" className="menu-item" href="/contact">Contact</a>
+                    <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+                </Menu>
+
+                <Row>
+                    <Col md={12} lg={12} xs={12}>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/firstpage" component={FirstPage}/>
+                    </Col>
+                </Row>
+            </Grid>
 
 
-//specify the base color/background of the parent container if needed
-const MySideNav = () => (
-    <Router>
-    <div style={{background: '#2c3e50', color: '#FFF', width: 220}}>
-        <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='sales'>
-            <Nav id='dashboard'>
-                <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>
-                <NavText> Dashboard </NavText>
-            </Nav>
-            <Nav id='sales'>
-                <NavIcon><SvgIcon size={20} icon={ic_business}/></NavIcon>
-                <NavText> Sales </NavText>
-            </Nav>
-        </SideNav>
-    </div>
-    </Router>
-)
+        );
+    }
+}
 
 export default MySideNav
