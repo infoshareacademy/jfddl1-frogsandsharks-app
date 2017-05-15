@@ -14,7 +14,7 @@ class Plan extends React.Component {
 
             var dayFlex = {
                 display: 'flex',
-                justifyContent: 'center',
+                justifyContent: 'space-around',
             }
             return (
                 <div>
