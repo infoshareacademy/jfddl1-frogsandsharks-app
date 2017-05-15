@@ -1,174 +1,58 @@
 import React from 'react'
-import { Table } from 'react-bootstrap'
-
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 class Plan extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Counter</h1>
-                <Table>
-                    <thead>
-                    <tr>
-                        <th>
+        render() {
+            return (
+                <Grid fluid>
+                    <h1>Twój plan żywieniowy</h1>
+                    <Row col={14}>
+                        <Col xs={6} md={1}>
                             Poniedziałek
-                        </th>
-                        <th>
+                            <div>
+                                <p>(dodaj produkty)</p>
+                            </div>
+                        </Col>
+                        <Col xs={6} md={1}>
                             Wtorek
-                        </th>
-                        <th>
+                            <div>
+                                <p>(dodaj produkty)</p>
+                            </div>
+                        </Col>
+                        <Col xs={6} md={1}>
                             Środa
-                        </th>
-                        <th>
+                            <div>
+                                <p>(dodaj produkty)</p>
+                            </div>
+                        </Col>
+                        <Col xs={6} md={1}>
                             Czwartek
-                        </th>
-                        <th>
+                            <div>
+                                <p>(dodaj produkty)</p>
+                            </div>
+                        </Col>
+                        <Col xs={6} md={1}>
                             Piątek
-                        </th>
-                        <th>
+                            <div>
+                                <p>(dodaj produkty)</p>
+                            </div>
+                        </Col>
+                        <Col xs={6} md={1}>
                             Sobota
-                        </th>
-                        <th>
+                            <div>
+                                <p>(dodaj produkty)</p>
+                            </div>
+                        </Col>
+                        <Col xs={6} md={1}>
                             Niedziela
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    </tbody>
-                </Table>
-            </div>
-        )
-    }
+                            <div>
+                                <p>(dodaj produkty)</p>
+                            </div>
+                        </Col>
+                    </Row>
+                </Grid>
+            );
+        }
 }
 
 export default Plan
