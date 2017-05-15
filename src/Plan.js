@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid';
+
 
 
 
@@ -7,59 +7,63 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 class Plan extends React.Component {
         render() {
 
-            var style = {
+            var dayColor = {
                 color: 'black',
-                background: '#49d290'
-
+                background: '#49d290',
             };
+
+            var dayFlex = {
+                display: 'flex',
+                justifyContent: 'center',
+            }
             return (
-                <Grid style={style}>
+                <div>
                     <h1>Twój plan żywieniowy</h1>
-                    <Row col={14}>
-                        <Col xs={6} md={1}>
-                            Poniedziałek
+                    <div style={dayFlex}>
+                        <div style={dayColor}>
+                            <h2>Poniedziałek</h2>
                             <div>
                                 <p>(dodaj produkty)</p>
                             </div>
-                        </Col>
-                        <Col xs={6} md={1}>
-                            Wtorek
+                        </div>
+                        <div style={dayColor}>
+                            <h2>Wtorek</h2>
                             <div>
                                 <p>(dodaj produkty)</p>
                             </div>
-                        </Col>
-                        <Col xs={6} md={1}>
-                            Środa
+                        </div>
+                        <div style={dayColor}>
+                            <h2>Środa</h2>
                             <div>
                                 <p>(dodaj produkty)</p>
                             </div>
-                        </Col>
-                        <Col xs={6} md={1}>
-                            Czwartek
+                        </div>
+                        <div style={dayColor}>
+                            <h2>Czwartek</h2>
                             <div>
                                 <p>(dodaj produkty)</p>
                             </div>
-                        </Col>
-                        <Col xs={6} md={1}>
-                            Piątek
+                        </div>
+                        <div style={dayColor}>
+                            <h2>Piątek</h2>
                             <div>
                                 <p>(dodaj produkty)</p>
                             </div>
-                        </Col>
-                        <Col xs={6} md={1}>
-                            Sobota
+                        </div>
+                        <div style={dayColor}>
+                            <h2>Sobota</h2>
                             <div>
                                 <p>(dodaj produkty)</p>
                             </div>
-                        </Col>
-                        <Col xs={6} md={1}>
-                            Niedziela
+                        </div>
+                        <div style={dayColor}>
+                            <h2>Niedziela</h2>
                             <div>
                                 <p>(dodaj produkty)</p>
                             </div>
-                        </Col>
-                    </Row>
-                </Grid>
+                        </div>
+                    </div>
+                </div>
             );
         }
 }
