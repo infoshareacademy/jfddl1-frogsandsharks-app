@@ -14,7 +14,8 @@
     "react-facebook-login-component": "^0.7.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "react-sidenav": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -17,7 +17,7 @@ import {
 } from 'react-router-bootstrap'
 
 import Home from './Home'
-import About from './About'
+import FirstPage from './FirstPage'
 
 const Navigation = () => (
     <Router>
@@ -32,8 +32,8 @@ const Navigation = () => (
                     <IndexLinkContainer to="/">
                         <NavItem href="#">Home</NavItem>
                     </IndexLinkContainer>
-                    <LinkContainer to="/about">
-                        <NavItem href="#">About</NavItem>
+                    <LinkContainer to="/firstpage">
+                        <NavItem href="#">FirstPage</NavItem>
                     </LinkContainer>
                 </Nav>
             </Navbar>
@@ -41,7 +41,7 @@ const Navigation = () => (
             <Row>
                 <Col md={12}>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
+                    <Route path="/firstpage" component={FirstPage}/>
                 </Col>
             </Row>
         </Grid>
