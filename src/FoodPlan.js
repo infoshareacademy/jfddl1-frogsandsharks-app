@@ -1,7 +1,7 @@
 import React from 'react'
-import { Row } from 'react-flexbox-grid';
 
-import DayView from './DayView'
+
+import DayView from './FoodPlan/DayView'
 
 
 
