@@ -3,60 +3,250 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 
 
 
-
 class Plan extends React.Component {
         render() {
 
             var style = {
                 color: 'black',
-                background: '#49d290'
+                background: '#96dbc8',
+                display: 'flex',
+                justifyContent: 'space-between'
 
             };
             return (
-                <Grid style={style}>
+                <Grid >
                     <h1>Twój plan żywieniowy</h1>
-                    <Row col={14}>
+                    <Row style={style}>
                         <Col xs={6} md={1}>
-                            Poniedziałek
-                            <div>
-                                <p>(dodaj produkty)</p>
-                            </div>
+                            <div>Poniedziałek</div>
+                            <ul>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                            </ul>
+                            <ul>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                            </ul>
+                            <ul>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                            </ul>
                         </Col>
                         <Col xs={6} md={1}>
-                            Wtorek
-                            <div>
-                                <p>(dodaj produkty)</p>
-                            </div>
+                            <div>Wtorek</div>
+                            <ul>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                            </ul>
+                            <ul>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                            </ul>
+                            <ul>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                            </ul>
                         </Col>
                         <Col xs={6} md={1}>
-                            Środa
-                            <div>
-                                <p>(dodaj produkty)</p>
-                            </div>
+                            <div>Środa</div>
+                            <ul>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                            </ul>
+                            <ul>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                            </ul>
+                            <ul>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                            </ul>
                         </Col>
                         <Col xs={6} md={1}>
-                            Czwartek
-                            <div>
-                                <p>(dodaj produkty)</p>
-                            </div>
+                            <div>Czwartek</div>
+                            <ul>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                            </ul>
+                            <ul>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                            </ul>
+                            <ul>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                            </ul>
                         </Col>
                         <Col xs={6} md={1}>
-                            Piątek
-                            <div>
-                                <p>(dodaj produkty)</p>
-                            </div>
+                            <div>Piątek</div>
+                            <ul>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                            </ul>
+                            <ul>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                            </ul>
+                            <ul>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                            </ul>
                         </Col>
                         <Col xs={6} md={1}>
-                            Sobota
-                            <div>
-                                <p>(dodaj produkty)</p>
-                            </div>
+                            <div>Sobota</div>
+                            <ul>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                            </ul>
+                            <ul>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                            </ul>
+                            <ul>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                            </ul>
                         </Col>
                         <Col xs={6} md={1}>
-                            Niedziela
-                            <div>
-                                <p>(dodaj produkty)</p>
-                            </div>
+                            <div>Niedziela</div>
+                            <ul>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                                <li>(śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                                <li>(drugie śniadanie)</li>
+                            </ul>
+                            <ul>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                                <li>(obiad)</li>
+                            </ul>
+                            <ul>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                                <li>(podwieczorek)</li>
+                            </ul>
+                            <ul>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                                <li>(kolacja)</li>
+                            </ul>
                         </Col>
                     </Row>
                 </Grid>
