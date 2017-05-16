@@ -11,12 +11,14 @@ import {
 
 import Home from './Home'
 import FirstPage from './FirstPage'
+import Foods from './Foods'
 
 import BurgerMenuWrapper from './BurgerMenuWrapper'
 
 const links = [
   { path: '/', label: 'Home' },
   { path: '/firstpage', label: 'FirstPage' },
+  { path: '/foods', label: 'Wyszukiwarka'}
 ]
 
 class App extends React.Component {
@@ -44,6 +46,7 @@ class App extends React.Component {
             <Col md={12}>
               <Route exact path="/" component={Home}/>
               <Route path="/firstpage" component={FirstPage}/>
+              <Route path="/foods" component={Foods}/>
             </Col>
           </Row>
         </Grid>
