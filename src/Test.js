@@ -15,13 +15,14 @@ import {
     IndexLinkContainer,
     LinkContainer
 } from 'react-router-bootstrap'
+import { connect } from 'react-redux'
 
 import Home from './Home'
 import About from './About'
-import Search from './Search'
+import Foods from './Foods'
 
 
-const Navigation = () => (
+const Test = () => (
     <Router>
         <Grid>
             <Navbar>
@@ -37,7 +38,7 @@ const Navigation = () => (
                     <LinkContainer to="/about">
                         <NavItem href="#">About</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/search">
+                    <LinkContainer to="/foods">
                         <NavItem href="#">Wyszukiwanie</NavItem>
                     </LinkContainer>
 
@@ -48,7 +49,7 @@ const Navigation = () => (
                 <Col md={12}>
                     <Route exact path="/" component={Home}/>
                     <Route path="/about" component={About}/>
-                    <Route path="/search" component={Search}/>
+                    <Route path="/foods" component={Foods}/>
 
                 </Col>
             </Row>
@@ -59,4 +60,6 @@ const Navigation = () => (
 )
 
 
-export default Navigation
+export default connect(
+
+)(Test)
