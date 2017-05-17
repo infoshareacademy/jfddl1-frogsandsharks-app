@@ -8,13 +8,10 @@ const FoodsTable = (props) => (
             {
                 name: 'name',
                 label: 'Name'
-            },
-            {
-                name: 'category',
-                label: 'Category'
             }
+
         ]}
-       // linked
+        //linked
         linkPrefix="/foods"
     />
 )

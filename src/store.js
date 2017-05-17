@@ -10,7 +10,7 @@ const enhancer = composeEnhancers(
     applyMiddleware(
         thunk
     ),
-    persistState()
+    //persistState()
 )
 
 const reducer = combineReducers({
