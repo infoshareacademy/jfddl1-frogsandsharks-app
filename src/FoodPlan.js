@@ -5,16 +5,14 @@ import DayView from './FoodPlan/DayView'
 
 
 
-var style = {
-  color: 'black',
-  background: '#96dbc8',
+const divstyle = {
   display: 'flex',
   justifyContent: 'space-between'
 
 };
 const FoodPlan = () => (
 
-<div style={style}>
+<div style={divstyle}>
     <DayView/>
     <DayView/>
     <DayView/>
