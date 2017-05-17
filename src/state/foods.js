@@ -28,7 +28,7 @@ export default (state = initialState, action) => {
                 searchPhrase: action.searchPhrase,
                 activeFilterNames: state.activeFilterNames.filter(
                     item => !['phrase', 'category_none'].includes(item)
-                ).concat('phrase')
+                ).concat('phrase', 'category_all')
             }
         default:
             return state
