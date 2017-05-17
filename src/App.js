@@ -51,7 +51,7 @@ class App extends React.Component {
               <Route path="/firstpage" component={FirstPage}/>
               <Route path="/foods" component={Foods}/>
               <Route path="/foodplan" component={Plan}/>
-              <Route path="/listofeffects" component={ListOfEffects}/>
+              <Route path="/listofeffects/:productId" component={ListOfEffects}/>
             </Col>
           </Row>
         </Grid>
