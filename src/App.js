@@ -4,9 +4,11 @@ import React, {Component} from 'react';
 
 import Sidebar from './Sidebar'
 import Navigation from './Navigation'
+import ListOfEffects from './ListOfEffects';
+
 import './App.css';
 
-import ListOfEffects from './ListOfEffects';
+
 
 class App extends Component {
   render() {

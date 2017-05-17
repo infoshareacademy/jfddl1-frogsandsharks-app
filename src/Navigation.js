@@ -18,6 +18,7 @@ import {
 
 import Home from './Home'
 import About from './About'
+import ListOfEffects from './ListOfEffects'
 
 const Navigation = () => (
     <Router>
