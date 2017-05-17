@@ -33,9 +33,12 @@ class ListOfEffects extends React.Component {
 
               <ListGroup>
                 <h1>W 100 gramach produktu</h1>
-                <ListGroupItem>kcal : </ListGroupItem>
+                <ListGroupItem>Nazwa : </ListGroupItem>
+                <ListGroupItem>Kategoria : </ListGroupItem>
+                <ListGroupItem>Kalorie : </ListGroupItem>
                 <ListGroupItem>Białko : </ListGroupItem>
                 <ListGroupItem>Węglowodany : </ListGroupItem>
+                <ListGroupItem>Cukry : </ListGroupItem>
                 <ListGroupItem>Tłuszcze : </ListGroupItem>
               </ListGroup>
 
