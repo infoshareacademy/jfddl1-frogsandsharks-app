@@ -1,15 +1,19 @@
 import React from 'react'
+import {LinkContainer} from 'react-router-bootstrap'
+
 
 const Kolacja = () => (
 
-  <div>
-    <ul>
-      <li>(Kolacja)</li>
-      <li>(Kolacja)</li>
-      <li>(Kolacja)</li>
-      <li>(Kolacja)</li>
-    </ul>
-  </div>
+  <LinkContainer to="foods">
+    <div>
+      <ul>
+        <li>(Kolacja)</li>
+        <li>(Kolacja)</li>
+        <li>(Kolacja)</li>
+        <li>(Kolacja)</li>
+      </ul>
+    </div>
+  </LinkContainer>
 )
 
 export default Kolacja
