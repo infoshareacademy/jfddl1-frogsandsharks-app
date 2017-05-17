@@ -32,7 +32,6 @@ class Food extends React.Component {
                         food => (
                             <ul key={food.uid}>
                                 <li>{food.name}</li>
-
                             </ul>
                         )
                     )
