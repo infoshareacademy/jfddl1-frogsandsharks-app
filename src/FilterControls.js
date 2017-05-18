@@ -28,7 +28,7 @@ const FilterControls = (props) => (
               ).label
 
               return (
-                <DropdownButton key={index} title={title}>
+                <DropdownButton id={1} key={index} title={title}>
                   {
                     group.map(
                       (filter, index) => {

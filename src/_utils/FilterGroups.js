@@ -1,11 +1,12 @@
 const categoryFilters = [
-  {
-      name: 'category_all',
-    label: 'Wszystkie'
-  },
+
   {
     name: 'category_none',
-    label: 'Kategorie'
+    label: 'Wybierz kategorię'
+  },
+  {
+    name: 'category_all',
+    label: 'Wszystkie'
   },
     {
         name: 'category_warzywa',
