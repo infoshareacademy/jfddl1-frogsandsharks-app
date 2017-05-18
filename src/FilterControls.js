@@ -23,9 +23,11 @@ const FilterControls = (props) => (
           props.filterGroups.map(
             (group, index) => {
 
-              const title = group.find(
+              const element = group.find(
                 filterObject => props.activeFilterNames.includes(filterObject.name)
-              ).label
+              )
+
+              const title = element === undefined ? 'Wszystkie' : element.label
 
               return (
                 <DropdownButton id={1} key={index} title={title}>
