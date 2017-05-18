@@ -10,6 +10,7 @@ import {
 } from 'react-bootstrap'
 
 import Home from './Home'
+import Logo from './Logo'
 import FirstPage from './FirstPage'
 import Foods from './Foods'
 import Plan from './Plan'
@@ -47,6 +48,7 @@ class App extends React.Component {
 
           <Row>
             <Col md={12}>
+              <Route path="/" component={Logo}/>
               <Route exact path="/" component={Home}/>
               <Route path="/firstpage" component={FirstPage}/>
               <Route exact path="/foods" component={Foods}/>

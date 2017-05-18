@@ -13,6 +13,7 @@ import {
 } from 'react-bootstrap'
 
 import Foods from './Foods'
+import Popup from "./Popup";
 
 
 class ListOfEffects extends React.Component {
@@ -63,6 +64,8 @@ class ListOfEffects extends React.Component {
                       <ListGroupItem>Cukry : {foods.sugars} </ListGroupItem>
                       <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
                     </ListGroup>
+
+                      <Popup/>
 
                   </Col>
                   </Row>
