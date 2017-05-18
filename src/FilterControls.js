@@ -53,31 +53,7 @@ const FilterControls = (props) => (
           )
         }
       </ButtonToolbar>
-      {/*<ButtonToolbar>*/}
-        {/*{*/}
-          {/*props.filterGroups.map(*/}
-            {/*(group, index) => (*/}
-              {/*<ButtonGroup key={index}>*/}
-                {/*{*/}
-                  {/*group.map(*/}
-                    {/*(filter, index) => {*/}
-                      {/*const isActive = props.activeFilterNames.includes(filter.name)*/}
-                      {/*return (*/}
-                        {/*<Button*/}
-                          {/*key={index}*/}
-                          {/*active={isActive}*/}
-                          {/*onClick={() => props.handleFiltersUpdate(filter.name, !isActive)}>*/}
-                          {/*{filter.label}*/}
-                        {/*</Button>*/}
-                      {/*)*/}
-                    {/*}*/}
-                  {/*)*/}
-                {/*}*/}
-              {/*</ButtonGroup>*/}
-            {/*)*/}
-          {/*)*/}
-        {/*}*/}
-      {/*</ButtonToolbar>*/}
+
     </FormGroup>
   </form>
 )
