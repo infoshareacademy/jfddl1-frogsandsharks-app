@@ -12,6 +12,8 @@ import {
   ListGroupItem
 } from 'react-bootstrap'
 
+import Foods from './Foods'
+
 
 class ListOfEffects extends React.Component {
 
@@ -37,28 +39,20 @@ class ListOfEffects extends React.Component {
     const foodsId = this.props.match.params.foodsId
     return (
       <Grid>
-          Lista: {foodsId}
-          {
-            this.state.foods.filter(
-              foods => foods.uid === foodsId
-            ).map(
-              foods => (
-                /*<ul key={student.uid}>
-                  <li>{student.name}</li>
-                  <li>{student.city}</li>
-                </ul>*/
-                <Row className="show-grid">
-                  <Col xs={12} md={4} lg={4}>
-                    <Row>
-                      <Col lg={12}>
-                        <div>Photo</div>
-                      </Col>
-                      <Col lg={12}>
-                        <div>Button</div>
-                      </Col>
-                    </Row>
-                  </Col>
-                  <Col xs={12} md={5} lg={5}>
+        {
+          this.state.foods.filter(
+            foods => foods.uid === foodsId
+          ).map(
+            foods => (
+              <Row className="show-grid">
+                <Col>
+                  <Row>
+                    <Col lg={4}>
+                    <Foods/>
+                    </Col>
+                    <Col xs={12} md={5} lg={5}>
+
+
                     <ListGroup key={foods.uid}>
                       <h1>W 100 gramach produktu</h1>
                       <ListGroupItem>Nazwa : {foods.name} </ListGroupItem>
@@ -71,14 +65,16 @@ class ListOfEffects extends React.Component {
                     </ListGroup>
 
                   </Col>
-                  <Col xs={12} md={3} lg={3}>
-                    <div>Button</div>
-                  </Col>
-                </Row>
+                  </Row>
+                </Col>
 
-              )
+
+
+              </Row>
+
             )
-          }
+          )
+        }
 
       </Grid>
     )

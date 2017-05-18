@@ -21,7 +21,7 @@ const links = [
   { path: '/firstpage', label: 'FirstPage' },
   { path: '/foods', label: 'Wyszukiwarka'},
   { path: '/foodplan', label: 'Plan żywieniowy'},
-  { path: '/listofeffects', label: 'Lista'},
+
 ]
 
 class App extends React.Component {
@@ -49,9 +49,10 @@ class App extends React.Component {
             <Col md={12}>
               <Route exact path="/" component={Home}/>
               <Route path="/firstpage" component={FirstPage}/>
-              <Route path="/foods" component={Foods}/>
+              <Route exact path="/foods" component={Foods}/>
               <Route path="/foodplan" component={Plan}/>
-              <Route path="/listofeffects/:foodsId" component={ListOfEffects}/>
+              <Route path="/foods/:foodsId" component={ListOfEffects}/>
+
             </Col>
           </Row>
         </Grid>
