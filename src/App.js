@@ -12,13 +12,16 @@ import {
 import Home from './Home'
 import FirstPage from './FirstPage'
 import Foods from './Foods'
-
+import Plan from './Plan'
 import BurgerMenuWrapper from './BurgerMenuWrapper'
+import ListOfEffects from './ListOfEffects'
 
 const links = [
   { path: '/', label: 'Home' },
   { path: '/firstpage', label: 'FirstPage' },
-  { path: '/foods', label: 'Wyszukiwarka'}
+  { path: '/foods', label: 'Wyszukiwarka'},
+  { path: '/foodplan', label: 'Plan żywieniowy'},
+  { path: '/listofeffects', label: 'Lista'},
 ]
 
 class App extends React.Component {
@@ -47,11 +50,14 @@ class App extends React.Component {
               <Route exact path="/" component={Home}/>
               <Route path="/firstpage" component={FirstPage}/>
               <Route path="/foods" component={Foods}/>
+              <Route path="/foodplan" component={Plan}/>
+              <Route path="/listofeffects/:productId" component={ListOfEffects}/>
             </Col>
           </Row>
         </Grid>
       </BurgerMenuWrapper>
     </Router>
+
   )
 }
 

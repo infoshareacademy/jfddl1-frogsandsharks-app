@@ -11,6 +11,9 @@ import './index.css'
 
 import store from './store'
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
 ReactDOM.render(
     <Provider store={store}>
         <App />
