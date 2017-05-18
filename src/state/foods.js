@@ -1,7 +1,7 @@
 const initialState = {
     foods: [],
     searchPhrase: '',
-    activeFilterNames: []
+    activeFilterNames: ['category_none']
 }
 
 export default (state = initialState, action) => {
@@ -27,8 +27,8 @@ export default (state = initialState, action) => {
                 ...state,
                 searchPhrase: action.searchPhrase,
                 activeFilterNames: state.activeFilterNames.filter(
-                    item => item !== 'phrase'
-                ).concat('phrase')
+                    item => !['phrase', 'category_none'].includes(item)
+                ).concat('phrase', 'category_all')
             }
         default:
             return state
