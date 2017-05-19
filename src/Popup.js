@@ -42,7 +42,7 @@ class Popup extends React.Component {
                 </Button>
 
                 <Modal show={this.state.showModal} onHide={this.close}>
-                    <Modal.Body closeButton>
+                    <Modal.Body>
                         <Modal.Title>Wybierz dzień w którym chcesz dodać posiłek</Modal.Title>
                         <ButtonToolbar>
                             <DropdownButton id={1} title={'Wybierz dzień'}>

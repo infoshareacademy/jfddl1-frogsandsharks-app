@@ -45,7 +45,7 @@ class ListOfEffects extends React.Component {
             foods => foods.uid === foodsId
           ).map(
             foods => (
-              <Row className="show-grid">
+              <Row key={foods.uid} className="show-grid">
                 <Col>
                   <Row>
                     <Col lg={4}>
