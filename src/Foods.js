@@ -17,7 +17,6 @@ class Foods extends React.Component {
             foods => this.props.setFoods(foods)
         )
     }
-
     render = () => (
         <div>
             <h3>Wprowadź wyszukiwany produkt</h3>

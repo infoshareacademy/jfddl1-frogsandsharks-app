@@ -1,4 +1,9 @@
 const categoryFilters = [
+
+  {
+    name: 'category_none',
+    label: 'Wybierz kategorię'
+  },
     {
         name: 'category_warzywa',
         label: 'Warzywa'
