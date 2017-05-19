@@ -4,10 +4,6 @@ import {
   Grid,
   Col,
   Row,
-  Nav,
-  Navbar,
-  NavItem,
-  Panel,
   ListGroup,
   ListGroupItem
 } from 'react-bootstrap'

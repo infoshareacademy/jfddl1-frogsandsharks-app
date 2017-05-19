@@ -1,7 +1,5 @@
 import React from 'react'
 import {
-  Popover,
-  Tooltip,
   Modal,
   Button,
   ButtonToolbar,
@@ -9,26 +7,18 @@ import {
   DropdownButton
 } from 'react-bootstrap'
 
+const dayNames = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela']
+const mealNames = ['Śniadanie', 'Drugie śniadanie', 'Obiad', 'Podwieczorek', 'Kolacja']
+
 class Popup extends React.Component {
   state = {
     showModal: false
+
+
   }
-
   close = () => this.setState({showModal: false})
-
   open = () => this.setState({showModal: true})
-
   render = () => {
-    const popover = (
-      <Popover id="modal-popover" title="popover">
-        very popover. such engagement
-      </Popover>
-    );
-    const tooltip = (
-      <Tooltip id="modal-tooltip">
-        wow.
-      </Tooltip>
-    );
 
     return (
       <div>
@@ -46,33 +36,40 @@ class Popup extends React.Component {
             <Modal.Title>Wybierz dzień w którym chcesz dodać posiłek</Modal.Title>
             <ButtonToolbar>
               <DropdownButton id={1} title={'Wybierz dzień'}>
-                <MenuItem>Poniedziałek</MenuItem>
-                <MenuItem>Wtorek</MenuItem>
-                <MenuItem>Środa</MenuItem>
-                <MenuItem>Czwartek</MenuItem>
-                <MenuItem>Piątek</MenuItem>
-                <MenuItem>Sobota</MenuItem>
-                <MenuItem>Niedziela</MenuItem>
+                {
+                  dayNames.map(
+                    (dayName, index) => (
+                      <MenuItem
+                        key={index}>
+                        {dayName}
+                      </MenuItem>
+                    )
+                  )
+                }
               </DropdownButton>
             </ButtonToolbar>
 
             <h4>Wybierz posiłek</h4>
             <ButtonToolbar>
               <DropdownButton id={1} title={'Wybierz posiłek'}>
-                <MenuItem>Sniadanie</MenuItem>
-                <MenuItem>Drugie śniadanie</MenuItem>
-                <MenuItem>Obiad</MenuItem>
-                <MenuItem>Podwieczorek</MenuItem>
-                <MenuItem>Kolacja</MenuItem>
+                {
+                  mealNames.map(
+                    (mealName, index) => (
+                      <MenuItem
+                        key={index}>
+                        {mealName}
+                      </MenuItem>
+                    )
+                  )
+                }
               </DropdownButton>
             </ButtonToolbar>
           </Modal.Body>
+
           <Modal.Body>
             <Button>Zatwierdź</Button>
             <Button onClick={this.close}>Close</Button>
           </Modal.Body>
-
-
         </Modal>
       </div>
     );
