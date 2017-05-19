@@ -13,7 +13,6 @@ export default withRouter(connect(
   class DataFetcher extends React.Component {
     componentWillMount() {
       this.props.fetchProducts()
-
     }
 
     render() {

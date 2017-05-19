@@ -17,16 +17,9 @@ const mealNames = [
   'Kolacja'
 ]
 
-const productsData = [
-  {uid: '7773cf85-2da6-4e26-b40f-6c784baee1de', name: 'Zupa'},
-  {uid: '2', name: 'Ogór'},
-  {uid: '3', name: 'Ziemnior'},
-]
-
-
 export default connect (
   state => ({
-    products: state.products.data,
+    products: state.products,
     selections: state.selections
   })
 ) (class FoodPlan extends React.Component {

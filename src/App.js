@@ -9,7 +9,6 @@ import {
   Row
 } from 'react-bootstrap'
 
-import DataFetcher from './DataFetcher'
 
 import Home from './Home'
 import Logo from './Logo'
@@ -18,6 +17,9 @@ import Foods from './Foods'
 import Plan from './Plan'
 import BurgerMenuWrapper from './BurgerMenuWrapper'
 import ListOfEffects from './ListOfEffects'
+
+import DataFetcher from './DataFetcher'
+
 
 const links = [
   { path: '/', label: 'Home' },
@@ -56,7 +58,7 @@ class App extends React.Component {
               <Route path="/firstpage" component={FirstPage}/>
               <Route exact path="/foods" component={Foods}/>
               <Route path="/foodplan" component={Plan}/>
-              <Route path="/foods/:foodsId" component={ListOfEffects}/>
+              {/*<Route path="/foods/:foodsId" component={ListOfEffects}/>*/}
 
             </Col>
           </Row>
@@ -71,7 +73,7 @@ class App extends React.Component {
             )
           )
         }
-        <Route path={'/foods/:productId'} component={ListOfEffects} />
+        <Route path="/foods/:foodsId" component={ListOfEffects}/>
       </DataFetcher>
     </div>
 

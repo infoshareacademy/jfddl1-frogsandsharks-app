@@ -15,7 +15,7 @@ const enhancer = composeEnhancers(
 )
 
 const reducer = combineReducers({
-    foods: foods,
+    foods,
     selections
 })
 
