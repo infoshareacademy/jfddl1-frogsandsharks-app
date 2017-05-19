@@ -9,6 +9,8 @@ import {
   Row
 } from 'react-bootstrap'
 
+import DataFetcher from './DataFetcher'
+
 import Home from './Home'
 import Logo from './Logo'
 import FirstPage from './FirstPage'
@@ -37,6 +39,7 @@ class App extends React.Component {
 
   render = () => (
     <Router>
+      <div>
       <BurgerMenuWrapper
         isOpen={this.state.sidebarOpen}
         toggleSidebar={this.toggleSidebar}
@@ -59,6 +62,19 @@ class App extends React.Component {
           </Row>
         </Grid>
       </BurgerMenuWrapper>
+
+      <DataFetcher>
+        {
+          links.map(
+            (route, index) => (
+              <Route key={index} exact path={route.path} component={route.component}/>
+            )
+          )
+        }
+        <Route path={'/foods/:productId'} component={ListOfEffects} />
+      </DataFetcher>
+    </div>
+
     </Router>
 
   )

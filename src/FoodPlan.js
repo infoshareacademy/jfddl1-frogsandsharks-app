@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import Meal from './FoodPlan/Meal'
 
 const divstyle = {
@@ -7,7 +8,7 @@ const divstyle = {
 
 };
 
-const dayNames = ['pn', 'wt', 'śr', 'cz', 'pt', 'so', 'nd']
+const dayNames = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela']
 const mealNames = [
   'Śniadanie',
   'Drugie śniadanie',
@@ -17,40 +18,47 @@ const mealNames = [
 ]
 
 const productsData = [
-  {uid: '1', name: 'Zupa'},
+  {uid: '7773cf85-2da6-4e26-b40f-6c784baee1de', name: 'Zupa'},
   {uid: '2', name: 'Ogór'},
   {uid: '3', name: 'Ziemnior'},
 ]
 
-const selections = [
-  { productUid: '1', dayName: 'śr', mealName: 'Obiad'}
-]
-const FoodPlan = () => (
-  <div style={divstyle}>
-    {
-      dayNames.map(
-        (dayName, index) => (
-          <div key={index}>
-            <div><h4>{dayName}</h4></div>
-            {
-              mealNames.map(
-                (mealName, index) => {
-                  const products = selections.filter(
-                    selection => selection.dayName === dayName && selection.mealName === mealName
-                  ).map(
-                    selection => productsData.find(product => product.uid === selection.productUid)
-                  )
-                  return (
-                    <Meal key={index} mealName={mealName} products={products}/>
+
+export default connect (
+  state => ({
+    products: state.products.data,
+    selections: state.selections
+  })
+) (class FoodPlan extends React.Component {
+  render() {
+    return  this.props.products === null ? <p>loading...</p> :(
+      <div style={divstyle}>
+        {
+          dayNames.map(
+            (dayName, index) => (
+              <div key={index}>
+                <div><h4>{dayName}</h4></div>
+                {
+                  mealNames.map(
+                    (mealName, index) => {
+                      const products = this.props.selections.filter(
+                        selection => selection.day === dayName && selection.meal === mealName
+                      ).map(
+                        selection => this.props.products.find(product => product.uid === selection.productId)
+                      )
+                      return (
+                        <Meal key={index} mealName={mealName} products={products}/>
+                      )
+                    }
                   )
                 }
-              )
-            }
-          </div>
-        )
-      )
-    }
-  </div>
+              </div>
+            )
+          )
+        }
+      </div>
+    )
+  }
+}
 )
 
-export default FoodPlan
