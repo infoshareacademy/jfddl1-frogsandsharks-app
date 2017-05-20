@@ -1,4 +1,4 @@
-import make from './selections'
+import make from './_utlis/makeFetchDuch'
 
 const {
   fetchItems: fetchProducts,

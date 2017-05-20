@@ -24,7 +24,7 @@ export default connect (
   })
 ) (class FoodPlan extends React.Component {
   render() {
-    return  this.props.products === null ? <p>loading...</p> :(
+    return  this.props.products.data === null ? <p>Pobieranie...</p> :(
       <div style={divstyle}>
         {
           dayNames.map(
@@ -37,7 +37,7 @@ export default connect (
                       const products = this.props.selections.filter(
                         selection => selection.day === dayName && selection.meal === mealName
                       ).map(
-                        selection => this.props.products.find(product => product.uid === selection.productId)
+                        selection => this.props.products.data.find(product => product.uid === selection.productId)
                       )
                       return (
                         <Meal key={index} mealName={mealName} products={products}/>
