@@ -23,12 +23,14 @@ const FilterControls = (props) => (
           props.filterGroups.map(
             (group, index) => {
 
-              const title = group.find(
+              const element = group.find(
                 filterObject => props.activeFilterNames.includes(filterObject.name)
-              ).label
+              )
+
+              const title = element === undefined ? 'Wszystkie' : element.label
 
               return (
-                <DropdownButton key={index} title={title}>
+                <DropdownButton id={1} key={index} title={title}>
                   {
                     group.map(
                       (filter, index) => {
@@ -51,31 +53,7 @@ const FilterControls = (props) => (
           )
         }
       </ButtonToolbar>
-      {/*<ButtonToolbar>*/}
-        {/*{*/}
-          {/*props.filterGroups.map(*/}
-            {/*(group, index) => (*/}
-              {/*<ButtonGroup key={index}>*/}
-                {/*{*/}
-                  {/*group.map(*/}
-                    {/*(filter, index) => {*/}
-                      {/*const isActive = props.activeFilterNames.includes(filter.name)*/}
-                      {/*return (*/}
-                        {/*<Button*/}
-                          {/*key={index}*/}
-                          {/*active={isActive}*/}
-                          {/*onClick={() => props.handleFiltersUpdate(filter.name, !isActive)}>*/}
-                          {/*{filter.label}*/}
-                        {/*</Button>*/}
-                      {/*)*/}
-                    {/*}*/}
-                  {/*)*/}
-                {/*}*/}
-              {/*</ButtonGroup>*/}
-            {/*)*/}
-          {/*)*/}
-        {/*}*/}
-      {/*</ButtonToolbar>*/}
+
     </FormGroup>
   </form>
 )

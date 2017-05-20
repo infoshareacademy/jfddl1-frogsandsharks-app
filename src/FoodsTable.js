@@ -11,7 +11,7 @@ const FoodsTable = (props) => (
             }
 
         ]}
-        //linked
+        linked
         linkPrefix="/foods"
     />
 )

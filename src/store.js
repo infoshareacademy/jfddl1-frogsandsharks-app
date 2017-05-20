@@ -1,8 +1,11 @@
 import { compose, createStore, combineReducers, applyMiddleware } from 'redux'
-import persistState from 'redux-localstorage'
+//import persistState from 'redux-localstorage'
 import thunk from 'redux-thunk'
 
 import foods from './state/foods'
+import products from './state/products'
+import selections from './state/selections'
+
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -14,7 +17,9 @@ const enhancer = composeEnhancers(
 )
 
 const reducer = combineReducers({
-    foods: foods
+    foods,
+    selections,
+    products
 })
 
 const store = createStore(
