@@ -20,6 +20,7 @@ const dayNames = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'S
 const mealNames = ['Śniadanie', 'Drugie śniadanie', 'Obiad', 'Podwieczorek', 'Kolacja']
 
 
+
 export default connect(
     state => ({
 
@@ -37,6 +38,8 @@ export default connect(
         }
         close = () => this.setState({showModal: false})
         open = () => this.setState({showModal: true, productId: this.props.foodUid})
+
+        handleConfirm = () => this.props.addSelection(this.state.day, this.state.meal, this.state.productId)
 
 
             render = () => {
@@ -124,8 +127,6 @@ export default connect(
                             </Modal.Body>
 
 
-
-
                             {/*<Modal.Body>*/}
                             {/*<LinkContainer to="/foodplan">*/}
                             {/*<Button*/}
@@ -143,5 +144,5 @@ export default connect(
                 );
             }
 
-        handleConfirm = () => this.props.addSelection(this.state.day, this.state.meal, this.state.productId)
+
     })
