@@ -54,6 +54,7 @@ export default connect(
                             <h4>Wybierz dzień w którym chcesz dodać posiłek</h4>
                             <ButtonToolbar>
                                 <DropdownButton
+                                    bsStyle="primary"
                                     id={1}
                                     title={this.state.day === null ? 'Wybierz dzień' : this.state.day}
                                     onSelect={(dayName) => this.setState({day: dayName})}
@@ -77,6 +78,7 @@ export default connect(
                             <h4>Wybierz posiłek</h4>
                             <ButtonToolbar>
                                 <DropdownButton
+                                    bsStyle="primary"
                                     id={1}
                                     title={this.state.meal === null ? 'Wybierz posiłek' : this.state.meal}
                                     onSelect={(mealName) => this.setState({meal: mealName})}
@@ -98,8 +100,16 @@ export default connect(
                         </Modal.Body>
 
                         <Modal.Body>
-                            <Button onClick={this.handleConfirm}>Zatwierdź</Button>
-                            <Button onClick={this.close}>Close</Button>
+                            <Button
+                                bsStyle="primary"
+                                onClick={this.handleConfirm}>
+                                Zatwierdź
+                            </Button>
+                            <Button
+                                bsStyle="primary"
+                                onClick={this.close}>
+                                Close
+                            </Button>
                         </Modal.Body>
                     </Modal>
                 </div>

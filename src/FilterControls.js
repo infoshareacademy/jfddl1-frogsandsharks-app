@@ -30,7 +30,11 @@ const FilterControls = (props) => (
               const title = element === undefined ? 'Wszystkie' : element.label
 
               return (
-                <DropdownButton id={1} key={index} title={title}>
+                <DropdownButton  bsStyle="primary"
+                                 bsSize="large"
+                                 id={1}
+                                 key={index}
+                                 title={title}>
                   {
                     group.map(
                       (filter, index) => {

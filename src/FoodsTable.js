@@ -7,7 +7,7 @@ const FoodsTable = (props) => (
         config={[
             {
                 name: 'name',
-                label: 'Name'
+                label: 'Wyniki wyszukiwania'
             }
 
         ]}

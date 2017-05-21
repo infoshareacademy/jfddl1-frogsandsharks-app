@@ -1,6 +1,11 @@
 #logo {
     width: 250px;
     height: 100px;
+    text-align:center;
+    border:none;
+    box-shadow: none;
+    margin:auto;
+
 }
 
 .logoSpace {
