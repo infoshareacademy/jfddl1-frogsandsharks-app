@@ -8,7 +8,7 @@ const GenericTable = (props) => (
         <tr>
             {
                 props.config.map(
-                    (item, index) => <th key={index}>{item.label}</th>
+                    (item, index) => <th className="listEffect" key={index}>{item.label}</th>
                 )
             }
         </tr>
@@ -23,7 +23,7 @@ const GenericTable = (props) => (
                                 configItem => configItem.name
                             ).map(
                                 (name, index) => (
-                                    <td key={index}>
+                                    <td className="lista" key={index}>
                                         {
                                             props.linked === true ?
                                                 <Link to={props.linkPrefix + '/' + dataItem.uid}>

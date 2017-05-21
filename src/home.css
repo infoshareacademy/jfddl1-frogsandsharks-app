@@ -10,7 +10,7 @@
 }
 
 .logoSpace {
-    /*padding-top: 26px;*/
+    padding-bottom: 40px;
     text-align: center;
 }
 
@@ -36,4 +36,12 @@
 }
 .ButtonGo:active {
     background-color: #1e685f;
+}
+
+.lista a {
+    color: #000;
+}
+.listEffect {
+    background-color: #267E74;
+    color:#fff;
 }
