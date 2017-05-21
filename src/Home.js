@@ -25,7 +25,7 @@ const Home = () => (
             <Col xs={6} md={4}>
                 <Thumbnail src="http://www.iconsfind.com/wp-content/uploads/2015/10/20151012_561baa03bcbc6.png" alt="250x250" >
                     <h3>Dodaj produkty do jadłospisu</h3>
-                    <p>Kliknij w prycisk poniżej o przejdź do wyszukiwarki produktów</p>
+                    <p>Kliknij w przycisk poniżej aby przejść do wyszukiwarki produktów</p>
                     <p>
                         <Button  href="/foods" bsStyle="primary"  className="ButtonGo">Wyszukiwarka</Button>
 
