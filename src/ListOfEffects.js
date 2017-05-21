@@ -57,7 +57,6 @@ class ListOfEffects extends React.Component {
                       <ListGroupItem>Kalorie : {foods.energy} </ListGroupItem>
                       <ListGroupItem>Białko : {foods.protein} </ListGroupItem>
                       <ListGroupItem>Węglowodany : {foods.carbohydrate} </ListGroupItem>
-                      <ListGroupItem>Cukry : {foods.sugars} </ListGroupItem>
                       <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
                     </ListGroup>
 
