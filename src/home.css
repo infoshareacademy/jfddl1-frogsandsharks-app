@@ -5,6 +5,7 @@
     border:none;
     box-shadow: none;
     margin:auto;
+    background-color: #DEDEDE;
 
 }
 
@@ -20,4 +21,19 @@
 
 .cosic {
     padding-top: 30vh;
+}
+
+.ButtonGo {
+    background-color: #267E74;
+    background-image: none;
+    border-color: #267E74;
+}
+.ButtonGo:hover {
+    background-color: #1e685f;
+}
+.ButtonGo:focus {
+    background-color: #1e685f;
+}
+.ButtonGo:active {
+    background-color: #1e685f;
 }

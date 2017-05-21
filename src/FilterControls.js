@@ -31,6 +31,7 @@ const FilterControls = (props) => (
 
               return (
                 <DropdownButton  bsStyle="primary"
+                                 className="ButtonGo"
                                  bsSize="large"
                                  id={1}
                                  key={index}
@@ -41,6 +42,7 @@ const FilterControls = (props) => (
                         const isActive = props.activeFilterNames.includes(filter.name)
                         return (
                           <MenuItem
+                              className="ButtonGo"
                             key={index}
                             active={isActive}
                             onSelect={() => props.handleFiltersUpdate(filter.name, !isActive)}>

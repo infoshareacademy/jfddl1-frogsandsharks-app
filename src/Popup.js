@@ -1,5 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {LinkContainer} from 'react-router-bootstrap'
+import {Glyphicon} from 'react-bootstrap'
+
 
 import {add} from './state/selections'
 
@@ -10,6 +13,7 @@ import {
     MenuItem,
     DropdownButton
 } from 'react-bootstrap'
+
 
 const dayNames = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela']
 const mealNames = ['Śniadanie', 'Drugie śniadanie', 'Obiad', 'Podwieczorek', 'Kolacja']
@@ -43,18 +47,22 @@ export default connect(
                     <Button
                         bsStyle="primary"
                         bsSize="large"
+                        className="ButtonGo"
                         onClick={this.open}
                     >
                         Dodaj posiłek
                     </Button>
 
+
                     <Modal show={this.state.showModal} onHide={this.close}>
+
                         <Modal.Body>
 
                             <h4>Wybierz dzień w którym chcesz dodać posiłek</h4>
                             <ButtonToolbar>
                                 <DropdownButton
                                     bsStyle="primary"
+                                    className="ButtonGo"
                                     id={1}
                                     title={this.state.day === null ? 'Wybierz dzień' : this.state.day}
                                     onSelect={(dayName) => this.setState({day: dayName})}
@@ -79,6 +87,7 @@ export default connect(
                             <ButtonToolbar>
                                 <DropdownButton
                                     bsStyle="primary"
+                                    className="ButtonGo"
                                     id={1}
                                     title={this.state.meal === null ? 'Wybierz posiłek' : this.state.meal}
                                     onSelect={(mealName) => this.setState({meal: mealName})}
@@ -102,15 +111,30 @@ export default connect(
                         <Modal.Body>
                             <Button
                                 bsStyle="primary"
+                                className="ButtonGo"
                                 onClick={this.handleConfirm}>
                                 Zatwierdź
                             </Button>
                             <Button
                                 bsStyle="primary"
+                                className="ButtonGo"
                                 onClick={this.close}>
                                 Close
                             </Button>
                         </Modal.Body>
+
+                        {/*<Modal.Body>*/}
+                            {/*<LinkContainer to="/foodplan">*/}
+                                {/*<Button*/}
+                                    {/*bsStyle="primary"*/}
+                                    {/*className="ButtonGo"*/}
+                                {/*><Glyphicon glyph="calendar"*/}
+                                            {/*className="ButtonGo"/>*/}
+                                    {/*Przejdź do jadłospisu*/}
+                                {/*</Button>*/}
+                            {/*</LinkContainer>*/}
+                        {/*</Modal.Body>*/}
+
                     </Modal>
                 </div>
             );

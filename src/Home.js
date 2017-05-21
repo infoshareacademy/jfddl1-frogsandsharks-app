@@ -27,7 +27,7 @@ const Home = () => (
                     <h3>Dodaj produkty do jadłospisu</h3>
                     <p>Kliknij w prycisk poniżej o przejdź do wyszukiwarki produktów</p>
                     <p>
-                        <Button href="/foods" bsStyle="primary">Wyszukiwarka</Button>
+                        <Button  href="/foods" bsStyle="primary"  className="ButtonGo">Wyszukiwarka</Button>
 
                     </p>
                 </Thumbnail>
