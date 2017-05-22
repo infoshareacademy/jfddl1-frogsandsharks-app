@@ -21,6 +21,9 @@ import ListOfEffects from './ListOfEffects'
 import DataFetcher from './DataFetcher'
 
 
+
+
+
 const links = [
   { path: '/', label: 'Home' },
   { path: '/firstpage', label: 'FirstPage' },
@@ -53,9 +56,10 @@ class App extends React.Component {
 
           <Row>
             <Col md={12}>
+
               <Route path="/" component={Logo}/>
-              <Route exact path="/" component={Home}/>
-              <Route path="/firstpage" component={FirstPage}/>
+              <Route className="menu-item" exact path="/" component={Home} />
+              <Route path="/firstpage" component={FirstPage} />
               <Route exact path="/foods" component={Foods}/>
               <Route path="/foodplan" component={Plan}/>
               {/*<Route path="/foods/:foodsId" component={ListOfEffects}/>*/}
@@ -69,7 +73,7 @@ class App extends React.Component {
         {
           links.map(
             (route, index) => (
-              <Route key={index} exact path={route.path} component={route.component}/>
+              <Route key={index} exact path={route.path} component={route.component} />
             )
           )
         }
