@@ -12,7 +12,6 @@ import {
   ButtonToolbar,
   MenuItem,
   DropdownButton,
-  Popover
 } from 'react-bootstrap'
 
 
@@ -124,10 +123,10 @@ export default connect(
               </ButtonToolbar>
             </Modal.Body>
 
-            <Modal.Body>
+            <Modal.Footer className="foot">
               <Button
                 bsStyle="primary"
-                className="ButtonGo"
+                className="ButtonGo leftBtn"
                 onClick={this.handleConfirm}>
                 Zatwierdź
               </Button>
@@ -138,7 +137,7 @@ export default connect(
                 Zamknij
               </Button>
 
-            </Modal.Body>
+            </Modal.Footer>
           </Modal>
         </div>
       );
