@@ -1,9 +1,10 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import { Alert } from 'react-bootstrap'
 //import {LinkContainer, } from 'react-router-bootstrap'
 
 
-import {add} from './state/selections'
+import { add } from './state/selections'
 
 import {
   Modal,
@@ -33,14 +34,16 @@ export default connect(
       productId: null,
       isFormComplete: false
     }
-    close = () => this.setState({showModal: false})
-    open = () => this.setState({showModal: true, productId: this.props.foodUid})
+    close = () => this.setState({ showModal: false })
+    open = () => this.setState({ showModal: true, productId: this.props.foodUid, isFormComplete: false })
 
-    handleConfirm = () => this.props.addSelection(this.state.day, this.state.meal, this.state.productId)
-
-    openPopup = () => this.setState({isFormComplete: true})
-    closePopup = () => this.setState({isFormComplete: false})
-    isFormComplete = () => this.props.addSelection(this.state.day, this.state.meal, this.state.productId)
+    handleConfirm = () => {
+      this.props.addSelection(this.state.day, this.state.meal, this.state.productId)
+      this.setState({
+        isFormComplete: true,
+        showModal: false
+      })
+    }
 
     render = () => {
 
@@ -56,6 +59,16 @@ export default connect(
             Dodaj posiłek
           </Button>
 
+          {
+            this.state.isFormComplete ?
+              <Alert bsStyle="success" onDismiss={() => this.setState({ isFormComplete: false })}>
+                <h4>Wow! Dodałeś produkt do posiłku!</h4>
+                <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
+                <p>
+                  <Button bsStyle="success" onClick={() => this.setState({ isFormComplete: false })}>Kontynuuj</Button>
+                </p>
+              </Alert> : null
+          }
 
           <Modal show={this.state.showModal} onHide={this.close}>
 
@@ -68,7 +81,7 @@ export default connect(
                   className="ButtonGo"
                   id={1}
                   title={this.state.day === null ? 'Wybierz dzień' : this.state.day}
-                  onSelect={(dayName) => this.setState({day: dayName})}
+                  onSelect={(dayName) => this.setState({ day: dayName })}
                 >
                   {
                     dayNames.map(
@@ -93,7 +106,7 @@ export default connect(
                   className="ButtonGo"
                   id={1}
                   title={this.state.meal === null ? 'Wybierz posiłek' : this.state.meal}
-                  onSelect={(mealName) => this.setState({meal: mealName})}
+                  onSelect={(mealName) => this.setState({ meal: mealName })}
 
                 >
                   {
@@ -126,28 +139,9 @@ export default connect(
               </Button>
 
             </Modal.Body>
-
-           <Popover id={1} show={this.isFormComplete}>
-             "Dodałeś" + productId.name + " do "+ mealName + "w dniu" + dayName
-           </Popover>
-
-
-            {/*<Modal.Body>*/}
-            {/*<LinkContainer to="/foodplan">*/}
-            {/*<Button*/}
-            {/*bsStyle="primary"*/}
-            {/*className="ButtonGo"*/}
-            {/*><Glyphicon glyph="calendar"*/}
-            {/*className="ButtonGo"/>*/}
-            {/*Przejdź do jadłospisu*/}
-            {/*</Button>*/}
-            {/*</LinkContainer>*/}
-            {/*</Modal.Body>*/}
-
           </Modal>
         </div>
       );
     }
-
-
-  })
+  }
+)
