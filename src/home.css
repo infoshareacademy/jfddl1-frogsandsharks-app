@@ -1,10 +1,30 @@
+.instruction {
+    text-align: center;
+}
+
+.dashboardBlock {
+    text-align: center;
+    background-color: #DEDEDE;
+
+}
+
+.dashboardBlock:hover {
+    border: #1e685f solid 2px;
+}
+
+.instructionDescription {
+    padding-bottom: 5vh;
+}
+
 #logo {
-    width: 250px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
     text-align:center;
     border:none;
     box-shadow: none;
     margin:auto;
+    padding-top: 0.5vh;
+    padding-bottom: 15vh;
     background-color: #DEDEDE;
 
 }
@@ -36,4 +56,10 @@
 }
 .ButtonGo:active {
     background-color: #1e685f;
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        float: right;
+    }
 }

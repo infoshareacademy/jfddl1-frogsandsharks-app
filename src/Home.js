@@ -11,43 +11,45 @@ import {
 
 import './home.css'
 
+
 const Home = () => (
     <Grid>
 
-        <Row className="show-grid">
+        <Row className="show-grid instruction">
             <Col xs={12} md={12} lg={12}>
                 <h1>Instrukcja</h1>
-                <p>Jakis tekst sajdkn sak fsdfjs dkjf sdh sdlf jskfj ldjf sdfjsd lfjs dlfs async f j
-                 jsdkfskdjf sdjkf jsdlfjsdklfjs dfkl jfslkdjf sldfjsldj fsdklfj kjf sdjsd flksdjf</p>
+                <p className="instructionDescription">Aby dodać posiłek do swojego planu żywieniowego wybierz na stronie głównej lub w menu bocznym rozwijanym "Wyszukiwarka".
+                Następnie wybierz posiłek którego szukasz i dodaj go do wybranego przez siebie dnia i posiłku. Jednocześnie informujemy,
+                    że aplikacja jest ciągle rozwijana, więc odnośniki <strong>"Trening" i "Powiadomienia" nie sa jeszcze aktywne.</strong></p>
             </Col>
         </Row>
         <Row className="show-grid options">
-            <Col xs={6} md={4}>
-                <Thumbnail src="http://www.iconsfind.com/wp-content/uploads/2015/10/20151012_561baa03bcbc6.png" alt="250x250" >
+            <Col xs={12} md={4}>
+                <Thumbnail src={require('./img/addDiet.png')} alt="Dodaj posiłek do diety" className="dashboardBlock">
                     <h3>Dodaj produkty do jadłospisu</h3>
-                    <p>Kliknij w prycisk poniżej o przejdź do wyszukiwarki produktów</p>
+                    <p>Kliknij w prycisk poniżej i przejdź do wyszukiwarki produktów</p>
                     <p>
-                        <Button  href="/foods" bsStyle="primary"  className="ButtonGo">Wyszukiwarka</Button>
+                         <Button  href="/foods" bsStyle="primary"  className="ButtonGo">Wyszukiwarka</Button>
 
                     </p>
                 </Thumbnail>
             </Col>
-            <Col xs={6} md={4}>
-                <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
-                    <h3>Thumbnail label</h3>
-                    <p>Description</p>
+            <Col xs={12} md={4}>
+                <Thumbnail src={require('./img/addTraining.png')} alt="Dodaj trening" className="dashboardBlock">
+                    <h3>Trening</h3>
+                    <p>Do swojej diety dodaj odpowiedni plan treningowy by uzyskać lepsze efekty.</p>
                     <p>
-                        <Button bsStyle="primary">Button</Button>&nbsp;
+                        <Button bsStyle="primary" className="ButtonGo">Trening</Button>&nbsp;
 
                     </p>
                 </Thumbnail>
             </Col>
-            <Col xs={6} md={4}>
-                <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
-                    <h3>Thumbnail label</h3>
-                    <p>Description</p>
+            <Col xs={12} md={4}>
+                <Thumbnail src={require('./img/addAlarm.png')} alt="Dodaj powiadomienia" className="dashboardBlock">
+                    <h3>Powiadomienia</h3>
+                    <p>Jeżeli często zdarza Ci się zapomnieć o diecie czy treningu to ustaw powiadomienia.</p>
                     <p>
-                        <Button bsStyle="primary">Button</Button>&nbsp;
+                        <Button bsStyle="primary" className="ButtonGo">Powiadomienia</Button>&nbsp;
 
                     </p>
                 </Thumbnail>

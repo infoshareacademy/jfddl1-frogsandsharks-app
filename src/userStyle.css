@@ -1,0 +1,15 @@
+#userProfile h3{
+    color: white;
+    padding-bottom: 2vh;
+}
+
+#links {
+    color: #fff;
+    padding-bottom: 0.5vh;
+}
+
+#links:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.1);
+}
