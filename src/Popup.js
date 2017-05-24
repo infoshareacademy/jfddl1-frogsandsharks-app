@@ -11,6 +11,7 @@ import {
     Modal,
     Button,
     ButtonToolbar,
+    ButtonGroup,
     MenuItem,
     DropdownButton,
 } from 'react-bootstrap'
@@ -60,6 +61,7 @@ export default connect(
                     </Button>
 
                     <ShareFb/>
+
                     {
                         this.state.isFormComplete ?
                             <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
