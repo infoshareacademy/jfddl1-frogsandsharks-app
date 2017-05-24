@@ -1,19 +1,26 @@
 .mealStyle  {
     height: 80px;
+    width: 180px;
     cursor: pointer;
 }
 
 .dayStyle {
-    border: 2px solid #00A6A5;
+    border: 1px solid #979797;
     margin-bottom: 100px;
 }
 
+.dayStyle:hover {
+    background-color: rgba(105, 105, 105, 0.1);
+}
+
 .mealNameStyle {
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
+    background-color: #96dbc8;
     padding: 5px;
     text-align: center;
+    font-style: italic;
+    letter-spacing: 1px;
 }
+
 .mealNameStyle > p {
     margin: none;
 }

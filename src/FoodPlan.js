@@ -5,7 +5,7 @@ import "./FoodPlan/style.css"
 
 const divstyle = {
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'center'
 
 };
 
