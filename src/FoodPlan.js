@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Meal from './FoodPlan/Meal'
+import "./FoodPlan/style.css"
 
 const divstyle = {
   display: 'flex',
@@ -29,7 +30,7 @@ export default connect (
         {
           dayNames.map(
             (dayName, index) => (
-              <div key={index}>
+              <div key={index} className="dayStyle">
                 <div><h4>{dayName}</h4></div>
                 {
                   mealNames.map(

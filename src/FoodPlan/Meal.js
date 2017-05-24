@@ -1,19 +1,21 @@
 import React from 'react'
 import {LinkContainer} from 'react-router-bootstrap'
-
+import './style.css'
 
 const Meal = (props) => (
 
   <LinkContainer to="foods">
     <div>
-      <h5>{props.mealName}</h5>
-      <ul>
-        {
-          props.products.map(
-            (product, index) => <li key={index}>{product.name}</li>
-          )
-        }
-      </ul>
+      <p className="mealNameStyle">{props.mealName}</p>
+      <div className="mealStyle">
+        <ul>
+          {
+            props.products.map(
+              (product, index) => <li key={index}>{product.name}</li>
+            )
+          }
+        </ul>
+      </div>
     </div>
   </LinkContainer>
 )

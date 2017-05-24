@@ -3,9 +3,6 @@ import { slide as BurgerMenu } from 'react-burger-menu'
 import { Link } from 'react-router-dom'
 
 import './userStyle.css'
-import {
-  Glyphicon
-} from 'react-bootstrap'
 
 const styles = {
   bmBurgerButton: {
