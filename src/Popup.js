@@ -11,7 +11,6 @@ import {
     Modal,
     Button,
     ButtonToolbar,
-    ButtonGroup,
     MenuItem,
     DropdownButton,
 } from 'react-bootstrap'
@@ -57,10 +56,10 @@ export default connect(
                         className="ButtonGo"
                         onClick={this.open}
                     >
-                        Dodaj posiłek
+                        Dodaj do posiłku
                     </Button>
 
-                    <ShareFb/>
+
 
                     {
                         this.state.isFormComplete ?
