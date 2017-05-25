@@ -15,7 +15,7 @@ const Logo = () => (
         <Row className="show-grid logoSpace">
         <Col xs={12} md={12} lg={12}>
             <LinkContainer to="/">
-                <Thumbnail style="background-color:#DEDEDE" src="http://frogs-sharks.jfddl1.is-academy.pl/image/logo.png" id="logo" href="/"/>
+                <Thumbnail style="background-color:#DEDEDE" src={require('./img/logo.png')} id="logo" href="/"/>
             </LinkContainer>
         </Col>
         </Row>
