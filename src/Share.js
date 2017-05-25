@@ -16,7 +16,7 @@ class ShareFb extends React.Component {
 
   render() {
     return (
-
+<div>
       <FacebookShareButton
         windowWidth={555}
         windowHeight={640}
@@ -29,10 +29,15 @@ class ShareFb extends React.Component {
         <Button bsSize="small">
           <Image src="http://audioenhancement.com/wp-content/uploads/2014/05/Share-on-Facebook-SM-1024x198.png"
                  id="fbButton" responsive={true}/>
+
+
+
         </Button>
       </FacebookShareButton>
 
 
+
+</div>
     )
   }
 }

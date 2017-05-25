@@ -52,7 +52,7 @@ export default connect(
 
                     <Button
                         bsStyle="primary"
-                        bsSize="large"
+                        bsSize="small"
                         className="ButtonGo"
                         onClick={this.open}
                     >
@@ -80,6 +80,7 @@ export default connect(
                             <ButtonToolbar>
                                 <DropdownButton
                                     bsStyle="primary"
+                                    bsSize="small"
                                     className="ButtonGo"
                                     id={1}
                                     title={this.state.day === null ? 'Wybierz dzień' : this.state.day}
@@ -106,6 +107,7 @@ export default connect(
                                 <DropdownButton
                                     bsStyle="primary"
                                     className="ButtonGo"
+                                    bsSize="small"
                                     id={1}
                                     title={this.state.meal === null ? 'Wybierz posiłek' : this.state.meal}
                                     onSelect={(mealName) => this.setState({meal: mealName})}
@@ -129,12 +131,14 @@ export default connect(
                         <Modal.Footer className="foot">
                             <Button
                                 bsStyle="primary"
+                                bsSize="small"
                                 className="ButtonGo leftBtn"
                                 onClick={this.handleConfirm}>
                                 Zatwierdź
                             </Button>
                             <Button
                                 bsStyle="primary"
+                                bsSize="small"
                                 className="ButtonGo"
                                 onClick={this.close}>
                                 Zamknij

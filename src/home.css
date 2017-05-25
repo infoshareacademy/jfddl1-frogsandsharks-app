@@ -78,9 +78,9 @@
 
 #fbButton {
     max-width: 150px ;
-    /*height: 46px;*/
     border: none;
     border-radius: 6px;
+    margin-left: -10px;
 }
 
 .btn-default {
