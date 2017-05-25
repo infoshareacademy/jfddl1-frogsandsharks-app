@@ -63,7 +63,7 @@ export default connect(
 
                     {
                         this.state.isFormComplete ?
-                            <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
+                            <Alert bsStyle="success"  onDismiss={() => this.setState({isFormComplete: false})}>
                                 <h4>Wow! Dodałeś produkt do posiłku!</h4>
                                 <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
                                 <p>

@@ -1,12 +1,12 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
-  Route
+    BrowserRouter as Router,
+    Route
 } from 'react-router-dom'
 import {
-  Grid,
-  Col,
-  Row
+    Grid,
+    Col,
+    Row
 } from 'react-bootstrap'
 
 
@@ -17,73 +17,71 @@ import Foods from './Foods'
 import Plan from './Plan'
 import BurgerMenuWrapper from './BurgerMenuWrapper'
 import ListOfEffects from './ListOfEffects'
-
+import LoginNew from './LoginNew'
 import DataFetcher from './DataFetcher'
 
-
-
-
-
 const links = [
-  { path: '/', label: 'Home' },
-  { path: '/firstpage', label: 'FirstPage' },
-  { path: '/foods', label: 'Wyszukiwarka'},
-  { path: '/foodplan', label: 'Plan żywieniowy'},
+    {path: '/', label: 'Home'},
+    {path: '/firstpage', label: 'FirstPage'},
+    {path: '/foods', label: 'Wyszukiwarka'},
+    {path: '/foodplan', label: 'Plan żywieniowy'},
+    {path: '/loginnew', label: 'Login'},
+
 
 ]
 
 class App extends React.Component {
 
-  state = {
-    sidebarOpen: false
-  }
+    state = {
+        sidebarOpen: false
+    }
 
-  toggleSidebar = (shouldBecomeOpen) => this.setState({
-    sidebarOpen: shouldBecomeOpen
-  })
+    toggleSidebar = (shouldBecomeOpen) => this.setState({
+        sidebarOpen: shouldBecomeOpen
+    })
 
-  render = () => (
-    <Router>
-      <div>
-      <BurgerMenuWrapper
-        isOpen={this.state.sidebarOpen}
-        toggleSidebar={this.toggleSidebar}
-        onStateChange={(state) => this.toggleSidebar(state.isOpen)}
-        links={links}
-      >
-        <Grid>
+    render = () => (
+        <Router>
+            <div>
+                <BurgerMenuWrapper
+                    isOpen={this.state.sidebarOpen}
+                    toggleSidebar={this.toggleSidebar}
+                    onStateChange={(state) => this.toggleSidebar(state.isOpen)}
+                    links={links}
+                >
+                    <Grid>
 
 
-          <Row>
-            <Col md={12}>
+                        <Row>
+                            <Col md={12}>
 
-              <Route path="/" component={Logo}/>
-              <Route className="menu-item" exact path="/" component={Home} />
-              <Route path="/firstpage" component={FirstPage} />
-              <Route exact path="/foods" component={Foods}/>
-              <Route path="/foodplan" component={Plan}/>
-              {/*<Route path="/foods/:foodsId" component={ListOfEffects}/>*/}
+                                <Route path="/" component={Logo}/>
+                                <Route className="menu-item" exact path="/" component={Home}/>
+                                <Route path="/firstpage" component={FirstPage}/>
+                                <Route exact path="/foods" component={Foods}/>
+                                <Route path="/foodplan" component={Plan}/>
+                                <Route path="/loginnew" component={LoginNew}/>
 
-            </Col>
-          </Row>
-        </Grid>
-      </BurgerMenuWrapper>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </BurgerMenuWrapper>
 
-      <DataFetcher>
-        {
-          links.map(
-            (route, index) => (
-              <Route key={index} exact path={route.path} component={route.component} />
-            )
-          )
-        }
-        <Route path="/foods/:foodsId" component={ListOfEffects}/>
-      </DataFetcher>
-    </div>
+                <DataFetcher>
+                    {
+                        links.map(
+                            (route, index) => (
+                                <Route key={index} exact path={route.path} component={route.component}/>
+                            )
+                        )
+                    }
+                    <Route path="/foods/:foodsId" component={ListOfEffects}/>
+                </DataFetcher>
+            </div>
 
-    </Router>
+        </Router>
 
-  )
+    )
 }
 
 export default App;
@@ -92,26 +90,26 @@ export default App;
 
 
 /*
-import Topics from './Topics'
-import Students from './Students'
-import Student from './Student'
-import Groups from './Groups'
-import Group from './Group'
-import Counters from './Counters'
-import Counter from './Counter'
+ import Topics from './Topics'
+ import Students from './Students'
+ import Student from './Student'
+ import Groups from './Groups'
+ import Group from './Group'
+ import Counters from './Counters'
+ import Counter from './Counter'
 
-import BurgerMenuWrapper from './BurgerMenuWrapper'
-import TopNavigation from './TopNavigation'
+ import BurgerMenuWrapper from './BurgerMenuWrapper'
+ import TopNavigation from './TopNavigation'
 
-const links = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About' },
-  { path: '/topics', label: 'Topics' },
-  { path: '/students', label: 'Students' },
-  { path: '/groups', label: 'Groups' },
-  { path: '/counters', label: 'Counters' },
-  { path: '/counter', label: 'Counter' }
-]
+ const links = [
+ { path: '/', label: 'Home' },
+ { path: '/about', label: 'About' },
+ { path: '/topics', label: 'Topics' },
+ { path: '/students', label: 'Students' },
+ { path: '/groups', label: 'Groups' },
+ { path: '/counters', label: 'Counters' },
+ { path: '/counter', label: 'Counter' }
+ ]
 
 
-export default App*/
+ export default App*/
