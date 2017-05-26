@@ -51,7 +51,7 @@ const BurgerMenuWrapper = (props) => (
       pageWrapId={ "page-wrap" }
       outerContainerId={ "outer-container" }
     >
-      <div id="userProfile"><img src={require('./img/userPhotoMin.png')} /><h3>Maria Kowalska</h3></div>
+      <div id="userProfile"><img src={require('./img/userPhotoMin.png')} alt=""/><h3>Maria Kowalska</h3></div>
       {
         props.links.map(
           (link, index) => (

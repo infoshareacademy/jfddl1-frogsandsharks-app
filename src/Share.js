@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   ShareButtons,
-  generateShareIcon
+  // generateShareIcon
 } from 'react-share';
 import {Button, Image} from 'react-bootstrap'
 
@@ -10,7 +10,7 @@ const {
 } = ShareButtons
 
 const shareUrl = 'http://app.frogs-sharks.jfddl1.is-academy.pl' + window.location.pathname
-const FacebookIcon = generateShareIcon('facebook')
+// const FacebookIcon = generateShareIcon('facebook')
 
 class ShareFb extends React.Component {
 

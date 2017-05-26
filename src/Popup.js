@@ -5,7 +5,6 @@ import {Alert} from 'react-bootstrap'
 
 
 import {add} from './state/selections'
-import ShareFb from './Share'
 
 import {
     Modal,
