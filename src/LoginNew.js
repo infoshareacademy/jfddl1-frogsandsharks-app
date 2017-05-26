@@ -2,6 +2,13 @@ import React from 'react'
 import {Form, FormGroup, FormControl, Col, ControlLabel, Button, Checkbox} from 'react-bootstrap'
 
 class LoginNew extends React.Component {
+    constructor (props) {
+        super(props);
+
+
+
+    }
+
     render() {
         return (
             <div>
@@ -28,8 +35,14 @@ class LoginNew extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                            <Button type="submit" bsStyle="primary" bsSize="small" className="ButtonGo">
+                            <Button bsStyle="primary" bsSize="small" className="ButtonGo">
                                 Zaloguj
+                            </Button>
+                            <Button bsStyle="primary" bsSize="small" className="ButtonGo">
+                                Zarejestruj się
+                            </Button>
+                            <Button bsStyle="primary" bsSize="small" className="ButtonGo">
+                                Wyloguj
                             </Button>
                         </Col>
                     </FormGroup>
