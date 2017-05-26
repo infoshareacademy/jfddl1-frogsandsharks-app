@@ -14,7 +14,8 @@ const Meal = (props) => (
       <p className="mealNameStyle">{props.mealName}</p>
       <OverlayTrigger placement="top" overlay={tooltip}>
         <div className="mealStyle" bsStyle="default">
-          <ul >
+          <img src={require('./ico/add.png')} className="imgStyle"/>
+          <ul>
             {
               props.products.map(
                 (product, index) => <li key={index}>{product.name}</li>
