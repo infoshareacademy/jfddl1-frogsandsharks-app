@@ -1,5 +1,5 @@
 import { compose, createStore, combineReducers, applyMiddleware } from 'redux'
-//import persistState from 'redux-localstorage'
+import persistState from 'redux-localstorage'
 import thunk from 'redux-thunk'
 
 import foods from './state/foods'
@@ -13,7 +13,7 @@ const enhancer = composeEnhancers(
     applyMiddleware(
         thunk
     ),
-    //persistState()
+    persistState(['selections'])
 )
 
 const reducer = combineReducers({
