@@ -13,8 +13,8 @@ const Meal = (props) => (
     <div>
       <p className="mealNameStyle">{props.mealName}</p>
       <OverlayTrigger placement="top" overlay={tooltip}>
-        <div className="mealStyle" bsStyle="default">
-          <img src={require('./ico/add.png')} className="imgStyle"/>
+        <div className="mealStyle">
+          <img src={require('./ico/add.png')} alt="" className="imgStyle"/>
           <ul>
             {
               props.products.map(
