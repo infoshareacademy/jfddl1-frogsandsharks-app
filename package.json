@@ -5,6 +5,7 @@
   "dependencies": {
     "admin-lte": "^2.3.11",
     "bootstrap": "^3.3.7",
+    "firebase": "^4.0.0",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-burger-menu": "^2.0.2",

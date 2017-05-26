@@ -1,14 +1,6 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Route
-} from 'react-router-dom'
-import {
-    Grid,
-    Col,
-    Row
-} from 'react-bootstrap'
-
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Grid, Col, Row} from 'react-bootstrap'
 
 import Home from './Home'
 import Logo from './Logo'
@@ -26,8 +18,6 @@ const links = [
     {path: '/foods', label: 'Wyszukiwarka'},
     {path: '/foodplan', label: 'Plan żywieniowy'},
     {path: '/loginnew', label: 'Login'},
-
-
 ]
 
 class App extends React.Component {
@@ -85,31 +75,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-///////////////////////////////////////////////////////////////////////////
-
-
-/*
- import Topics from './Topics'
- import Students from './Students'
- import Student from './Student'
- import Groups from './Groups'
- import Group from './Group'
- import Counters from './Counters'
- import Counter from './Counter'
-
- import BurgerMenuWrapper from './BurgerMenuWrapper'
- import TopNavigation from './TopNavigation'
-
- const links = [
- { path: '/', label: 'Home' },
- { path: '/about', label: 'About' },
- { path: '/topics', label: 'Topics' },
- { path: '/students', label: 'Students' },
- { path: '/groups', label: 'Groups' },
- { path: '/counters', label: 'Counters' },
- { path: '/counter', label: 'Counter' }
- ]
-
-
- export default App*/
