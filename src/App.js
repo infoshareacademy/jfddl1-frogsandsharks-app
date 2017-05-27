@@ -21,14 +21,18 @@ const links = [
     {path: '/loginnew', label: 'Login'},
 ]
 
+
 class App extends React.Component {
     state = {
-        sidebarOpen: false
+        sidebarOpen: false,
+        isLogged: false
     }
 
     toggleSidebar = (shouldBecomeOpen) => this.setState({
         sidebarOpen: shouldBecomeOpen
     })
+
+
 
     constructor () {
  super()
@@ -44,14 +48,25 @@ class App extends React.Component {
 }
 
     componentWillMount() {
-    firebase.auth().signInWithEmailAndPassword('ptrainer.team@gmail.com', 'frogs&sharks').catch(function (error) {
+    firebase.auth().signInWithEmailAndPassword('ptrainer.team@gmail.co', 'frogs&sharks').catch(function (error) {
         // Handle Errors here.
         console.log('Not Log In')
     })
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                this.setState.isLogged = true;
+               console.log('zaloagowany')
+            } else {
+                this.setState.isLogged = false;
+               console.log('niezalogowany')
+            }
+        });
 
 }
     render = () => (
         <Router>
+            <div>
+            if ( isLogged) {
             <div>
                 <BurgerMenuWrapper
                     isOpen={this.state.sidebarOpen}
@@ -70,7 +85,7 @@ class App extends React.Component {
                                 <Route path="/firstpage" component={FirstPage}/>
                                 <Route exact path="/foods" component={Foods}/>
                                 <Route path="/foodplan" component={Plan}/>
-                                <Route path="/loginnew" component={LoginNew}/>
+                                {/*<Route path="/loginnew" component={LoginNew}/>*/}
 
                             </Col>
                         </Row>
@@ -89,6 +104,21 @@ class App extends React.Component {
                 </DataFetcher>
             </div>
 
+        }
+        else {
+            <div>
+                <Grid>
+                    <Row>
+                        <Col md={12}>
+                            <Route path="/loginnew" component={LoginNew}/>
+                        </Col>
+                    </Row>
+                </Grid>
+            </div>
+
+
+        }
+            </div>
         </Router>
 
     )
