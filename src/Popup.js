@@ -68,9 +68,9 @@ export default connect(
                   <Button bsStyle="success" onClick={() => this.setState({isFormComplete: false})}>
                     Kontynuuj
                   </Button>
-                  <Button bsStyle="success">
-                    Przejdź do planu
-                  </Button>
+                  {/*<Button bsStyle="info" onClick={ () => }>*/}
+                    {/*Przejdź do planu*/}
+                  {/*</Button>*/}
                             </p>
                             </Alert> : null
                           }
