@@ -19,6 +19,14 @@ class LoginNew extends React.Component {
         })
     }
 
+    logout = () => {
+        firebase.auth().signOut().then(function() {
+            // Sign-out successful.
+        }).catch(function(error) {
+            // An error happened.
+        })
+    }
+
     handlePasswordChange = (event) => {
         this.setState({password: event.target.value});
     }
@@ -62,7 +70,7 @@ class LoginNew extends React.Component {
                             <Button bsStyle="primary" bsSize="small" className="ButtonGo">
                                 Zarejestruj się
                             </Button>
-                            <Button bsStyle="primary" bsSize="small" className="ButtonGo">
+                            <Button bsStyle="primary" bsSize="small" className="ButtonGo" onClick={this.logout}>
                                 Wyloguj
                             </Button>
                         </Col>

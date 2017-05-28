@@ -11,6 +11,7 @@ import Plan from './Plan'
 import BurgerMenuWrapper from './BurgerMenuWrapper'
 import ListOfEffects from './ListOfEffects'
 import LoginNew from './LoginNew'
+import Logout from './Logout'
 import DataFetcher from './DataFetcher'
 
 const links = [
@@ -18,7 +19,8 @@ const links = [
     { path: '/firstpage', label: 'FirstPage' },
     { path: '/foods', label: 'Wyszukiwarka' },
     { path: '/foodplan', label: 'Plan żywieniowy' },
-    { path: '/loginnew', label: 'Login' },
+    { path: '/loginout', label: 'Wyloguj' },
+
 ]
 
 class App extends React.Component {
@@ -83,7 +85,7 @@ class App extends React.Component {
                                     <Route path="/firstpage" component={FirstPage} />
                                     <Route exact path="/foods" component={Foods} />
                                     <Route path="/foodplan" component={Plan} />
-                                    {/*<Route path="/loginnew" component={LoginNew}/>*/}
+                                    <Route path="/loginout" component={Logout}/>
 
                                 </Col>
                             </Row>
