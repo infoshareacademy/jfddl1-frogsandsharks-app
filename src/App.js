@@ -45,12 +45,6 @@ class App extends React.Component {
     }
 
     componentWillMount() {
-
-        firebase.auth().signInWithEmailAndPassword('ptrainer.team@gmail.co', 'frogs&sharks').catch(function (error) {
-            // Handle Errors here.
-            console.log('Login failed!')
-        })
-
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 this.setState({
@@ -64,8 +58,8 @@ class App extends React.Component {
                 console.log('User ISNT logged in')
             }
         });
-
     }
+
     render = () => {
         const loginBox = (<LoginNew />);
 
