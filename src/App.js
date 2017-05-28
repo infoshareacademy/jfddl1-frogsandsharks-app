@@ -61,7 +61,7 @@ class App extends React.Component {
     }
 
     render = () => {
-        const loginBox = (<LoginNew />);
+        const loginBox = (<Router><LoginNew /></Router>);
 
         const app = (<Router>
             <div>

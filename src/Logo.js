@@ -2,12 +2,7 @@ import React from 'react'
 
 import {LinkContainer} from 'react-router-bootstrap'
 
-import {
-    Grid,
-    Col,
-    Row,
-    Thumbnail,
-} from 'react-bootstrap'
+import { Grid, Col, Row, Thumbnail } from 'react-bootstrap'
 
 const Logo = () => (
 

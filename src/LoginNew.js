@@ -1,6 +1,7 @@
 import React from 'react'
-import { Form, FormGroup, FormControl, Col, ControlLabel, Button, Checkbox } from 'react-bootstrap'
+import {Form, FormGroup, FormControl, Col, ControlLabel, Button} from 'react-bootstrap'
 import * as firebase from 'firebase'
+import Logo from './Logo'
 
 class LoginNew extends React.Component {
     constructor(props) {
@@ -19,16 +20,17 @@ class LoginNew extends React.Component {
     }
 
     handlePasswordChange = (event) => {
-        this.setState({ password: event.target.value });
+        this.setState({password: event.target.value});
     }
 
     handleEmailChange = (event) => {
-        this.setState({ email: event.target.value });
+        this.setState({email: event.target.value});
     }
 
     render() {
         return (
             <div>
+                <Logo/>
                 <h1>Logowanie</h1>
 
                 <Form horizontal>
@@ -37,7 +39,8 @@ class LoginNew extends React.Component {
                             Email
                         </Col>
                         <Col sm={8}>
-                            <FormControl type="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange} />
+                            <FormControl type="email" placeholder="Email" value={this.state.email}
+                                         onChange={this.handleEmailChange}/>
                         </Col>
                     </FormGroup>
 
@@ -46,7 +49,8 @@ class LoginNew extends React.Component {
                             Password
                         </Col>
                         <Col sm={8}>
-                            <FormControl type="password" placeholder="Password" value={this.state.password} onChange={this.handlePasswordChange} />
+                            <FormControl type="password" placeholder="Password" value={this.state.password}
+                                         onChange={this.handlePasswordChange}/>
                         </Col>
                     </FormGroup>
 
