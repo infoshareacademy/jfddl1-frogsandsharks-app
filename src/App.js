@@ -1,6 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import {Grid, Col, Row} from 'react-bootstrap'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Grid, Col, Row } from 'react-bootstrap'
 import * as firebase from 'firebase'
 
 import Home from './Home'
@@ -14,13 +14,12 @@ import LoginNew from './LoginNew'
 import DataFetcher from './DataFetcher'
 
 const links = [
-    {path: '/', label: 'Home'},
-    {path: '/firstpage', label: 'FirstPage'},
-    {path: '/foods', label: 'Wyszukiwarka'},
-    {path: '/foodplan', label: 'Plan żywieniowy'},
-    {path: '/loginnew', label: 'Login'},
+    { path: '/', label: 'Home' },
+    { path: '/firstpage', label: 'FirstPage' },
+    { path: '/foods', label: 'Wyszukiwarka' },
+    { path: '/foodplan', label: 'Plan żywieniowy' },
+    { path: '/loginnew', label: 'Login' },
 ]
-
 
 class App extends React.Component {
     state = {
@@ -32,10 +31,8 @@ class App extends React.Component {
         sidebarOpen: shouldBecomeOpen
     })
 
-
-
-    constructor () {
- super()
+    constructor() {
+        super()
         var config = {
             apiKey: "AIzaSyBPvx8Yw4Egka7vZs7MDzfenpt6xCb1yi8",
             authDomain: "ptrainer-1e21c.firebaseapp.com",
@@ -45,83 +42,83 @@ class App extends React.Component {
             messagingSenderId: "266477979996"
         }
         firebase.initializeApp(config);
-}
+    }
 
     componentWillMount() {
-    firebase.auth().signInWithEmailAndPassword('ptrainer.team@gmail.co', 'frogs&sharks').catch(function (error) {
-        // Handle Errors here.
-        console.log('Not Log In')
-    })
-        firebase.auth().onAuthStateChanged(function(user) {
+
+        firebase.auth().signInWithEmailAndPassword('ptrainer.team@gmail.co', 'frogs&sharks').catch(function (error) {
+            // Handle Errors here.
+            console.log('Login failed!')
+        })
+
+        firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-                this.setState.isLogged = true;
-               console.log('zaloagowany')
+                this.setState({
+                    isLogged: true
+                });
+                console.log('User IS logged in')
             } else {
-                this.setState.isLogged = false;
-               console.log('niezalogowany')
+                this.setState({
+                    isLogged: false
+                });
+                console.log('User ISNT logged in')
             }
         });
 
-}
-    render = () => (
-        <Router>
+    }
+    render = () => {
+        const loginBox = (<LoginNew />);
+
+        const app = (<Router>
             <div>
-            if ( isLogged) {
-            <div>
-                <BurgerMenuWrapper
-                    isOpen={this.state.sidebarOpen}
-                    toggleSidebar={this.toggleSidebar}
-                    onStateChange={(state) => this.toggleSidebar(state.isOpen)}
-                    links={links}
-                >
-                    <Grid>
+                <div>
+                    <BurgerMenuWrapper
+                        isOpen={this.state.sidebarOpen}
+                        toggleSidebar={this.toggleSidebar}
+                        onStateChange={(state) => this.toggleSidebar(state.isOpen)}
+                        links={links}
+                    >
+                        <Grid>
 
 
-                        <Row>
-                            <Col md={12}>
+                            <Row>
+                                <Col md={12}>
 
-                                <Route path="/" component={Logo}/>
-                                <Route className="menu-item" exact path="/" component={Home}/>
-                                <Route path="/firstpage" component={FirstPage}/>
-                                <Route exact path="/foods" component={Foods}/>
-                                <Route path="/foodplan" component={Plan}/>
-                                {/*<Route path="/loginnew" component={LoginNew}/>*/}
+                                    <Route path="/" component={Logo} />
+                                    <Route className="menu-item" exact path="/" component={Home} />
+                                    <Route path="/firstpage" component={FirstPage} />
+                                    <Route exact path="/foods" component={Foods} />
+                                    <Route path="/foodplan" component={Plan} />
+                                    {/*<Route path="/loginnew" component={LoginNew}/>*/}
 
-                            </Col>
-                        </Row>
-                    </Grid>
-                </BurgerMenuWrapper>
+                                </Col>
+                            </Row>
+                        </Grid>
+                    </BurgerMenuWrapper>
 
-                <DataFetcher>
-                    {
-                        links.map(
-                            (route, index) => (
-                                <Route key={index} exact path={route.path} component={route.component}/>
+                    <DataFetcher>
+                        {
+                            links.map(
+                                (route, index) => (
+                                    <Route key={index} exact path={route.path} component={route.component} />
+                                )
                             )
-                        )
-                    }
-                    <Route path="/foods/:foodsId" component={ListOfEffects}/>
-                </DataFetcher>
+                        }
+                        <Route path="/foods/:foodsId" component={ListOfEffects} />
+                    </DataFetcher>
+                </div>
             </div>
+        </Router>);
 
+        if (this.state.isLogged) {
+            return (app)
+
+        } else {
+            return (loginBox)
         }
-        else {
-            <div>
-                <Grid>
-                    <Row>
-                        <Col md={12}>
-                            <Route path="/loginnew" component={LoginNew}/>
-                        </Col>
-                    </Row>
-                </Grid>
-            </div>
 
 
-        }
-            </div>
-        </Router>
-
-    )
+    }
 }
 
 export default App;
