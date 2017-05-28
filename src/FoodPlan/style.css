@@ -8,6 +8,7 @@
     min-height: auto;
     width: 180px;
     cursor: pointer;
+    background-color: #dedede;
 }
 
 .dayStyle {
@@ -29,8 +30,13 @@
     letter-spacing: 1px;
 }
 
-.mealNameStyle > p {
-    margin: none;
+p {
+    margin: 0 0 0px;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 
 .dayNameStyle {

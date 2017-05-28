@@ -11,19 +11,23 @@ const Meal = (props) => (
 
   <LinkContainer to="foods">
     <div>
-      <p className="mealNameStyle">{props.mealName}</p>
-      <OverlayTrigger placement="top" overlay={tooltip}>
-        <div className="mealStyle">
-          <img src={require('./ico/add.png')} alt="" className="imgStyle"/>
-          <ul>
-            {
-              props.products.map(
-                (product, index) => <li key={index}>{product.name}</li>
-              )
-            }
-          </ul>
-        </div>
-      </OverlayTrigger>
+      <div>
+        <p className="mealNameStyle">{props.mealName}</p>
+      </div>
+      <div className="mealStyle">
+        <OverlayTrigger placement="top" overlay={tooltip}>
+          <div>
+            <img src={require('./ico/add.png')} alt="" className="imgStyle"/>
+            <ul>
+              {
+                props.products.map(
+                  (product, index) => <li key={index}>{product.name}</li>
+                )
+              }
+            </ul>
+          </div>
+        </OverlayTrigger>
+      </div>
     </div>
   </LinkContainer>
 )
