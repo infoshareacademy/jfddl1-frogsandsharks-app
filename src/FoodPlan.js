@@ -31,7 +31,7 @@ export default connect (
           dayNames.map(
             (dayName, index) => (
               <div key={index} className="dayStyle">
-                <div className="dayNameStyle"><h4>{dayName}</h4></div>
+                <div className="dayNameStyle"><p>{dayName}</p></div>
                 {
                   mealNames.map(
                     (mealName, index) => {

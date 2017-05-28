@@ -3,7 +3,7 @@
     margin-bottom: 50px;
 }
 
-.mealStyle  {
+.mealStyle {
     height: 90px;
     min-height: auto;
     width: 180px;
@@ -41,8 +41,12 @@ ul {
 
 .dayNameStyle {
     text-align: center;
+    background-color: #cbcbcb;
+    font-size: 20px;
 }
 
 .imgStyle {
-   float: right;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
 }
