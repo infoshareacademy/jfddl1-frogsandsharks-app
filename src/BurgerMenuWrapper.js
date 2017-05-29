@@ -3,9 +3,7 @@ import { slide as BurgerMenu } from 'react-burger-menu'
 import { Link } from 'react-router-dom'
 
 import './userStyle.css'
-import {
-  Glyphicon
-} from 'react-bootstrap'
+
 
 const styles = {
   bmBurgerButton: {
@@ -44,6 +42,8 @@ const styles = {
 
 }
 
+
+
 const BurgerMenuWrapper = (props) => (
   <div id="outer-container">
     <BurgerMenu
@@ -53,7 +53,7 @@ const BurgerMenuWrapper = (props) => (
       pageWrapId={ "page-wrap" }
       outerContainerId={ "outer-container" }
     >
-      <div id="userProfile"><img src={require('./img/userPhotoMin.png')} /><h3>Maria Kowalska</h3></div>
+      <div id="userProfile"><img src={require('./img/userPhotoMin.png')} alt=""/><h3>Maria Kowalska</h3></div>
       {
         props.links.map(
           (link, index) => (

@@ -1,10 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Meal from './FoodPlan/Meal'
+import "./FoodPlan/style.css"
 
 const divstyle = {
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'center'
 
 };
 
@@ -29,9 +30,10 @@ export default connect (
         {
           dayNames.map(
             (dayName, index) => (
-              <div key={index}>
-                <div><h4>{dayName}</h4></div>
+              <div key={index} className="dayStyle">
+                <div className="dayNameStyle"><p>{dayName}</p></div>
                 {
+
                   mealNames.map(
                     (mealName, index) => {
                       const products = this.props.selections.filter(
@@ -39,8 +41,9 @@ export default connect (
                       ).map(
                         selection => this.props.products.data.find(product => product.uid === selection.productId)
                       )
+                      let link = 'foods/'+dayName+'/'+mealName;
                       return (
-                        <Meal key={index} mealName={mealName} products={products}/>
+                        <Meal key={index} mealName={mealName} products={products} link={link}/>
                       )
                     }
                   )

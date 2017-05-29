@@ -32,7 +32,7 @@ const FilterControls = (props) => (
               return (
                 <DropdownButton  bsStyle="primary"
                                  className="ButtonGo"
-                                 bsSize="large"
+                                 bsSize="small"
                                  id={1}
                                  key={index}
                                  title={title}>

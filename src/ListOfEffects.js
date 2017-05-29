@@ -10,7 +10,7 @@ import {
 
 import Foods from './Foods'
 import Popup from './Popup';
-
+import ShareFb from './Share'
 
 class ListOfEffects extends React.Component {
 
@@ -45,28 +45,34 @@ class ListOfEffects extends React.Component {
                 <Col>
                   <Row>
                     <Col lg={4}>
-                    <Foods/>
+                      <Foods/>
                     </Col>
                     <Col xs={12} md={5} lg={5}>
 
 
-                    <ListGroup key={foods.uid}>
-                      <h1>W 100 gramach produktu</h1>
-                      <ListGroupItem>Nazwa : {foods.name} </ListGroupItem>
-                      <ListGroupItem>Kategoria : {foods.category}</ListGroupItem>
-                      <ListGroupItem>Kalorie : {foods.energy} </ListGroupItem>
-                      <ListGroupItem>Białko : {foods.protein} </ListGroupItem>
-                      <ListGroupItem>Węglowodany : {foods.carbohydrate} </ListGroupItem>
-                      <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
-                    </ListGroup>
+                      <ListGroup key={foods.uid}>
+                        <h1>W 100 gramach produktu</h1>
+                        <ListGroupItem>Nazwa : {foods.name} </ListGroupItem>
+                        <ListGroupItem>Kategoria : {foods.category}</ListGroupItem>
+                        <ListGroupItem>Kalorie : {foods.energy} </ListGroupItem>
+                        <ListGroupItem>Białko : {foods.protein} </ListGroupItem>
+                        <ListGroupItem>Węglowodany : {foods.carbohydrate} </ListGroupItem>
+                        <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
+                      </ListGroup>
 
+                      <Row>
+                        <Col lg={8}>
+                          <Popup foodUid={foods.uid}/>
+                        </Col>
+                        <Col lg={4}>
+                          <ShareFb/>
 
-                      <Popup foodUid={foods.uid}/>
+                        </Col>
 
-                  </Col>
+                      </Row>
+                    </Col>
                   </Row>
                 </Col>
-
 
 
               </Row>
