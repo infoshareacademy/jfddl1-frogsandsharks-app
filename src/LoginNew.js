@@ -12,7 +12,8 @@ class LoginNew extends React.Component {
         }
     }
 
-    login = () => {
+    login = (event) => {
+        event.preventDefault();
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
             // TODO - show some message - this lib is great for this - toastr
             console.log('Login failed!')
@@ -41,13 +42,13 @@ class LoginNew extends React.Component {
                 <Logo/>
                 <h1>Logowanie</h1>
 
-                <Form horizontal>
+                <Form horizontal onSubmit={this.login}>
                     <FormGroup controlId="formHorizontalEmail">
                         <Col componentClass={ControlLabel} sm={2}>
                             Email
                         </Col>
                         <Col sm={8}>
-                            <FormControl type="email" placeholder="Email" value={this.state.email}
+                            <FormControl required type="email" placeholder="Email" value={this.state.email}
                                          onChange={this.handleEmailChange}/>
                         </Col>
                     </FormGroup>
@@ -64,7 +65,7 @@ class LoginNew extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                            <Button bsStyle="primary" bsSize="small" className="ButtonGo" onClick={this.login}>
+                            <Button type="submit" bsStyle="primary" bsSize="small" className="ButtonGo" >
                                 Zaloguj
                             </Button>
                             <Button bsStyle="primary" bsSize="small" className="ButtonGo">
