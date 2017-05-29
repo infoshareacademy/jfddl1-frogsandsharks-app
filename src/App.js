@@ -18,8 +18,7 @@ const links = [
     { path: '/', label: 'Home' },
     { path: '/firstpage', label: 'FirstPage' },
     { path: '/foods', label: 'Wyszukiwarka' },
-    { path: '/foodplan', label: 'Plan żywieniowy' },
-    { path: '/loginout', label: 'Wyloguj' },
+    { path: '/foodplan', label: 'Plan żywieniowy' }
 
 ]
 
@@ -85,7 +84,6 @@ class App extends React.Component {
                                     <Route path="/firstpage" component={FirstPage} />
                                     <Route exact path="/foods" component={Foods} />
                                     <Route path="/foodplan" component={Plan} />
-                                    <Route path="/loginout" component={Logout}/>
 
                                 </Col>
                             </Row>

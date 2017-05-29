@@ -20,13 +20,7 @@ class LoginNew extends React.Component {
         })
     }
 
-    logout = () => {
-        firebase.auth().signOut().then(function() {
-            // Sign-out successful.
-        }).catch(function(error) {
-            // An error happened.
-        })
-    }
+
 
     handlePasswordChange = (event) => {
         this.setState({password: event.target.value});
