@@ -73,7 +73,7 @@ class BurgerMenuWrapper extends React.Component {
             )
           )}
         {
-          <Link id="links"  to={'/loginnew'} onClick={() => this.logout()}>Wyloguj</Link>
+          <Link id="links"  to={'/'} onClick={() => this.logout()}>Wyloguj</Link>
         }
       </BurgerMenu>
       <div id="page-wrap">

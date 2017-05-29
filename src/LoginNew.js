@@ -3,6 +3,8 @@ import {Form, FormGroup, FormControl, Col, ControlLabel, Button} from 'react-boo
 import * as firebase from 'firebase'
 import Logo from './Logo'
 
+
+
 class LoginNew extends React.Component {
     constructor(props) {
         super(props);
@@ -19,8 +21,6 @@ class LoginNew extends React.Component {
             console.log('Login failed!')
         })
     }
-
-
 
     handlePasswordChange = (event) => {
         this.setState({password: event.target.value});
