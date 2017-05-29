@@ -55,7 +55,7 @@ class App extends React.Component {
                 console.log('User IS logged in')
             } else {
                 this.setState({
-                    isLogged: false
+                    isLogged: true
                 });
                 console.log('User ISNT logged in')
             }
@@ -101,6 +101,7 @@ class App extends React.Component {
                             )
                         }
                         <Route path="/foods/:foodsId" component={ListOfEffects} />
+                        <Route path="/foods/:day/:meal" component={Foods} />
                     </DataFetcher>
                 </div>
             </div>

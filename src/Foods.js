@@ -1,4 +1,5 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import FilterControls from './FilterControls'
@@ -8,7 +9,14 @@ import { foods as filters } from './_utils/filters'
 import { foodFilterGroups  as filterGroups } from './_utils/FilterGroups'
 
 class Foods extends React.Component {
+
     componentWillMount = () => {
+      console.log('foods', this.props);
+        if(this.props.match.params.day && this.props.match.params.meal) {
+          const day = this.props.match.params.day;
+          const meal = this.props.match.params.meal;
+          console.log('data from router', day, meal)
+        }
         fetch(
             process.env.PUBLIC_URL + '/data/foods.json'
         ).then(
@@ -17,6 +25,7 @@ class Foods extends React.Component {
             foods => this.props.setFoods(foods)
         )
     }
+
     render = () => (
         <div>
             <h3>Wprowadź wyszukiwany produkt</h3>
@@ -64,4 +73,4 @@ export default connect(
             searchPhrase: event.target.value
         })
     })
-)(Foods)
+)(withRouter(Foods))
