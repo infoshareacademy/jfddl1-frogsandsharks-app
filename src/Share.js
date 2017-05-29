@@ -27,7 +27,7 @@ class ShareFb extends React.Component {
         picture="http://frogs-sharks.jfddl1.is-academy.pl/image/logo.png"
         title="ptrainer - Najlepszy trener personalny w sieci">
         <Button bsSize="small">
-          <Image src="http://audioenhancement.com/wp-content/uploads/2014/05/Share-on-Facebook-SM-1024x198.png"
+          <Image src={require('./img/Share-on-Facebook.png')}
                  id="fbButton" responsive={true}/>
 
 

@@ -5,6 +5,7 @@ import {Alert} from 'react-bootstrap'
 
 
 import {add} from './state/selections'
+import ShareFb from './Share'
 
 import {
   Modal,
@@ -59,19 +60,15 @@ export default connect(
           </Button>
 
 
-          {
-            this.state.isFormComplete ?
-              <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
-                <h4>Wow! Dodałeś produkt do posiłku!</h4>
-                <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
-                <p>
-                  <Button bsStyle="success" onClick={() => this.setState({isFormComplete: false})}>
-                    Kontynuuj
-                  </Button>
-                  {/*<Button bsStyle="info" onClick={ () => }>*/}
-                    {/*Przejdź do planu*/}
-                  {/*</Button>*/}
-                            </p>
+
+                    {
+                        this.state.isFormComplete ?
+                            <Alert bsStyle="success"  onDismiss={() => this.setState({isFormComplete: false})}>
+                                <h4>Wow! Dodałeś produkt do posiłku!</h4>
+                                <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
+                                <p>
+                                    <Button bsStyle="success" onClick={() => this.setState({isFormComplete: false})}>Kontynuuj</Button>
+                                </p>
                             </Alert> : null
                           }
 
@@ -131,26 +128,26 @@ export default connect(
                       </ButtonToolbar>
                     </Modal.Body>
 
-                    <Modal.Footer className="foot">
-                      <Button
-                        bsStyle="primary"
-                        bsSize="small"
-                        className="ButtonGo leftBtn"
-                        onClick={this.handleConfirm}>
-                        Zatwierdź
-                      </Button>
-                      <Button
-                        bsStyle="primary"
-                        bsSize="small"
-                        className="ButtonGo"
-                        onClick={this.close}>
-                        Zamknij
-                      </Button>
+                        <Modal.Footer className="foot">
+                            <Button
+                                bsStyle="primary"
+                                bsSize="small"
+                                className="ButtonGo leftBtn"
+                                onClick={this.handleConfirm}>
+                                Zatwierdź
+                            </Button>
+                            <Button
+                                bsStyle="primary"
+                                bsSize="small"
+                                className="ButtonGo"
+                                onClick={this.close}>
+                                Zamknij
+                            </Button>
 
-                    </Modal.Footer>
-                  </Modal>
+                        </Modal.Footer>
+                    </Modal>
                 </div>
-                );
-                }
-          }
-          )
+            );
+        }
+    }
+)
