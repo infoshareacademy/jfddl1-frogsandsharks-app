@@ -14,8 +14,9 @@ const Meal = (props) => (
       <div>
         <p className="mealNameStyle">{props.mealName}</p>
       </div>
-      <div className="mealStyle">
-        <OverlayTrigger placement="top" overlay={tooltip}>
+      <OverlayTrigger placement="top" overlay={tooltip}>
+        <div className="mealStyle">
+
           <div>
             <img src={require('./ico/add.png')} alt="" className="imgStyle"/>
             <ul>
@@ -26,8 +27,9 @@ const Meal = (props) => (
               }
             </ul>
           </div>
-        </OverlayTrigger>
-      </div>
+        </div>
+      </OverlayTrigger>
+
     </div>
   </LinkContainer>
 )
