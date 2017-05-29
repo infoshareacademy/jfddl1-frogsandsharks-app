@@ -9,7 +9,7 @@ const tooltip = (
 
 const Meal = (props) => (
 
-  <LinkContainer to="foods">
+  <LinkContainer to={props.link}>
     <div>
       <div>
         <p className="mealNameStyle">{props.mealName}</p>

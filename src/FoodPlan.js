@@ -33,6 +33,7 @@ export default connect (
               <div key={index} className="dayStyle">
                 <div className="dayNameStyle"><p>{dayName}</p></div>
                 {
+
                   mealNames.map(
                     (mealName, index) => {
                       const products = this.props.selections.filter(
@@ -40,8 +41,9 @@ export default connect (
                       ).map(
                         selection => this.props.products.data.find(product => product.uid === selection.productId)
                       )
+                      let link = 'foods/'+dayName+'/'+mealName;
                       return (
-                        <Meal key={index} mealName={mealName} products={products}/>
+                        <Meal key={index} mealName={mealName} products={products} link={link}/>
                       )
                     }
                   )
