@@ -12,12 +12,17 @@ class Foods extends React.Component {
 
     componentWillMount = () => {
       console.log('foods', this.props);
+
         if(this.props.match.params.day && this.props.match.params.meal) {
-          const day = this.props.match.params.day;
-          const meal = this.props.match.params.meal;
-          console.log('data from router', day, meal)
+           this.day = this.props.match.params.day;
+           this.meal = this.props.match.params.meal;
+        }else {
+          this.day = null;
+          this.meal = null;
         }
-        fetch(
+        console.log('data from router', this.day, this.meal)
+
+      fetch(
             process.env.PUBLIC_URL + '/data/foods.json'
         ).then(
             response => response.json()
@@ -38,6 +43,8 @@ class Foods extends React.Component {
             />
 
             <FoodsTable
+                day = {this.day}
+                meal = {this.meal}
                 foods={
                     this.props.foods.filter(
                         food => this.props.activeFilterNames.map(
