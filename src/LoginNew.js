@@ -3,6 +3,10 @@ import {Form, FormGroup, FormControl, Col, ControlLabel, Button} from 'react-boo
 import * as firebase from 'firebase'
 import Logo from './Logo'
 
+
+
+  var provider = new firebase.auth.GoogleAuthProvider()
+
 class LoginNew extends React.Component {
     constructor(props) {
         super(props);
@@ -12,20 +16,36 @@ class LoginNew extends React.Component {
         }
     }
 
+    signInNewUsers = () => {
+      firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .then(function() {
+            console.log('signUp success')
+        })
+        .catch(function(error) {
+        // Handle Errors here.
+        console.log('signUp fail')
+      });
+    }
+
     login = (event) => {
         event.preventDefault();
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
             // TODO - show some message - this lib is great for this - toastr
-            console.log('Login failed!')
+         console.log('Login failed!')
         })
     }
 
-    logout = () => {
-        firebase.auth().signOut().then(function() {
-            // Sign-out successful.
-        }).catch(function(error) {
-            // An error happened.
-        })
+
+    loginGoogle = () => {
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        //var token = result.credential.accessToken;
+        // The signed-in user info.
+        ///var user = result.user;
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+      });
     }
 
     handlePasswordChange = (event) => {
@@ -68,7 +88,7 @@ class LoginNew extends React.Component {
                             <Button type="submit" bsStyle="primary" bsSize="small" className="ButtonGo" >
                                 Zaloguj
                             </Button>
-                            <Button bsStyle="primary" bsSize="small" className="ButtonGo">
+                            <Button bsStyle="primary" bsSize="small" className="ButtonGo" onClick={this.signInNewUsers}>
                                 Zarejestruj się
                             </Button>
                             <Button bsStyle="primary" bsSize="small" className="ButtonGo" onClick={this.logout}>
@@ -79,11 +99,12 @@ class LoginNew extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                            <Button type="submit">
-                                Logowanie przez Facebook
+                            <Button type="submit" onClick={this.loginGoogle}>
+                                Logowanie przez google
                             </Button>
                         </Col>
                     </FormGroup>
+
                 </Form>
             </div>
         )
