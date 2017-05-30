@@ -41,7 +41,7 @@ export default connect (
                       ).map(
                         selection => this.props.products.data.find(product => product.uid === selection.productId)
                       )
-                      let link = 'foods/'+dayName+'/'+mealName;
+                      let link = '/foods/'+dayName+'/'+mealName;
                       return (
                         <Meal key={index} mealName={mealName} products={products} link={link}/>
                       )

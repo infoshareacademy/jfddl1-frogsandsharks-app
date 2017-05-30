@@ -55,7 +55,7 @@ class App extends React.Component {
                 console.log('User IS logged in')
             } else {
                 this.setState({
-                    isLogged: true
+                    isLogged: false
                 });
                 console.log('User ISNT logged in')
             }
