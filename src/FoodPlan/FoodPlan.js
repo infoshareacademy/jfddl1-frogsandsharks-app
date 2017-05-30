@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Meal from './FoodPlan/Meal'
-import "./FoodPlan/style.css"
+import Meal from './Meal'
+import "./style.css"
 
 const divstyle = {
   display: 'flex',
