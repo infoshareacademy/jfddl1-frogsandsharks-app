@@ -89,7 +89,6 @@ export default connect(
                                         dayNames.map(
                                             (dayName, index) => (
                                                 <MenuItem
-
                                                     key={index}
                                                     eventKey={dayName}
                                                 >

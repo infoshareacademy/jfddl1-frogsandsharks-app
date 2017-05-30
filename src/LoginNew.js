@@ -3,8 +3,6 @@ import {Form, FormGroup, FormControl, Col, ControlLabel, Button} from 'react-boo
 import * as firebase from 'firebase'
 import Logo from './Logo'
 
-
-
   var provider = new firebase.auth.GoogleAuthProvider()
 
 class LoginNew extends React.Component {
@@ -39,10 +37,6 @@ class LoginNew extends React.Component {
     loginGoogle = () => {
       firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        //var token = result.credential.accessToken;
-        // The signed-in user info.
-        ///var user = result.user;
-        // ...
       }).catch(function(error) {
         // Handle Errors here.
       });
@@ -106,6 +100,7 @@ class LoginNew extends React.Component {
                     </FormGroup>
 
                 </Form>
+
             </div>
         )
     }
