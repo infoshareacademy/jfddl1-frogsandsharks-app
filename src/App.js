@@ -100,8 +100,9 @@ class App extends React.Component {
                                 )
                             )
                         }
-                        <Route path="/foods/:foodsId" component={ListOfEffects} />
-                        <Route path="/foods/:day/:meal" component={Foods} />
+                        <Route exact path="/foods/:foodsId" component={ListOfEffects} />
+                        <Route exact path="/foods/:day/:meal" component={Foods} />
+                        <Route exact path="/foods/:day/:meal/:foodsId" component={ListOfEffects} />
                     </DataFetcher>
                 </div>
             </div>

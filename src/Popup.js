@@ -56,7 +56,16 @@ export default connect(
             className="ButtonGo"
             onClick={this.open}
           >
-            Dodaj do posiłku
+            Wybierz posiłek, by dodać produkt
+          </Button>
+
+          <Button
+            bsStyle="primary"
+            bsSize="small"
+            className="ButtonGo"
+            onClick={this.open}
+          >
+            Dodaj do aktualnego posiłku
           </Button>
 
 

@@ -8,7 +8,7 @@
     min-height: auto;
     width: 180px;
     cursor: pointer;
-    background-color: #dedede;
+    background-color: rgba(222,222,222, 0.8);
 }
 
 .dayStyle {
@@ -17,7 +17,7 @@
 }
 
 .dayStyle:hover {
-    background-color: rgba(134, 134, 134, 0.2);
+    background-color: rgba(87, 87, 87, 0.8);
     border: #1e685f solid 2px;
 
 }
