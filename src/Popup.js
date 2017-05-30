@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Alert} from 'react-bootstrap'
+import {withRouter} from 'react-router-dom'
+
 //import {LinkContainer, } from 'react-router-bootstrap'
 
 
@@ -26,7 +28,7 @@ export default connect(
     addSelection: (day, meal, productId) => dispatch(add(day, meal, productId))
   })
 )(
-  class Popup extends React.Component {
+  withRouter(class Popup extends React.Component {
     state = {
       showModal: false,
       day: null,
@@ -34,11 +36,25 @@ export default connect(
       productId: null,
       isFormComplete: false
     }
+
+    componentWillMount(){
+      console.log('popup props', this.props);
+    }
+
     close = () => this.setState({showModal: false})
     open = () => this.setState({showModal: true, productId: this.props.foodUid, isFormComplete: false})
 
+
     handleConfirm = () => {
       this.props.addSelection(this.state.day, this.state.meal, this.state.productId)
+      this.setState({
+        isFormComplete: true,
+        showModal: false
+      })
+    }
+
+    handleConfirmWithDayAndMealFromURL = () => {
+      this.props.addSelection(this.props.match.params.day, this.props.match.params.meal, this.props.match.params.foodsId)
       this.setState({
         isFormComplete: true,
         showModal: false
@@ -63,7 +79,7 @@ export default connect(
             bsStyle="primary"
             bsSize="small"
             className="ButtonGo"
-            onClick={this.open}
+            onClick={this.handleConfirmWithDayAndMealFromURL}
           >
             Dodaj do aktualnego posiłku
           </Button>
@@ -158,5 +174,5 @@ export default connect(
                 </div>
             );
         }
-    }
+    })
 )
