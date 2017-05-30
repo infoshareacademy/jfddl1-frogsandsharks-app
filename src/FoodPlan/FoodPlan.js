@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Meal from './FoodPlan/Meal'
-import "./FoodPlan/style.css"
+import Meal from './Meal'
+import "./style.css"
 
 const divstyle = {
   display: 'flex',
@@ -31,8 +31,9 @@ export default connect (
           dayNames.map(
             (dayName, index) => (
               <div key={index} className="dayStyle">
-                <div className="dayNameStyle"><h4>{dayName}</h4></div>
+                <div className="dayNameStyle"><p>{dayName}</p></div>
                 {
+
                   mealNames.map(
                     (mealName, index) => {
                       const products = this.props.selections.filter(
@@ -40,8 +41,9 @@ export default connect (
                       ).map(
                         selection => this.props.products.data.find(product => product.uid === selection.productId)
                       )
+                      let link = '/foods/'+dayName+'/'+mealName;
                       return (
-                        <Meal key={index} mealName={mealName} products={products}/>
+                        <Meal key={index} mealName={mealName} products={products} link={link}/>
                       )
                     }
                   )

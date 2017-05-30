@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Alert} from 'react-bootstrap'
+import {withRouter} from 'react-router-dom'
 
+import {LinkContainer, } from 'react-router-bootstrap'
 
 
 import {add} from './state/selections'
@@ -25,7 +27,7 @@ export default connect(
         addSelection: (day, meal, productId) => dispatch(add(day, meal, productId))
     })
 )(
-    class Popup extends React.Component {
+    withRouter(class Popup extends React.Component {
         state = {
             showModal: false,
             day: null,
@@ -33,11 +35,25 @@ export default connect(
             productId: null,
             isFormComplete: false
         }
+
+        componentWillMount() {
+            console.log('popup props', this.props);
+        }
+
         close = () => this.setState({showModal: false})
         open = () => this.setState({showModal: true, productId: this.props.foodUid, isFormComplete: false})
 
+
         handleConfirm = () => {
             this.props.addSelection(this.state.day, this.state.meal, this.state.productId)
+            this.setState({
+                isFormComplete: true,
+                showModal: false
+            })
+        }
+
+        handleConfirmWithDayAndMealFromURL = () => {
+            this.props.addSelection(this.props.match.params.day, this.props.match.params.meal, this.props.match.params.foodsId)
             this.setState({
                 isFormComplete: true,
                 showModal: false
@@ -55,18 +71,26 @@ export default connect(
                         className="ButtonGo"
                         onClick={this.open}
                     >
-                        Dodaj do posiłku
+                        Wybierz posiłek, by dodać produkt
                     </Button>
 
-
-
+                    <Button
+                        bsStyle="primary"
+                        bsSize="small"
+                        className="ButtonGo"
+                        onClick={this.handleConfirmWithDayAndMealFromURL}
+                    >
+                        Dodaj do aktualnego posiłku
+                    </Button>
                     {
                         this.state.isFormComplete ?
-                            <Alert bsStyle="success"  onDismiss={() => this.setState({isFormComplete: false})}>
-                                <h4>Wow! Dodałeś produkt do posiłku!</h4>
+                            <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
+                                <h4>Zaktualizowałeś swój jadłospis!</h4>
                                 <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
                                 <p>
-                                    <Button bsStyle="success" onClick={() => this.setState({isFormComplete: false})}>Kontynuuj</Button>
+                                    <LinkContainer to="/foodplan">
+                                    <Button bsStyle="success" onClick={() => this.setState({isFormComplete: false})}>Przejdź do jadłospisu</Button>
+                                    </LinkContainer>
                                 </p>
                             </Alert> : null
                     }
@@ -89,6 +113,7 @@ export default connect(
                                         dayNames.map(
                                             (dayName, index) => (
                                                 <MenuItem
+
                                                     key={index}
                                                     eventKey={dayName}
                                                 >
@@ -147,5 +172,5 @@ export default connect(
                 </div>
             );
         }
-    }
+    })
 )

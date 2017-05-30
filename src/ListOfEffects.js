@@ -18,7 +18,7 @@ class ListOfEffects extends React.Component {
     super(props)
 
     this.state = {
-      foods: []
+      foods: [],
     }
 
     fetch(
@@ -34,6 +34,7 @@ class ListOfEffects extends React.Component {
 
   render() {
     const foodsId = this.props.match.params.foodsId
+
     return (
       <Grid>
         {
