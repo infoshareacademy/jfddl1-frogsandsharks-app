@@ -2,6 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Meal from './Meal'
 import "./style.css"
+import {update} from '../state/selections'
+import * as firebase from 'firebase'
 
 const divstyle = {
   display: 'flex',
@@ -22,8 +24,21 @@ export default connect (
   state => ({
     products: state.products,
     selections: state.selections
+  }),
+  dispatch => ({
+    refreashSelectionsArray: (newSelectionsArray) => dispatch(update(newSelectionsArray))
   })
 ) (class FoodPlan extends React.Component {
+
+    constructor(){
+      super();
+      var userId = firebase.auth().currentUser.uid;
+      firebase.database().ref('/usersData/').child(userId).child('selections').on('value', ((snapshot)=>{
+        console.log('snapshot selections', snapshot.val());
+        this.props.refreashSelectionsArray(snapshot.val());
+      }));
+    }
+
   render() {
     return  this.props.products.data === null ? <p>Pobieranie...</p> :(
       <div style={divstyle}>

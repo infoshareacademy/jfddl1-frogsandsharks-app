@@ -32,15 +32,7 @@ class App extends React.Component {
 
   constructor() {
     super()
-    var config = {
-      apiKey: "AIzaSyBPvx8Yw4Egka7vZs7MDzfenpt6xCb1yi8",
-      authDomain: "ptrainer-1e21c.firebaseapp.com",
-      databaseURL: "https://ptrainer-1e21c.firebaseio.com",
-      projectId: "ptrainer-1e21c",
-      storageBucket: "ptrainer-1e21c.appspot.com",
-      messagingSenderId: "266477979996"
-    }
-    firebase.initializeApp(config);
+
   }
 
   componentWillMount() {
