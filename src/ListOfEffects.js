@@ -11,6 +11,7 @@ import {
 import Foods from './Foods'
 import Popup from './Popup';
 import ShareFb from './Share'
+import MyComponent from "./state/Chart";
 
 class ListOfEffects extends React.Component {
 
@@ -69,6 +70,11 @@ class ListOfEffects extends React.Component {
 
                         </Col>
 
+                      </Row>
+                      <Row>
+                        <Col lg ={12}>
+                          <MyComponent/>
+                        </Col>
                       </Row>
                     </Col>
                   </Row>
