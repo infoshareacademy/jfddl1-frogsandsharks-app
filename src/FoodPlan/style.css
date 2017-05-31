@@ -7,7 +7,6 @@
     height: 90px;
     min-height: auto;
     width: 180px;
-    cursor: pointer;
     background-color: rgba(222,222,222, 0.8);
 }
 
@@ -49,4 +48,6 @@ ul {
     float: right;
     margin-right: 10px;
     margin-top: 10px;
+    cursor: pointer;
+
 }
