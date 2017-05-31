@@ -80,22 +80,22 @@ class LoginNew extends React.Component {
 
           <FormGroup>
             <Col smOffset={2} sm={10}>
-              <Button type="submit" bsStyle="primary" bsSize="small" className="ButtonGo">
+              <button type="submit" className="ButtonGo">
                 Zaloguj
-              </Button>
-              <Button bsStyle="primary" bsSize="small" className="ButtonGo" onClick={this.signInNewUsers}>
+              </button>
+              <button className="ButtonGo" onClick={this.signInNewUsers}>
                 Zarejestruj się
-              </Button>
-              <Button bsStyle="primary" bsSize="small" className="ButtonGo" onClick={this.logout}>
+              </button>
+              <button className="ButtonGo" onClick={this.logout}>
                 Wyloguj
-              </Button>
+              </button>
             </Col>
           </FormGroup>
 
           <FormGroup>
             <Col smOffset={2} sm={10}>
-              <button type="submit" onClick={this.loginGoogle}>
-                Logowanie przez google
+              <button type="submit" className="GpButton" onClick={this.loginGoogle}>
+                Zaloguj przez Google+
               </button>
             </Col>
           </FormGroup>

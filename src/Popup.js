@@ -65,23 +65,19 @@ export default connect(
             return (
                 <div>
 
-                    <Button
-                        bsStyle="primary"
-                        bsSize="small"
+                    <button
                         className="ButtonGo"
                         onClick={this.open}
                     >
-                        Wybierz posiłek, by dodać produkt
-                    </Button>
+                        Wybierz dzień i posiłek
+                    </button>
 
-                    <Button
-                        bsStyle="primary"
-                        bsSize="small"
+                    <button
                         className="ButtonGo"
                         onClick={this.handleConfirmWithDayAndMealFromURL}
                     >
                         Dodaj do aktualnego posiłku
-                    </Button>
+                    </button>
                     {
                         this.state.isFormComplete ?
                             <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
@@ -89,7 +85,7 @@ export default connect(
                                 <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
                                 <p>
                                     <LinkContainer to="/foodplan">
-                                    <Button bsStyle="success" onClick={() => this.setState({isFormComplete: false})}>Przejdź do jadłospisu</Button>
+                                    <button className="ButtonGo" onClick={() => this.setState({isFormComplete: false})}>Przejdź do jadłospisu</button>
                                     </LinkContainer>
                                 </p>
                             </Alert> : null
@@ -102,8 +98,6 @@ export default connect(
                             <h4>Wybierz dzień w którym chcesz dodać posiłek</h4>
                             <ButtonToolbar>
                                 <DropdownButton
-                                    bsStyle="primary"
-                                    bsSize="small"
                                     className="ButtonGo"
                                     id={1}
                                     title={this.state.day === null ? 'Wybierz dzień' : this.state.day}
@@ -128,9 +122,7 @@ export default connect(
                             <h4>Wybierz posiłek</h4>
                             <ButtonToolbar>
                                 <DropdownButton
-                                    bsStyle="primary"
                                     className="ButtonGo"
-                                    bsSize="small"
                                     id={1}
                                     title={this.state.meal === null ? 'Wybierz posiłek' : this.state.meal}
                                     onSelect={(mealName) => this.setState({meal: mealName})}
@@ -153,15 +145,11 @@ export default connect(
 
                         <Modal.Footer className="foot">
                             <Button
-                                bsStyle="primary"
-                                bsSize="small"
                                 className="ButtonGo leftBtn"
                                 onClick={this.handleConfirm}>
                                 Zatwierdź
                             </Button>
                             <Button
-                                bsStyle="primary"
-                                bsSize="small"
                                 className="ButtonGo"
                                 onClick={this.close}>
                                 Zamknij
