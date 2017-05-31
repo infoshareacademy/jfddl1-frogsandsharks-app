@@ -13,6 +13,9 @@ const tooltip = (
 
 
 export default connect (
+  state => ({
+    productId: state.selections
+  }),
   dispatch => ({
     removeFromFavorites: (productId) => dispatch(remove(productId))
   })
@@ -33,7 +36,7 @@ export default connect (
             <ul>
               {
                 props.products.map(
-                  (product, index) => <li key={index} onClick={() => props.removeFromFavorites(product)}>{product.name}</li>
+                  (product, index) => <li key={index} onClick={() => props.removeFromFavorites}>{product.name}</li>
                 )
               }
             </ul>
