@@ -7,7 +7,6 @@ import {withRouter} from 'react-router-dom'
 
 
 import {add} from './state/selections'
-import ShareFb from './Share'
 
 import {
   Modal,
