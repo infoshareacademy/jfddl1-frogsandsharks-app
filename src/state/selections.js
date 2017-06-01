@@ -22,11 +22,12 @@ export default (state = initialState, action) => {
         {
           day: action.day,
           meal: action.meal,
-          productId: action.productId}
+          productId: action.productId
+        }
       ]
     case REMOVE:
       return state.filter(
-        productId => productId !== action.productId
+        productId => productId !== action.groupId
       )
     default:
       return state
