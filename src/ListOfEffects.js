@@ -34,13 +34,25 @@ class ListOfEffects extends React.Component {
   }
 
   render() {
-    const foodsId = this.props.match.params.foodsId
+
+    const foodsId = this.props.match.params.foodsId;
+
+    const currentFood = this.state.foods.filter(
+      foods => foods.uid === foodsId
+    );
+    console.log('#',currentFood);
+    var data= [];
+    if(currentFood[0]) {
+      data = [
+        {label: "Biako", value: currentFood[0].protein * 4, color: "#008000"},
+        {label: "Węglowodany", value: currentFood[0].carbohydrate * 4, color: "#3b5998"},
+        {label: "Tłuszcze", value: currentFood[0].fat * 9, color: "#FFA500"}
+      ];
+    }
     return (
       <Grid>
         {
-          this.state.foods.filter(
-            foods => foods.uid === foodsId
-          ).map(
+          currentFood.map(
             foods => (
               <Row key={foods.uid} className="show-grid">
                 <Col>
@@ -73,7 +85,7 @@ class ListOfEffects extends React.Component {
                       </Row>
                       <Row>
                         <Col lg ={12}>
-                          <MyComponent/>
+                          <MyComponent data={data}/>
                         </Col>
                       </Row>
                     </Col>
