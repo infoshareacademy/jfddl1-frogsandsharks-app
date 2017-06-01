@@ -73,15 +73,18 @@ export default connect(
                     >
                         Wybierz posiłek, by dodać produkt
                     </Button>
-
-                    <Button
+                  {
+                    this.props.match.params.day ?
+                      <Button
                         bsStyle="primary"
                         bsSize="small"
                         className="ButtonGo"
                         onClick={this.handleConfirmWithDayAndMealFromURL}
-                    >
+                      >
                         Dodaj do aktualnego posiłku
-                    </Button>
+                      </Button> : null
+                  }
+
                     {
                         this.state.isFormComplete ?
                             <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>

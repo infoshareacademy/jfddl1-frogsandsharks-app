@@ -20,8 +20,6 @@ var config = {
 }
 firebase.initializeApp(config);
 
-
-
 ReactDOM.render(
     <Provider store={store}>
         <App />

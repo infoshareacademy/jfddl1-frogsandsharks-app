@@ -1,11 +1,12 @@
+import * as firebase from 'firebase'
+
 const ADD = 'selections/ADD'
 const UPDATE = 'selections/UPDATE'
 
+
 export const add = (day, meal, productId) => ({
   type: ADD,
-  day,
-  meal,
-  productId
+  day, meal, productId
 })
 
 export const update = (newSelectionsArray) => ({
@@ -19,7 +20,7 @@ export default (state = initialState, action) => {
   console.log('REDUCER', action);
   switch (action.type) {
     case ADD : {
-       let newState = [
+      let newState = [
         ...state,
         {
           day: action.day,
@@ -27,8 +28,11 @@ export default (state = initialState, action) => {
           productId: action.productId
         }
       ];
-      console.log('ADD', newState);
-
+      var userId = firebase.auth().currentUser.uid
+      firebase.database().ref('/usersData/').child(userId).child('selections').set(newState)
+        .then(() => {
+           console.log('ADDED TO FIREBASE');
+        })
       return newState
     }
     case UPDATE : {
