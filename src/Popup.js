@@ -65,14 +65,7 @@ export default connect(
             return (
                 <div>
 
-                    <Button
-                        bsStyle="primary"
-                        bsSize="small"
-                        className="ButtonGo"
-                        onClick={this.open}
-                    >
-                        Wybierz posiłek, by dodać produkt
-                    </Button>
+
                   {
                     this.props.match.params.day ?
                       <Button
@@ -82,7 +75,15 @@ export default connect(
                         onClick={this.handleConfirmWithDayAndMealFromURL}
                       >
                         Dodaj do aktualnego posiłku
-                      </Button> : null
+                      </Button> :
+                      <Button
+                        bsStyle="primary"
+                        bsSize="small"
+                        className="ButtonGo"
+                        onClick={this.open}
+                      >
+                        Wybierz posiłek, by dodać produkt
+                      </Button>
                   }
 
                     {
