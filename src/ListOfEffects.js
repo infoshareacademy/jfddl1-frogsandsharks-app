@@ -40,9 +40,9 @@ class ListOfEffects extends React.Component {
     const currentFood = this.state.foods.filter(
       foods => foods.uid === foodsId
     );
-    console.log('#',currentFood);
-    var data= [];
-    if(currentFood[0]) {
+    console.log('#', currentFood);
+    var data = [];
+    if (currentFood[0]) {
       data = [
         {label: "Biako", value: currentFood[0].protein * 4, color: "#008000"},
         {label: "Węglowodany", value: currentFood[0].carbohydrate * 4, color: "#3b5998"},
@@ -73,29 +73,25 @@ class ListOfEffects extends React.Component {
                         <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
                       </ListGroup>
 
+
                       <Row>
                         <Col lg={8}>
                           <Popup foodUid={foods.uid}/>
                         </Col>
                         <Col lg={4}>
                           <ShareFb/>
-
                         </Col>
 
                       </Row>
-                      <Row>
-                        <Col lg ={12}>
-                          <MyComponent data={data}/>
-                        </Col>
-                      </Row>
+
+                    </Col>
+                    <Col lg={3}>
+                      <MyComponent data={data}/>
                     </Col>
                   </Row>
                 </Col>
-
-
               </Row>
-
-            )
+          )
           )
         }
 
