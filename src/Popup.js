@@ -65,14 +65,20 @@ export default connect(
             return (
                 <div>
 
-                    <Button
+                  {
+                    this.props.match.params.day ?
+                      null :
+                      <Button
                         bsStyle="primary"
                         bsSize="small"
                         className="ButtonGo"
                         onClick={this.open}
-                    >
+                      >
                         Wybierz posiłek, by dodać produkt
-                    </Button>
+                      </Button>
+                  }
+
+
                   {
                     this.props.match.params.day ?
                       <Button
