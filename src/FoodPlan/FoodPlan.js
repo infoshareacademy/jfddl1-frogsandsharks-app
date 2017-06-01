@@ -20,7 +20,7 @@ const mealNames = [
   'Kolacja'
 ]
 
-export default connect (
+export default connect(
   state => ({
     products: state.products,
     selections: state.selections
@@ -28,48 +28,48 @@ export default connect (
   dispatch => ({
     refreashSelectionsArray: (newSelectionsArray) => dispatch(update(newSelectionsArray))
   })
-) (class FoodPlan extends React.Component {
+)(class FoodPlan extends React.Component {
 
-    constructor(){
+    constructor() {
       super();
       var userId = firebase.auth().currentUser.uid;
-      firebase.database().ref('/usersData/').child(userId).child('selections').on('value', ((snapshot)=>{
+      firebase.database().ref('/usersData/').child(userId).child('selections').on('value', ((snapshot) => {
         console.log('snapshot selections', snapshot.val());
         this.props.refreashSelectionsArray(snapshot.val());
       }));
     }
 
-  render() {
-    return  this.props.products.data === null ? <p>Pobieranie...</p> :(
-      <div style={divstyle}>
-        {
-          dayNames.map(
-            (dayName, index) => (
-              <div key={index} className="dayStyle">
-                <div className="dayNameStyle"><p>{dayName}</p></div>
-                {
+    render() {
+      return this.props.products.data === null ? <p>Pobieranie...</p> : (
+        <div style={divstyle}>
+          {
+            dayNames.map(
+              (dayName, index) => (
+                <div key={index} className="dayStyle">
+                  <div className="dayNameStyle"><p>{dayName}</p></div>
+                  {
 
-                  mealNames.map(
-                    (mealName, index) => {
-                      const products = this.props.selections.filter(
-                        selection => selection.day === dayName && selection.meal === mealName
-                      ).map(
-                        selection => this.props.products.data.find(product => product.uid === selection.productId)
-                      )
-                      let link = '/foods/'+dayName+'/'+mealName;
-                      return (
-                        <Meal key={index} mealName={mealName} products={products} link={link}/>
-                      )
-                    }
-                  )
-                }
-              </div>
+                    mealNames.map(
+                      (mealName, index) => {
+                        const products = this.props.selections.filter(
+                          selection => selection.day === dayName && selection.meal === mealName
+                        ).map(
+                          selection => this.props.products.data.find(product => product.uid === selection.productId)
+                        )
+                        let link = '/foods/' + dayName + '/' + mealName;
+                        return (
+                          <Meal key={index} mealName={mealName} products={products} link={link}/>
+                        )
+                      }
+                    )
+                  }
+                </div>
+              )
             )
-          )
-        }
-      </div>
-    )
+          }
+        </div>
+      )
+    }
   }
-}
 )
 
