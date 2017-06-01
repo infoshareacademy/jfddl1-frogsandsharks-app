@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Alert} from 'react-bootstrap'
 import {withRouter} from 'react-router-dom'
 
-import {LinkContainer,} from 'react-router-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 
 import {add} from './state/selections'
@@ -86,38 +86,35 @@ export default connect(
               </Button>
           }
 
-          {
-            this.state.isFormComplete ?
-              <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
-                <h4>Zaktualizowałeś swój jadłospis!</h4>
-                <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
-                <p>
-                  <LinkContainer to="/foodplan">
-                    <Button bsStyle="success" onClick={() => this.setState({isFormComplete: false})}>Przejdź do
-                      jadłospisu</Button>
-                  </LinkContainer>
-                </p>
-              </Alert> : null
-          }
+                    {
+                        this.state.isFormComplete ?
+                            <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
+                                <h4>Zaktualizowałeś swój jadłospis!</h4>
+                                <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
+                                <p>
+                                    <LinkContainer to="/foodplan">
+                                    <button className="ButtonGo" onClick={() => this.setState({isFormComplete: false})}>Przejdź do jadłospisu</button>
+                                    </LinkContainer>
+                                </p>
+                            </Alert> : null
+                    }
 
           <Modal show={this.state.showModal} onHide={this.close}>
 
             <Modal.Body>
 
-              <h4>Wybierz dzień w którym chcesz dodać posiłek</h4>
-              <ButtonToolbar>
-                <DropdownButton
-                  bsStyle="primary"
-                  bsSize="small"
-                  className="ButtonGo"
-                  id={1}
-                  title={this.state.day === null ? 'Wybierz dzień' : this.state.day}
-                  onSelect={(dayName) => this.setState({day: dayName})}
-                >
-                  {
-                    dayNames.map(
-                      (dayName, index) => (
-                        <MenuItem
+                            <h4>Wybierz dzień w którym chcesz dodać posiłek</h4>
+                            <ButtonToolbar>
+                                <DropdownButton
+                                    className="ButtonGo"
+                                    id={1}
+                                    title={this.state.day === null ? 'Wybierz dzień' : this.state.day}
+                                    onSelect={(dayName) => this.setState({day: dayName})}
+                                >
+                                    {
+                                        dayNames.map(
+                                            (dayName, index) => (
+                                                <MenuItem
 
                           key={index}
                           eventKey={dayName}
@@ -130,15 +127,13 @@ export default connect(
                 </DropdownButton>
               </ButtonToolbar>
 
-              <h4>Wybierz posiłek</h4>
-              <ButtonToolbar>
-                <DropdownButton
-                  bsStyle="primary"
-                  className="ButtonGo"
-                  bsSize="small"
-                  id={1}
-                  title={this.state.meal === null ? 'Wybierz posiłek' : this.state.meal}
-                  onSelect={(mealName) => this.setState({meal: mealName})}
+                            <h4>Wybierz posiłek</h4>
+                            <ButtonToolbar>
+                                <DropdownButton
+                                    className="ButtonGo"
+                                    id={1}
+                                    title={this.state.meal === null ? 'Wybierz posiłek' : this.state.meal}
+                                    onSelect={(mealName) => this.setState({meal: mealName})}
 
                 >
                   {
@@ -156,21 +151,17 @@ export default connect(
               </ButtonToolbar>
             </Modal.Body>
 
-            <Modal.Footer className="foot">
-              <Button
-                bsStyle="primary"
-                bsSize="small"
-                className="ButtonGo leftBtn"
-                onClick={this.handleConfirm}>
-                Zatwierdź
-              </Button>
-              <Button
-                bsStyle="primary"
-                bsSize="small"
-                className="ButtonGo"
-                onClick={this.close}>
-                Zamknij
-              </Button>
+                        <Modal.Footer className="foot">
+                            <Button
+                                className="ButtonGo leftBtn"
+                                onClick={this.handleConfirm}>
+                                Zatwierdź
+                            </Button>
+                            <Button
+                                className="ButtonGo"
+                                onClick={this.close}>
+                                Zamknij
+                            </Button>
 
             </Modal.Footer>
           </Modal>
