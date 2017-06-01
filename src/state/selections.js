@@ -6,9 +6,9 @@ export const add = (day, meal, productId) => ({
   day, meal, productId
 })
 
-export const remove = (day, meal, productId) => ({
+export const remove = (productId) => ({
   type: REMOVE,
-  day, meal, productId
+  groupId: productId
 })
 
 
@@ -32,7 +32,5 @@ export default (state = initialState, action) => {
     default:
       return state
   }
-
-
 }
 
