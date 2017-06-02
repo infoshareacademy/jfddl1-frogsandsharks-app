@@ -8,7 +8,7 @@ export const add = (day, meal, productId) => ({
 
 export const remove = (productId) => ({
   type: REMOVE,
-  groupId: productId
+  productId: productId
 })
 
 
@@ -27,7 +27,7 @@ export default (state = initialState, action) => {
       ]
     case REMOVE:
       return state.filter(
-        productId => productId !== action.groupId
+        productId => productId !== action.productId
       )
     default:
       return state
