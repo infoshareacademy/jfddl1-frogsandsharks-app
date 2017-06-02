@@ -1,10 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Meal from './FoodPlan/Meal'
+import "./FoodPlan/style.css"
 
 const divstyle = {
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'center'
 
 };
 
@@ -29,8 +30,8 @@ export default connect (
         {
           dayNames.map(
             (dayName, index) => (
-              <div key={index}>
-                <div><h4>{dayName}</h4></div>
+              <div key={index} className="dayStyle">
+                <div className="dayNameStyle"><h4>{dayName}</h4></div>
                 {
                   mealNames.map(
                     (mealName, index) => {

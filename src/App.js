@@ -1,14 +1,7 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
-import {
-  Grid,
-  Col,
-  Row
-} from 'react-bootstrap'
-
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Grid, Col, Row} from 'react-bootstrap'
+import * as firebase from 'firebase'
 
 import Home from './Home'
 import Logo from './Logo'
@@ -17,101 +10,109 @@ import Foods from './Foods'
 import Plan from './Plan'
 import BurgerMenuWrapper from './BurgerMenuWrapper'
 import ListOfEffects from './ListOfEffects'
-
+import LoginNew from './LoginNew'
 import DataFetcher from './DataFetcher'
 
-
-
-
-
 const links = [
-  { path: '/', label: 'Home' },
-  { path: '/firstpage', label: 'FirstPage' },
-  { path: '/foods', label: 'Wyszukiwarka'},
-  { path: '/foodplan', label: 'Plan żywieniowy'},
+  {path: '/', label: 'Home'},
+  {path: '/firstpage', label: 'FirstPage'},
+  {path: '/foods', label: 'Wyszukiwarka'},
+  {path: '/foodplan', label: 'Plan żywieniowy'}
 
 ]
 
 class App extends React.Component {
-
   state = {
-    sidebarOpen: false
+    sidebarOpen: false,
+    isLogged: false
   }
 
   toggleSidebar = (shouldBecomeOpen) => this.setState({
     sidebarOpen: shouldBecomeOpen
   })
 
-  render = () => (
-    <Router>
+  constructor() {
+    super()
+    var config = {
+      apiKey: "AIzaSyBPvx8Yw4Egka7vZs7MDzfenpt6xCb1yi8",
+      authDomain: "ptrainer-1e21c.firebaseapp.com",
+      databaseURL: "https://ptrainer-1e21c.firebaseio.com",
+      projectId: "ptrainer-1e21c",
+      storageBucket: "ptrainer-1e21c.appspot.com",
+      messagingSenderId: "266477979996"
+    }
+    firebase.initializeApp(config);
+  }
+
+  componentWillMount() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          isLogged: true,
+          sidebarOpen: false
+        });
+        console.log('User IS logged in')
+      } else {
+        this.setState({
+          isLogged: false
+        });
+        console.log('User ISNT logged in')
+      }
+    });
+  }
+
+  render = () => {
+    const loginBox = (<Router><LoginNew /></Router>);
+
+    const app = (<Router>
       <div>
-      <BurgerMenuWrapper
-        isOpen={this.state.sidebarOpen}
-        toggleSidebar={this.toggleSidebar}
-        onStateChange={(state) => this.toggleSidebar(state.isOpen)}
-        links={links}
-      >
-        <Grid>
+        <div>
+          <BurgerMenuWrapper
+            isOpen={this.state.sidebarOpen}
+            toggleSidebar={this.toggleSidebar}
+            onStateChange={(state) => this.toggleSidebar(state.isOpen)}
+            links={links}
+          >
+            <Grid>
 
 
-          <Row>
-            <Col md={12}>
+              <Row>
+                <Col md={12}>
 
-              <Route path="/" component={Logo}/>
-              <Route className="menu-item" exact path="/" component={Home} />
-              <Route path="/firstpage" component={FirstPage} />
-              <Route exact path="/foods" component={Foods}/>
-              <Route path="/foodplan" component={Plan}/>
-              {/*<Route path="/foods/:foodsId" component={ListOfEffects}/>*/}
+                  <Route path="/" component={Logo}/>
+                  <Route className="menu-item" exact path="/" component={Home}/>
+                  <Route path="/firstpage" component={FirstPage}/>
+                  <Route exact path="/foods" component={Foods}/>
+                  <Route path="/foodplan" component={Plan}/>
 
-            </Col>
-          </Row>
-        </Grid>
-      </BurgerMenuWrapper>
+                </Col>
+              </Row>
+            </Grid>
+          </BurgerMenuWrapper>
 
-      <DataFetcher>
-        {
-          links.map(
-            (route, index) => (
-              <Route key={index} exact path={route.path} component={route.component} />
-            )
-          )
-        }
-        <Route path="/foods/:foodsId" component={ListOfEffects}/>
-      </DataFetcher>
-    </div>
+          <DataFetcher>
+            {
+              links.map(
+                (route, index) => (
+                  <Route key={index} exact path={route.path} component={route.component}/>
+                )
+              )
+            }
+            <Route path="/foods/:foodsId" component={ListOfEffects}/>
+          </DataFetcher>
+        </div>
+      </div>
+    </Router>);
 
-    </Router>
+    if (this.state.isLogged) {
+      return (app)
 
-  )
+    } else {
+      return (loginBox)
+    }
+
+
+  }
 }
 
 export default App;
-
-///////////////////////////////////////////////////////////////////////////
-
-
-/*
-import Topics from './Topics'
-import Students from './Students'
-import Student from './Student'
-import Groups from './Groups'
-import Group from './Group'
-import Counters from './Counters'
-import Counter from './Counter'
-
-import BurgerMenuWrapper from './BurgerMenuWrapper'
-import TopNavigation from './TopNavigation'
-
-const links = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About' },
-  { path: '/topics', label: 'Topics' },
-  { path: '/students', label: 'Students' },
-  { path: '/groups', label: 'Groups' },
-  { path: '/counters', label: 'Counters' },
-  { path: '/counter', label: 'Counter' }
-]
-
-
-export default App*/
