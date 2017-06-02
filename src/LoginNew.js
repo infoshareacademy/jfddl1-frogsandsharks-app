@@ -12,7 +12,9 @@ class LoginNew extends React.Component {
         this.state = {
             email: '',
             password: '',
-            showAlert: false
+            showLoginAlert: false,
+            showSignAlert: false
+
         }
     }
 
@@ -21,8 +23,11 @@ class LoginNew extends React.Component {
             .then(function () {
                 console.log('signUp success')
             })
-            .catch(function (error) {
+            .catch((error) => {
                 // Handle Errors here.
+                this.setState({
+                    showSignAlert: true
+                })
                 console.log('signUp fail')
             });
     }
@@ -30,11 +35,9 @@ class LoginNew extends React.Component {
     login = (event) => {
         event.preventDefault();
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
-            // TODO - show some message - this lib is great for this - toastr
             this.setState({
-                showAlert: true
+                showLoginAlert: true
             })
-            console.log('Login failed!')
         })
     }
 
@@ -104,9 +107,16 @@ class LoginNew extends React.Component {
                 </Form>
 
                 {
-                    this.state.showAlert ?
-                        <Alert bsStyle="warning" onDismiss={() => this.setState({showAlert: false})}>
+                    this.state.showLoginAlert ?
+                        <Alert bsStyle="danger"  onDismiss={() => this.setState({showLoginAlert: false})}>
                             <h4>Niepoprawny login lub hasło</h4>
+                        </Alert> : null
+                }
+                {
+                    this.state.showSignAlert?
+                        <Alert bsStyle="danger"  onDismiss={() => this.setState({showSignAlert: false})}>
+                            <h4>Błąd rejestracji</h4>
+                            <p>Twój e-mail jest nieprawidłowy lub znajduje się już w bazie</p>
                         </Alert> : null
                 }
 
