@@ -1,13 +1,13 @@
 import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import {Grid, Col, Row} from 'react-bootstrap'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Grid, Col, Row } from 'react-bootstrap'
 import * as firebase from 'firebase'
 
 import Home from './Home'
 import Logo from './Logo'
 import FirstPage from './FirstPage'
 import Foods from './Foods'
-import Plan from './Plan'
+import Plan from './FoodPlan/Plan'
 import BurgerMenuWrapper from './BurgerMenuWrapper'
 import ListOfEffects from './ListOfEffects'
 import LoginNew from './LoginNew'
@@ -18,7 +18,6 @@ const links = [
   {path: '/firstpage', label: 'FirstPage'},
   {path: '/foods', label: 'Wyszukiwarka'},
   {path: '/foodplan', label: 'Plan żywieniowy'}
-
 ]
 
 class App extends React.Component {
@@ -33,15 +32,7 @@ class App extends React.Component {
 
   constructor() {
     super()
-    var config = {
-      apiKey: "AIzaSyBPvx8Yw4Egka7vZs7MDzfenpt6xCb1yi8",
-      authDomain: "ptrainer-1e21c.firebaseapp.com",
-      databaseURL: "https://ptrainer-1e21c.firebaseio.com",
-      projectId: "ptrainer-1e21c",
-      storageBucket: "ptrainer-1e21c.appspot.com",
-      messagingSenderId: "266477979996"
-    }
-    firebase.initializeApp(config);
+
   }
 
   componentWillMount() {
@@ -90,19 +81,21 @@ class App extends React.Component {
             </Grid>
           </BurgerMenuWrapper>
 
-          <DataFetcher>
-            {
-              links.map(
-                (route, index) => (
-                  <Route key={index} exact path={route.path} component={route.component}/>
-                )
-              )
-            }
-            <Route path="/foods/:foodsId" component={ListOfEffects}/>
-          </DataFetcher>
-        </div>
-      </div>
-    </Router>);
+                    <DataFetcher>
+                        {
+                            links.map(
+                                (route, index) => (
+                                    <Route key={index} exact path={route.path} component={route.component} />
+                                )
+                            )
+                        }
+                        <Route exact path="/foods/:foodsId" component={ListOfEffects} />
+                        <Route exact path="/foods/:day/:meal" component={Foods} />
+                        <Route exact path="/foods/:day/:meal/:foodsId" component={ListOfEffects} />
+                    </DataFetcher>
+                </div>
+            </div>
+        </Router>);
 
     if (this.state.isLogged) {
       return (app)

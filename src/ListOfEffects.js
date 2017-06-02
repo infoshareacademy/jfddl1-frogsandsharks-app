@@ -19,7 +19,7 @@ class ListOfEffects extends React.Component {
     super(props)
 
     this.state = {
-      foods: []
+      foods: [],
     }
 
     fetch(

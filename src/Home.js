@@ -1,4 +1,5 @@
 import React from 'react'
+import {LinkContainer} from 'react-router-bootstrap'
 
 import {
     Grid,
@@ -28,8 +29,9 @@ const Home = () => (
                     <h3>Dodaj produkty do jadłospisu</h3>
                     <p>Kliknij w przycisk poniżej aby przejść do wyszukiwarki produktów</p>
                     <p>
-                         <Button  href="/foods" bsStyle="primary"  className="ButtonGo">Wyszukiwarka</Button>
-
+                        <LinkContainer to="/foods">
+                         <Button bsStyle="primary"  className="ButtonGo">Wyszukiwarka</Button>
+                        </LinkContainer>
                     </p>
                 </Thumbnail>
             </Col>

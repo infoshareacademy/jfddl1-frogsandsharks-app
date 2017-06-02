@@ -13,6 +13,8 @@ const FoodsTable = (props) => (
         ]}
         linked
         linkPrefix="/foods"
+        day={props.day}
+        meal={props.meal}
     />
 )
 

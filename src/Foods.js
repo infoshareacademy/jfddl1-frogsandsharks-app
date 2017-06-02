@@ -43,8 +43,8 @@ class Foods extends React.Component {
             />
 
             <FoodsTable
-                day = {this.day}
-                meal = {this.meal}
+                day={this.day}
+                meal={this.meal}
                 foods={
                     this.props.foods.filter(
                         food => this.props.activeFilterNames.map(

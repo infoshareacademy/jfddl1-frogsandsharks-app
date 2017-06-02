@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./FoodPlan/style.css"
+import "./style.css"
 
 import FoodPlan from './FoodPlan'
 
