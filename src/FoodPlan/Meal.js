@@ -9,16 +9,18 @@ const tooltip = (
 
 const Meal = (props) => (
 
-  <LinkContainer to={props.link}>
+
     <div>
       <div>
         <p className="mealNameStyle">{props.mealName}</p>
       </div>
-      <OverlayTrigger placement="top" overlay={tooltip}>
         <div className="mealStyle">
-
           <div>
-            <img src={require('./ico/add.png')} alt="" className="imgStyle"/>
+            <OverlayTrigger placement="top" overlay={tooltip}>
+              <LinkContainer to={props.link} className="imgStyle">
+                <img src={require('./ico/add.png')} alt=""/>
+              </LinkContainer>
+            </OverlayTrigger>
             <ul>
               {
                 props.products.map(
@@ -28,10 +30,7 @@ const Meal = (props) => (
             </ul>
           </div>
         </div>
-      </OverlayTrigger>
-
     </div>
-  </LinkContainer>
 )
 
 export default Meal

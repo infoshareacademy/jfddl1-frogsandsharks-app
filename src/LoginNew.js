@@ -84,9 +84,7 @@ class LoginNew extends React.Component {
               <button className="ButtonGo" onClick={this.signInNewUsers}>
                 Zarejestruj się
               </button>
-              <button className="ButtonGo" onClick={this.logout}>
-                Wyloguj
-              </button>
+              
             </Col>
           </FormGroup>
 
