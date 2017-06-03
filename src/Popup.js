@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Alert} from 'react-bootstrap'
 import {withRouter} from 'react-router-dom'
 
-import {LinkContainer, } from 'react-router-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap'
 
 
 import {add} from './state/selections'
@@ -65,19 +65,27 @@ export default connect(
             return (
                 <div>
 
-                    <button
-                        className="ButtonGo"
-                        onClick={this.open}
-                    >
-                        Wybierz dzień i posiłek
-                    </button>
 
-                    <button
-                        className="ButtonGo"
-                        onClick={this.handleConfirmWithDayAndMealFromURL}
-                    >
-                        Dodaj do aktualnego posiłku
-                    </button>
+                    {
+                        this.props.match.params.day ?
+                            <Button
+                                bsStyle="primary"
+                                bsSize="small"
+                                className="ButtonGo"
+                                onClick={this.handleConfirmWithDayAndMealFromURL}
+                            >
+                                Dodaj do aktualnego posiłku
+                            </Button> :
+                            <Button
+                                bsStyle="primary"
+                                bsSize="small"
+                                className="ButtonGo"
+                                onClick={this.open}
+                            >
+                                Wybierz posiłek, by dodać produkt
+                            </Button>
+                    }
+
                     {
                         this.state.isFormComplete ?
                             <Alert bsStyle="success" onDismiss={() => this.setState({isFormComplete: false})}>
@@ -85,7 +93,10 @@ export default connect(
                                 <p>Dodałeś nowy produkt do posiłku {this.state.meal} w dniu {this.state.day}</p>
                                 <p>
                                     <LinkContainer to="/foodplan">
-                                    <button className="ButtonGo" onClick={() => this.setState({isFormComplete: false})}>Przejdź do jadłospisu</button>
+                                        <button className="ButtonGo"
+                                                onClick={() => this.setState({isFormComplete: false})}>Przejdź do
+                                            jadłospisu
+                                        </button>
                                     </LinkContainer>
                                 </p>
                             </Alert> : null

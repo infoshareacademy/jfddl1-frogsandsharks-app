@@ -8,7 +8,7 @@ import {
   ListGroupItem
 } from 'react-bootstrap'
 
-import Foods from './Foods'
+import Foods from './SearchFoods'
 import Popup from './Popup';
 import ShareFb from './Share'
 
