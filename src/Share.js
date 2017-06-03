@@ -2,7 +2,7 @@ import React from 'react'
 import {
   ShareButtons
 } from 'react-share';
-import {Button, Image} from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 
 const {
   FacebookShareButton,
