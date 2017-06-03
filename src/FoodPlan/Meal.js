@@ -36,7 +36,7 @@ export default connect(
             <ul>
               {
                 props.products.map(
-                  (product, index) => <li key={index} onClick={() => props.removeFromFavorites(product)}>{product.name}
+                  (product, index) => <li key={index} onClick={() => props.removeFromFavorites(product.uid)}>{product.name}
                   </li>
                 )
               }
