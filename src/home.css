@@ -29,7 +29,7 @@
     margin: auto;
     padding-top: 0.5vh;
     padding-bottom: 15vh;
-    /*background-color: #DEDEDE;*/
+    background-color: #DEDEDE;
     background-color: transparent;
 
 }
@@ -48,7 +48,6 @@
     padding-top: 30vh;
 }
 
-
 @media screen and (max-width: 768px) {
     #logo {
         float: right;
@@ -65,7 +64,7 @@
 }
 
 #fbButton {
-    max-width: 150px ;
+    max-width: 150px;
     border: none;
     border-radius: 6px;
     margin-left: -10px;
@@ -80,6 +79,7 @@
     background-color: #DF4A32;
     color: #ffffff;
 }
+
 .GpButton:hover {
     background-color: #FF4A32;
 }
@@ -112,6 +112,7 @@
     text-decoration: none;
     border: none
 }
+
 .btn:hover, .btn:active, .btn:visited, .btn:focus, .btn-default:hover, .btn-default:active, .btn-default:focus, .ButtonGo:hover {
     background: #1e685f;
     background-image: -webkit-linear-gradient(top, #1e685f, #3b464d);
@@ -122,18 +123,23 @@
     text-decoration: none;
     color: #ffffff;
 }
+
 .dropdown-menu > li > a {
     color: #ffffff;
 }
+
 .dropdown-menu > li > a:hover {
     background-image: none;
 }
-.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active, .dropdown-menu > li > a:visited{
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active, .dropdown-menu > li > a:visited {
     background: none;
 }
-.dropdown-menu > li{
+
+.dropdown-menu > li {
     border-radius: 0;
 }
+
 .dropdown-menu {
     background-color: #267E74;
 

@@ -3,35 +3,47 @@ import {LinkContainer} from 'react-router-bootstrap'
 import './style.css'
 import {Tooltip, OverlayTrigger} from 'react-bootstrap'
 
+import {connect} from 'react-redux'
+
+import {remove} from "../state/selections"
+
 const tooltip = (
   <Tooltip id="tooltip"><strong>Kliknij tutaj</strong> aby dodać produkt.</Tooltip>
 );
 
-const Meal = (props) => (
 
-  <LinkContainer to={props.link}>
-    <div>
+export default connect(
+  state => ({
+    productId: state.selections
+  }),
+  dispatch => ({
+    removeFromFavorites: (productId) => dispatch(remove(productId))
+  })
+)(
+  function Meal(props) {
+    return (
       <div>
-        <p className="mealNameStyle">{props.mealName}</p>
-      </div>
-      <OverlayTrigger placement="top" overlay={tooltip}>
+        <div>
+          <p className="mealNameStyle">{props.mealName}</p>
+        </div>
         <div className="mealStyle">
-
           <div>
-            <img src={require('./ico/add.png')} alt="" className="imgStyle"/>
+            <OverlayTrigger placement="top" overlay={tooltip}>
+              <LinkContainer to={props.link} className="imgStyle">
+                <img src={require('./ico/add.png')} alt=""/>
+              </LinkContainer>
+            </OverlayTrigger>
             <ul>
               {
                 props.products.map(
-                  (product, index) => <li key={index}>{product.name}</li>
+                  (product, index) => <li key={index} onClick={() => props.removeFromFavorites(product.uid)}>{product.name}
+                  </li>
                 )
               }
             </ul>
           </div>
         </div>
-      </OverlayTrigger>
-
-    </div>
-  </LinkContainer>
+      </div>
+    )
+  }
 )
-
-export default Meal

@@ -1,28 +1,28 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 
 import FilterControls from './FilterControls'
 import FoodsTable from './FoodsTable'
 
-import { foods as filters } from './_utils/filters'
-import { foodFilterGroups  as filterGroups } from './_utils/FilterGroups'
+import {foods as filters} from './_utils/filters'
+import {foodFilterGroups  as filterGroups} from './_utils/FilterGroups'
 
 class Foods extends React.Component {
 
     componentWillMount = () => {
-      console.log('foods', this.props);
+        console.log('foods', this.props);
 
-        if(this.props.match.params.day && this.props.match.params.meal) {
-           this.day = this.props.match.params.day;
-           this.meal = this.props.match.params.meal;
-        }else {
-          this.day = null;
-          this.meal = null;
+        if (this.props.match.params.day && this.props.match.params.meal) {
+            this.day = this.props.match.params.day;
+            this.meal = this.props.match.params.meal;
+        } else {
+            this.day = null;
+            this.meal = null;
         }
         console.log('data from router', this.day, this.meal)
 
-      fetch(
+        fetch(
             process.env.PUBLIC_URL + '/data/foods.json'
         ).then(
             response => response.json()
