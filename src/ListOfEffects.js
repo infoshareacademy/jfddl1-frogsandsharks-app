@@ -8,9 +8,10 @@ import {
   ListGroupItem
 } from 'react-bootstrap'
 
-import Foods from './Foods'
+import Foods from './SearchFoods'
 import Popup from './Popup';
-
+import ShareFb from './Share'
+import MyComponent from "./state/Chart";
 
 class ListOfEffects extends React.Component {
 
@@ -18,7 +19,7 @@ class ListOfEffects extends React.Component {
     super(props)
 
     this.state = {
-      foods: []
+      foods: [],
     }
 
     fetch(
@@ -33,45 +34,64 @@ class ListOfEffects extends React.Component {
   }
 
   render() {
-    const foodsId = this.props.match.params.foodsId
+
+    const foodsId = this.props.match.params.foodsId;
+
+    const currentFood = this.state.foods.filter(
+      foods => foods.uid === foodsId
+    );
+    console.log('#', currentFood);
+    var data = [];
+    if (currentFood[0]) {
+      data = [
+        {label: "Biako", value: currentFood[0].protein * 4, color: "#008000"},
+        {label: "Węglowodany", value: currentFood[0].carbohydrate * 4, color: "#3b5998"},
+        {label: "Tłuszcze", value: currentFood[0].fat * 9, color: "#FFA500"}
+      ];
+    }
     return (
       <Grid>
         {
-          this.state.foods.filter(
-            foods => foods.uid === foodsId
-          ).map(
+          currentFood.map(
             foods => (
               <Row key={foods.uid} className="show-grid">
                 <Col>
                   <Row>
                     <Col lg={4}>
-                    <Foods/>
+                      <Foods/>
                     </Col>
                     <Col xs={12} md={5} lg={5}>
 
 
-                    <ListGroup key={foods.uid}>
-                      <h1>W 100 gramach produktu</h1>
-                      <ListGroupItem>Nazwa : {foods.name} </ListGroupItem>
-                      <ListGroupItem>Kategoria : {foods.category}</ListGroupItem>
-                      <ListGroupItem>Kalorie : {foods.energy} </ListGroupItem>
-                      <ListGroupItem>Białko : {foods.protein} </ListGroupItem>
-                      <ListGroupItem>Węglowodany : {foods.carbohydrate} </ListGroupItem>
-                      <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
-                    </ListGroup>
+                      <ListGroup key={foods.uid}>
+                        <h1>W 100 gramach produktu</h1>
+                        <ListGroupItem>Nazwa : {foods.name} </ListGroupItem>
+                        <ListGroupItem>Kategoria : {foods.category}</ListGroupItem>
+                        <ListGroupItem>Kalorie : {foods.energy} </ListGroupItem>
+                        <ListGroupItem>Białko : {foods.protein} </ListGroupItem>
+                        <ListGroupItem>Węglowodany : {foods.carbohydrate} </ListGroupItem>
+                        <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
+                      </ListGroup>
 
 
-                      <Popup foodUid={foods.uid}/>
+                      <Row>
+                        <Col lg={8}>
+                          <Popup foodUid={foods.uid}/>
+                        </Col>
+                        <Col lg={4}>
+                          <ShareFb/>
+                        </Col>
 
-                  </Col>
+                      </Row>
+
+                    </Col>
+                    <Col lg={3}>
+                      <MyComponent data={data}/>
+                    </Col>
                   </Row>
                 </Col>
-
-
-
               </Row>
-
-            )
+          )
           )
         }
 
@@ -83,51 +103,3 @@ class ListOfEffects extends React.Component {
 
 
 export default ListOfEffects
-
-/*
- import React from 'react'
-
- class Student extends React.Component {
-
- constructor(props) {
- super(props)
-
- this.state = {
- students: []
- }
-
- fetch(
- process.env.PUBLIC_URL + '/data/students.json'
- ).then(
- response => response.json()
- ).then(
- students => this.setState({
- students: students
- })
- )
- }
-
- render() {
- const studentId = parseInt(this.props.match.params.studentId, 10)
- return (
- <div>
- Student: {studentId}
- {
- this.state.students.filter(
- student => student.id === studentId
- ).map(
- student => (
- <ul key={student.id}>
- <li>{student.name}</li>
- <li>{student.city}</li>
- </ul>
- )
- )
- }
- </div>
- )
- }
- }
-
- export default Student
- */

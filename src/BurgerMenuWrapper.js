@@ -1,11 +1,10 @@
 import React from 'react'
 import { slide as BurgerMenu } from 'react-burger-menu'
+import * as firebase from 'firebase'
 import { Link } from 'react-router-dom'
 
 import './userStyle.css'
-import {
-  Glyphicon
-} from 'react-bootstrap'
+
 
 const styles = {
   bmBurgerButton: {
@@ -44,30 +43,47 @@ const styles = {
 
 }
 
-const BurgerMenuWrapper = (props) => (
-  <div id="outer-container">
-    <BurgerMenu
-      onStateChange={props.onStateChange}
-      isOpen={props.isOpen}
-      styles={styles}
-      pageWrapId={ "page-wrap" }
-      outerContainerId={ "outer-container" }
-    >
-      <div id="userProfile"><img src={require('./img/userPhotoMin.png')} /><h3>Maria Kowalska</h3></div>
-      {
-        props.links.map(
-          (link, index) => (
-            <Link id="links" key={index} to={link.path} onClick={() => props.toggleSidebar(false)}>{link.label}</Link>
-          )
-        )
-      }
-    </BurgerMenu>
-    <div id="page-wrap">
-      {
-        props.children
-      }
+class BurgerMenuWrapper extends React.Component {
+
+
+
+  logout = () => {
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+    }).catch(function(error) {
+      // An error happened.
+    })
+  }
+
+  render = () => {
+    return (
+    <div id="outer-container">
+      <BurgerMenu
+        onStateChange={this.props.onStateChange}
+        isOpen={this.props.isOpen}
+        styles={styles}
+        pageWrapId={ "page-wrap" }
+        outerContainerId={ "outer-container" }
+      >
+        <div id="userProfile"><img src={require('./img/userPhotoMin.png')} alt=" "/><h3>Maria Kowalska</h3></div>
+        {
+          this.props.links.map(
+            (link, index) => (
+              <Link id="links" key={index} to={link.path} onClick={() => this.props.toggleSidebar(false)}>{link.label}</Link>
+            )
+          )}
+        {
+          <Link id="links"  to={'/'} onClick={this.logout}>Wyloguj</Link>
+        }
+      </BurgerMenu>
+      <div id="page-wrap">
+        {
+          this.props.children
+        }
+      </div>
     </div>
-  </div>
-)
+    )
+  }
+}
 
 export default BurgerMenuWrapper

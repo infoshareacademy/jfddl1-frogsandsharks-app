@@ -1,3 +1,7 @@
+* {
+    max-width: 100%;
+}
+
 .instruction {
     text-align: center;
 }
@@ -19,13 +23,14 @@
 #logo {
     width: 200px;
     height: 80px;
-    text-align:center;
-    border:none;
+    text-align: center;
+    border: none;
     box-shadow: none;
-    margin:auto;
+    margin: auto;
     padding-top: 0.5vh;
     padding-bottom: 15vh;
     background-color: #DEDEDE;
+    background-color: transparent;
 
 }
 
@@ -43,21 +48,6 @@
     padding-top: 30vh;
 }
 
-.ButtonGo {
-    background-color: #267E74;
-    background-image: none;
-    border-color: #267E74;
-}
-.ButtonGo:hover {
-    background-color: #1e685f;
-}
-.ButtonGo:focus {
-    background-color: #1e685f;
-}
-.ButtonGo:active {
-    background-color: #1e685f;
-}
-
 @media screen and (max-width: 768px) {
     #logo {
         float: right;
@@ -67,8 +57,90 @@
 .lista a {
     color: #000;
 }
+
 .listEffect {
     background-color: #267E74;
-    color:#fff;
+    color: #fff;
 }
 
+#fbButton {
+    max-width: 150px;
+    border: none;
+    border-radius: 6px;
+    margin-left: -10px;
+    background-color: transparent;
+}
+
+.GpButton {
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 1%;
+    background-color: #DF4A32;
+    color: #ffffff;
+}
+
+.GpButton:hover {
+    background-color: #FF4A32;
+}
+
+.btn-default {
+    background-image: none;
+    background-color: #dedede;
+    border: none;
+    padding: 0;
+    text-shadow: none;
+}
+
+.btn, .ButtonGo {
+    background: #267E74;
+    background-image: -webkit-linear-gradient(top, #267E74, #414547);
+    background-image: -moz-linear-gradient(top, #267E74, #414547);
+    background-image: -ms-linear-gradient(top, #267E74, #414547);
+    background-image: -o-linear-gradient(top, #267E74, #414547);
+    background-image: linear-gradient(to bottom, #267E74, #414547);
+    -webkit-border-radius: 11;
+    -moz-border-radius: 11;
+    border-radius: 11px;
+    -webkit-box-shadow: 3px 4px 7px #666666;
+    -moz-box-shadow: 3px 4px 7px #666666;
+    box-shadow: 3px 4px 7px #666666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 1.6vh;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border: none
+}
+
+.btn:hover, .btn:active, .btn:visited, .btn:focus, .btn-default:hover, .btn-default:active, .btn-default:focus, .ButtonGo:hover {
+    background: #1e685f;
+    background-image: -webkit-linear-gradient(top, #1e685f, #3b464d);
+    background-image: -moz-linear-gradient(top, #1e685f, #3b464d);
+    background-image: -ms-linear-gradient(top, #1e685f, #3b464d);
+    background-image: -o-linear-gradient(top, #1e685f, #3b464d);
+    background-image: linear-gradient(to bottom, #1e685f, #3b464d);
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.dropdown-menu > li > a {
+    color: #ffffff;
+}
+
+.dropdown-menu > li > a:hover {
+    background-image: none;
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active, .dropdown-menu > li > a:visited {
+    background: none;
+}
+
+.dropdown-menu > li {
+    border-radius: 0;
+}
+
+.dropdown-menu {
+    background-color: #267E74;
+
+}
