@@ -1,4 +1,5 @@
 import * as firebase from 'firebase'
+
 const ADD = 'selections/ADD'
 const UPDATE = 'selections/UPDATE'
 const REMOVE = 'selections/REMOVE'
