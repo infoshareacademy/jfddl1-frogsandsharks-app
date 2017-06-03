@@ -6,10 +6,13 @@ export const add = (day, meal, productId) => ({
   day, meal, productId
 })
 
-export const remove = (productId) => ({
-  type: REMOVE,
-  productId
-})
+export const remove = (productId) => {
+  console.log('REMOVE ACTION CREATOR', productId);
+  return {
+    type: REMOVE,
+    productId
+  }
+}
 
 
 const initialState = []
@@ -26,8 +29,9 @@ export default (state = initialState, action) => {
         }
       ]
     case REMOVE:
+    console.log('REMOVE ACTION')
       return state.filter(
-        productId => productId !== action.productId
+        product => product.productId !== action.productId
       )
     default:
       return state
