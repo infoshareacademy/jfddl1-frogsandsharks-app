@@ -1,6 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import {Grid, Col, Row} from 'react-bootstrap'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Grid, Col, Row } from 'react-bootstrap'
 import * as firebase from 'firebase'
 
 import Home from './Home'
@@ -18,7 +18,6 @@ const links = [
   {path: '/firstpage', label: 'FirstPage'},
   {path: '/foods', label: 'Wyszukiwarka'},
   {path: '/foodplan', label: 'Plan żywieniowy'}
-
 ]
 
 class App extends React.Component {
