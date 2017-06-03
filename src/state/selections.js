@@ -8,7 +8,7 @@ export const add = (day, meal, productId) => ({
 
 export const remove = (productId) => ({
   type: REMOVE,
-  productId: productId
+  productId
 })
 
 

@@ -3,16 +3,16 @@ import {LinkContainer} from 'react-router-bootstrap'
 import './style.css'
 import {Tooltip, OverlayTrigger} from 'react-bootstrap'
 
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 
-import { remove } from "../state/selections"
+import {remove} from "../state/selections"
 
 const tooltip = (
   <Tooltip id="tooltip"><strong>Kliknij tutaj</strong> aby dodać produkt.</Tooltip>
 );
 
 
-export default connect (
+export default connect(
   state => ({
     productId: state.selections
   }),
@@ -36,7 +36,8 @@ export default connect (
             <ul>
               {
                 props.products.map(
-                  (product, index) => <li key={index} onClick={() => props.removeFromFavorites(remove(product))}>{product.name}</li>
+                  (product, index) => <li key={index} onClick={() => props.removeFromFavorites(product)}>{product.name}
+                  </li>
                 )
               }
             </ul>
