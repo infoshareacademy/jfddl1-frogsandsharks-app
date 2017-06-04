@@ -2,6 +2,7 @@ import React from 'react'
 import { slide as BurgerMenu } from 'react-burger-menu'
 import * as firebase from 'firebase'
 import { Link } from 'react-router-dom'
+import UserPanel from "./UserPanel";
 
 import './userStyle.css'
 
@@ -65,7 +66,9 @@ class BurgerMenuWrapper extends React.Component {
         pageWrapId={ "page-wrap" }
         outerContainerId={ "outer-container" }
       >
-        <div id="userProfile"><img src={require('./img/userPhotoMin.png')} alt=" "/><h3>Maria Kowalska</h3></div>
+        <div>
+          <UserPanel/>
+        </div>
         {
           this.props.links.map(
             (link, index) => (

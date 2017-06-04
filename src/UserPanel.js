@@ -2,6 +2,8 @@ import React from 'react'
 import * as firebase from 'firebase'
 import {LinkContainer} from 'react-router-bootstrap'
 
+import './userPanel.css'
+
 
 class UserPanel extends React.Component {
     state = {
@@ -24,9 +26,15 @@ class UserPanel extends React.Component {
             <div>
                 {
                     this.state.profile ?
-                        <div>
-                            <h1>{this.state.profile.email}</h1>
-                            <img src={this.state.profile.photoURL} alt="Zdjęcie profilowe" />
+                        <div id="userPanel">
+                            <div id="photo">
+                                <img src={this.state.profile.photoURL} alt="Zdjęcie profilowe" />
+                                <div id="nameEmail">
+                                    <h1>{this.state.profile.displayName}</h1>
+                                    <p>{this.state.profile.email}</p>
+                                </div>
+                            </div>
+
                         </div> : null
                 }
             </div>

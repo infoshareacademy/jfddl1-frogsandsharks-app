@@ -1,0 +1,28 @@
+#userPanel img {
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+}
+
+#photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+#photo h1 {
+    font-size: 20px;
+    color: #fff;
+    padding-left: 10px;
+    padding-top: 0;
+}
+
+#nameEmail {
+    height: 90px;
+}
+
+#nameEmail p {
+    color: #fff;
+    padding-left: 10px;
+}
