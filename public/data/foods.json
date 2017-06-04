@@ -113,10 +113,10 @@
     "uid": "07f610ae-554c-47d5-983d-ef6e23b68bff",
     "name": "marchew",
     "category": "warzywa",
-    "energy": 6,
-    "protein": 0.03,
-    "fat": 0.49,
-    "carbohydrate": 0.37,
+    "energy": 258,
+    "protein": 3.89,
+    "fat": 5.55,
+    "carbohydrate": 48.3,
     "photo": "marchew.jpg"
   },
   {

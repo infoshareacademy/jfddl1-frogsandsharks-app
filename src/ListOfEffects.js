@@ -44,9 +44,9 @@ class ListOfEffects extends React.Component {
     var data = [];
     if (currentFood[0]) {
       data = [
-        {label: "Biako", value: currentFood[0].protein * 4, color: "#008000"},
-        {label: "Węglowodany", value: currentFood[0].carbohydrate * 4, color: "#3b5998"},
-        {label: "Tłuszcze", value: currentFood[0].fat * 9, color: "#FFA500"}
+        {label: "Biako w kcal", value: currentFood[0].protein * 4, color: "#008000"},
+        {label: "Węglowodany w kcal", value: currentFood[0].carbohydrate * 4, color: "#3b5998"},
+        {label: "Tłuszcze w kcal", value: currentFood[0].fat * 9, color: "#FFA500"}
       ];
     }
     return (
