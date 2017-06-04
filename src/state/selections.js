@@ -7,12 +7,12 @@ const REMOVE = 'selections/REMOVE'
 export const add = (day, meal, productId) => ({
   type: ADD,
   day, meal, productId
-})
+});
 
 export const update = (newSelectionsArray) => ({
   type: UPDATE,
   payload: newSelectionsArray
-})
+});
 
 export const remove = (productId) => {
   console.log('REMOVE ACTION CREATOR', productId);
@@ -20,7 +20,7 @@ export const remove = (productId) => {
     type: REMOVE,
     productId
   }
-}
+};
 
 
 const initialState = []
@@ -57,13 +57,6 @@ export default (state = initialState, action) => {
       var userId = firebase.auth().currentUser.uid
       firebase.database().ref('/usersData/').child(userId).child('selections/').set(removeState)
       return  removeState;
-
-      // var removeState = state.filter(
-      //   product => product.productId !== action.productId
-      // );
-      // var userId = firebase.auth().currentUser.uid;
-      // firebase.database().ref('/usersData/selections/').child(userId).set(removeState);
-      // return removeState;
     }
     default:
       return state
