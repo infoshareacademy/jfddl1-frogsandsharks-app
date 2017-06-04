@@ -44,9 +44,9 @@ class ListOfEffects extends React.Component {
     var data = [];
     if (currentFood[0]) {
       data = [
-        {label: "Biako w kcal", value: currentFood[0].protein * 4, color: "#008000"},
-        {label: "Węglowodany w kcal", value: currentFood[0].carbohydrate * 4, color: "#3b5998"},
-        {label: "Tłuszcze w kcal", value: currentFood[0].fat * 9, color: "#FFA500"}
+        {label: "Biako w kcal", value: currentFood[0].protein.toFixed(0) * 4, color: "#008000"},
+        {label: "Węglowodany w kcal", value: currentFood[0].carbohydrate.toFixed(0) * 4, color: "#3b5998"},
+        {label: "Tłuszcze w kcal", value: currentFood[0].fat.toFixed(0) * 9, color: "#FFA500"}
       ];
     }
     return (
@@ -86,7 +86,9 @@ class ListOfEffects extends React.Component {
 
                     </Col>
                     <Col lg={3}>
-                      <MyComponent data={data}/>
+                      <ListGroup>
+                        <ListGroupItem><MyComponent data={data}/></ListGroupItem>
+                      </ListGroup>
                     </Col>
                   </Row>
                 </Col>
