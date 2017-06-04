@@ -85,7 +85,7 @@ class ListOfEffects extends React.Component {
                       </Row>
 
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={3} md={6} xs={12}>
                       <ListGroup>
                         <ListGroupItem><MyComponent data={data}/></ListGroupItem>
                       </ListGroup>
