@@ -10,11 +10,7 @@ class UserPanel extends React.Component {
         firebase.auth().onAuthStateChanged( user => {
             if (user != null) {
                 user.providerData.forEach(function (profile) {
-                    console.log("Sign-in provider: "+profile.providerId);
-                    console.log("  Provider-specific UID: "+profile.uid);
-                    console.log("  Name: "+profile.displayName);
-                    console.log("  Email: "+profile.email);
-                    console.log("  Photo URL: "+profile.photoURL);
+                    this.setState({ profile: profile })
                 });
             } else {
                 // No user is signed in.
@@ -24,7 +20,13 @@ class UserPanel extends React.Component {
     render() {
         return (
             <div>
-
+                {
+                    this.state.profile ?
+                        <div>
+                            <h1>{this.state.profile.email}</h1>
+                            <img src={this.state.profile.photoURL} alt="Zdjęcie profilowe" />
+                        </div> : null
+                }
             </div>
         );
     }
