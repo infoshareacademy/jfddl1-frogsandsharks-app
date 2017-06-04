@@ -50,9 +50,9 @@ export default (state = initialState, action) => {
     case REMOVE: {
       console.log('REMOVE ACTION')
 
-      var removeState = state.filter(
-        product => product.productId !== action.productId
-      );
+      const indexOfItemToRemove = state.findIndex( product => product.productId === action.productId)
+
+      const removeState = state.filter( (item, index) => index !== indexOfItemToRemove)
 
       var userId = firebase.auth().currentUser.uid
       firebase.database().ref('/usersData/').child(userId).child('selections/').set(removeState)
