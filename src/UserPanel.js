@@ -1,15 +1,17 @@
 import React from 'react'
-import {Form, FormGroup, FormControl, Col, ControlLabel, Alert} from 'react-bootstrap'
 import * as firebase from 'firebase'
 import {LinkContainer} from 'react-router-bootstrap'
 
 
 class UserPanel extends React.Component {
+    state = {
+        profile: null
+    }
     componentWillMount = () => {
 
         firebase.auth().onAuthStateChanged( user => {
             if (user != null) {
-                user.providerData.forEach(function (profile) {
+                user.providerData.forEach(profile => {
                     this.setState({ profile: profile })
                 });
             } else {
