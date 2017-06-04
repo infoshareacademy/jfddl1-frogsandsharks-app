@@ -1,8 +1,13 @@
-.mealStyle  {
+.planNameStyle {
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+
+.mealStyle {
     height: 90px;
     min-height: auto;
     width: 180px;
-    cursor: pointer;
+    background-color: rgba(222,222,222, 0.8);
 }
 
 .dayStyle {
@@ -11,7 +16,7 @@
 }
 
 .dayStyle:hover {
-    background-color: rgba(134, 134, 134, 0.2);
+    background-color: rgba(87, 87, 87, 0.8);
     border: #1e685f solid 2px;
 
 }
@@ -24,10 +29,24 @@
     letter-spacing: 1px;
 }
 
-.mealNameStyle > p {
-    margin: none;
+p {
+    margin: 0 0 0px;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 
 .dayNameStyle {
     text-align: center;
+    background-color: #cbcbcb;
+    font-size: 20px;
+}
+
+.imgStyle {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }

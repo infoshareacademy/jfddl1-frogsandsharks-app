@@ -8,9 +8,10 @@ import {
   ListGroupItem
 } from 'react-bootstrap'
 
-import Foods from './Foods'
+import Foods from './SearchFoods'
 import Popup from './Popup';
 import ShareFb from './Share'
+import MyComponent from "./state/Chart";
 
 class ListOfEffects extends React.Component {
 
@@ -18,7 +19,7 @@ class ListOfEffects extends React.Component {
     super(props)
 
     this.state = {
-      foods: []
+      foods: [],
     }
 
     fetch(
@@ -33,13 +34,25 @@ class ListOfEffects extends React.Component {
   }
 
   render() {
-    const foodsId = this.props.match.params.foodsId
+
+    const foodsId = this.props.match.params.foodsId;
+
+    const currentFood = this.state.foods.filter(
+      foods => foods.uid === foodsId
+    );
+    console.log('#', currentFood);
+    var data = [];
+    if (currentFood[0]) {
+      data = [
+        {label: "Biako", value: currentFood[0].protein * 4, color: "#008000"},
+        {label: "Węglowodany", value: currentFood[0].carbohydrate * 4, color: "#3b5998"},
+        {label: "Tłuszcze", value: currentFood[0].fat * 9, color: "#FFA500"}
+      ];
+    }
     return (
       <Grid>
         {
-          this.state.foods.filter(
-            foods => foods.uid === foodsId
-          ).map(
+          currentFood.map(
             foods => (
               <Row key={foods.uid} className="show-grid">
                 <Col>
@@ -60,24 +73,25 @@ class ListOfEffects extends React.Component {
                         <ListGroupItem>Tłuszcze : {foods.fat} </ListGroupItem>
                       </ListGroup>
 
+
                       <Row>
                         <Col lg={8}>
                           <Popup foodUid={foods.uid}/>
                         </Col>
                         <Col lg={4}>
                           <ShareFb/>
-
                         </Col>
 
                       </Row>
+
+                    </Col>
+                    <Col lg={3}>
+                      <MyComponent data={data}/>
                     </Col>
                   </Row>
                 </Col>
-
-
               </Row>
-
-            )
+          )
           )
         }
 

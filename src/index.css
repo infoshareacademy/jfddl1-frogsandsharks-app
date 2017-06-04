@@ -2,5 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #DEDEDE;
+  background-image: url("FoodPlan/bg/4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }

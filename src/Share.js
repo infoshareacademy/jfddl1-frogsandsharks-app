@@ -2,7 +2,7 @@ import React from 'react'
 import {
   ShareButtons
 } from 'react-share';
-import {Button, Image} from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 
 const {
   FacebookShareButton,
@@ -25,13 +25,13 @@ class ShareFb extends React.Component {
                         od strony technicznej, dobierze zestaw ćwiczeń oraz rospisze dietę."
         picture="http://frogs-sharks.jfddl1.is-academy.pl/image/logo.png"
         title="ptrainer - Najlepszy trener personalny w sieci">
-        <Button bsSize="small">
+        <button id="fbButton">
           <Image src={require('./img/Share-on-Facebook.png')}
-                 id="fbButton" responsive={true}/>
+                  responsive={true}/>
 
 
 
-        </Button>
+        </button>
       </FacebookShareButton>
 
 
