@@ -8,12 +8,15 @@
 
 .dashboardBlock {
     text-align: center;
-    background-color: #DEDEDE;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    box-shadow: none;
 
 }
 
 .dashboardBlock:hover {
-    border: #1e685f solid 2px;
+    transform: scale(1.1);
+
 }
 
 .instructionDescription {
@@ -40,8 +43,8 @@
 }
 
 .options img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .cosic {

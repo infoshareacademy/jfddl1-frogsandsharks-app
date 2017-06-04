@@ -29,7 +29,7 @@ const Home = () => (
         <Row className="show-grid options">
             <Col xs={12} md={4}>
                 <Thumbnail src={require('./img/addDiet.png')} alt="Dodaj posiłek do diety" className="dashboardBlock">
-                    <h3>Dodaj produkty do jadłospisu</h3>
+                    <h3>Dodaj produkty</h3>
                     <p>Kliknij w przycisk poniżej aby przejść do wyszukiwarki produktów</p>
                     <p>
                         <LinkContainer to="/foods">

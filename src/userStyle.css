@@ -13,3 +13,16 @@
     text-decoration: none;
     transform: scale(1.1);
 }
+
+#logoutButton {
+    width: 100px;
+    height: 30px;
+    color: #222222;
+    background-color: #267E74;
+    box-shadow: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    font-size: 12px;
+}
