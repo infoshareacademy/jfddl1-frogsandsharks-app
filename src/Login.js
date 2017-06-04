@@ -4,6 +4,7 @@ import * as firebase from 'firebase'
 import Logo from './Logo'
 
 
+
 var provider = new firebase.auth.GoogleAuthProvider()
 
 class LoginNew extends React.Component {
