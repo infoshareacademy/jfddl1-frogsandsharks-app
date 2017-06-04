@@ -2,8 +2,10 @@ import React from 'react'
 import { slide as BurgerMenu } from 'react-burger-menu'
 import * as firebase from 'firebase'
 import { Link } from 'react-router-dom'
+import {Button} from 'react-bootstrap'
 
 import './userStyle.css'
+import UserPanel from "./UserPanel";
 
 
 const styles = {
@@ -25,7 +27,7 @@ const styles = {
     background: '#fff'
   },
   bmMenu: {
-    background: '#006666',
+    background: '#172229',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em'
   },
@@ -65,7 +67,9 @@ class BurgerMenuWrapper extends React.Component {
         pageWrapId={ "page-wrap" }
         outerContainerId={ "outer-container" }
       >
-        <div id="userProfile"><img src={require('./img/userPhotoMin.png')} alt=" "/><h3>Maria Kowalska</h3></div>
+        <div>
+          <UserPanel/>
+        </div>
         {
           this.props.links.map(
             (link, index) => (
@@ -73,8 +77,13 @@ class BurgerMenuWrapper extends React.Component {
             )
           )}
         {
-          <Link id="links"  to={'/'} onClick={this.logout}>Wyloguj</Link>
+          <Button bsStyle="primary" className="ButtonGo" id="logoutButton">
+            <Link id="links"  to={'/'} onClick={this.logout}>Wyloguj</Link>
+          </Button>
+
         }
+
+
       </BurgerMenu>
       <div id="page-wrap">
         {

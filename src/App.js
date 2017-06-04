@@ -5,7 +5,7 @@ import * as firebase from 'firebase'
 
 import Home from './Home'
 import Logo from './Logo'
-import FirstPage from './FirstPage'
+import Trening from './Trening'
 import Foods from './SearchFoods'
 import Plan from './FoodPlan/Plan'
 import BurgerMenuWrapper from './BurgerMenuWrapper'
@@ -15,9 +15,9 @@ import DataFetcher from './DataFetcher'
 
 const links = [
     {path: '/', label: 'Home'},
-    {path: '/firstpage', label: 'FirstPage'},
     {path: '/foods', label: 'Wyszukiwarka'},
-    {path: '/foodplan', label: 'Plan żywieniowy'}
+    {path: '/foodplan', label: 'Plan żywieniowy'},
+    {path: '/trening', label: 'Trening'}
 ]
 
 class App extends React.Component {
@@ -72,7 +72,7 @@ class App extends React.Component {
 
                                     <Route path="/" component={Logo}/>
                                     <Route className="menu-item" exact path="/" component={Home}/>
-                                    <Route path="/firstpage" component={FirstPage}/>
+                                    <Route path="/trening" component={Trening}/>
                                     <Route exact path="/foods" component={Foods}/>
                                     <Route path="/foodplan" component={Plan}/>
 
