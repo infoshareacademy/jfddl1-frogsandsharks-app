@@ -35,7 +35,6 @@ export default connect(
             var userId = firebase.auth().currentUser.uid;
             firebase.database().ref('/usersData/').child(userId).child('selections').on('value', ((snapshot) => {
                 console.log('snapshot selections', snapshot.val());
-                this.props.refreshSelectionsArray(snapshot.val());
             }));
         }
 
