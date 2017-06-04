@@ -14,7 +14,7 @@
 
 }
 
-.dashboardBlock:hover {
+.dashboardBlock :hover {
     transform: scale(1.1);
 
 }
