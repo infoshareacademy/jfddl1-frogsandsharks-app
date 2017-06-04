@@ -29,7 +29,7 @@ export default (state = initialState, action) => {
   console.log('REDUCER', action);
   switch (action.type) {
     case ADD : {
-      let newState = [
+      var newState = [
         ...state,
         {
           day: action.day,
@@ -50,14 +50,20 @@ export default (state = initialState, action) => {
     case REMOVE: {
       console.log('REMOVE ACTION')
 
-      var userId = firebase.auth().currentUser.uid
-      firebase.database().ref('/usersData/').child(userId).child('selections/').remove()
-        .then(() => {
-          console.log('remove from firebaseeee');
-        })
-      return state.filter(
+      var removeState = state.filter(
         product => product.productId !== action.productId
       );
+
+      var userId = firebase.auth().currentUser.uid
+      firebase.database().ref('/usersData/').child(userId).child('selections/').set(removeState)
+      return  removeState;
+
+      // var removeState = state.filter(
+      //   product => product.productId !== action.productId
+      // );
+      // var userId = firebase.auth().currentUser.uid;
+      // firebase.database().ref('/usersData/selections/').child(userId).set(removeState);
+      // return removeState;
     }
     default:
       return state
