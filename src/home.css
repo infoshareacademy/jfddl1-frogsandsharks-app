@@ -14,7 +14,7 @@
 
 }
 
-.dashboardBlock :hover {
+.dashboardBlock:hover {
     transform: scale(1.1);
 
 }
@@ -43,8 +43,8 @@
 }
 
 .options img {
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 190px;
 }
 
 .cosic {
