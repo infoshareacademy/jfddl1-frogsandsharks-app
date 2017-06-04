@@ -74,6 +74,19 @@
     background-color: transparent;
 }
 
+.fbButton {
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 1%;
+    background-color: #3b5998;
+    color: #ffffff;
+}
+
+.fbButton:hover {
+    background-color: #5571ab;
+}
+
 .GpButton {
     border: none;
     border-radius: 6px;
