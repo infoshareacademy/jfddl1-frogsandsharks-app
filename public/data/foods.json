@@ -1,0 +1,882 @@
+[
+  {
+    "uid": "8c414394-6ae4-4e1e-a2c2-04e661cd3339",
+    "name": "kalafior",
+    "category": "warzywa",
+    "energy": 288,
+    "protein": 14.59,
+    "fat": 22.89,
+    "carbohydrate": 5.9,
+    "photo": "kalafior.jpg"
+  },
+  {
+    "uid": "541878de-fb35-4a7e-bcad-bf3b8271c967",
+    "name": "brokuł",
+    "category": "warzywa",
+    "energy": 275,
+    "protein": 1.18,
+    "fat": 26.55,
+    "carbohydrate": 7.83,
+    "photo": "brokuł.jpg"
+  },
+  {
+    "uid": "f8ed95fd-93f9-492d-9102-73e6b5d43717",
+    "name": "ziemniak",
+    "category": "warzywa",
+    "energy": 13,
+    "protein": 0.96,
+    "fat": 0.75,
+    "carbohydrate": 0.6,
+    "photo": "ziemniak.jpg"
+  },
+  {
+    "uid": "9ffc137d-6c3f-4d90-80b2-cbc3ba466517",
+    "name": "pomidor",
+    "category": "warzywa",
+    "energy": 30,
+    "protein": 2.6,
+    "fat": 1.94,
+    "carbohydrate": 0.53,
+    "photo": "pomidor.jpg"
+  },
+  {
+    "uid": "40ee0bef-a74e-479e-8a6f-a41965ad7d31",
+    "name": "papryka",
+    "category": "warzywa",
+    "energy": 54,
+    "protein": 2.34,
+    "fat": 0.44,
+    "carbohydrate": 10.17,
+    "photo": "papryka.jpg"
+  },
+  {
+    "uid": "876423f6-c372-4bf1-93c6-c2b5b7c109df",
+    "name": "ogórek",
+    "category": "warzywa",
+    "energy": 264,
+    "protein": 19.75,
+    "fat": 3.63,
+    "carbohydrate": 38.09,
+    "photo": "ogorek.jpg"
+  },
+  {
+    "uid": "4b84d744-950c-47b3-bc95-46ff2f114e48",
+    "name": "kapusta",
+    "category": "warzywa",
+    "energy": 113,
+    "protein": 23.2,
+    "fat": 0.64,
+    "carbohydrate": 3.62,
+    "photo": "kapusta.jpg"
+  },
+  {
+    "uid": "4a91a6f0-bb1d-45b4-a367-93956a209fda",
+    "name": "cebula",
+    "category": "warzywa",
+    "energy": 108,
+    "protein": 9.41,
+    "fat": 5.77,
+    "carbohydrate": 4.6,
+    "photo": "cebula.jpg"
+  },
+  {
+    "uid": "968fdd10-f242-40b5-a1e7-7e5e763d5146",
+    "name": "czosnek",
+    "category": "warzywa",
+    "energy": 280,
+    "protein": 5.21,
+    "fat": 6.33,
+    "carbohydrate": 50.54,
+    "photo": "czosnek.jpg"
+  },
+  {
+    "uid": "72df4689-7b83-4492-b150-7ef6759e53cd",
+    "name": "brukselka",
+    "category": "warzywa",
+    "energy": 62,
+    "protein": 3.8,
+    "fat": 2.7,
+    "carbohydrate": 5.63,
+    "photo": "brukselka.jpg"
+  },
+  {
+    "uid": "ee894b2c-a55c-48b3-ba6c-dcfd6057e8b6",
+    "name": "rzodkiewka",
+    "category": "warzywa",
+    "energy": 20,
+    "protein": 2.02,
+    "fat": 0.32,
+    "carbohydrate": 2.26,
+    "photo": "rzodkiewka.jpg"
+  },
+  {
+    "uid": "07f610ae-554c-47d5-983d-ef6e23b68bff",
+    "name": "marchew",
+    "category": "warzywa",
+    "energy": 258,
+    "protein": 3.89,
+    "fat": 5.55,
+    "carbohydrate": 48.3,
+    "photo": "marchew.jpg"
+  },
+  {
+    "uid": "2742f998-cd62-4082-8e82-e512b34da9b1",
+    "name": "pietruszka",
+    "category": "warzywa",
+    "energy": 258,
+    "protein": 3.89,
+    "fat": 5.55,
+    "carbohydrate": 48.13,
+    "photo": "pietruszka.jpg"
+  },
+  {
+    "uid": "a8f58776-fe65-4bc2-b3d9-a9524628070f",
+    "name": "bataty",
+    "category": "warzywa",
+    "energy": 5,
+    "protein": 0.54,
+    "fat": 0.08,
+    "carbohydrate": 0.54,
+    "photo": "bataty.jpg"
+  },
+  {
+    "uid": "0b8e622c-1599-4fd0-9405-749d2388840f",
+    "name": "szpinak",
+    "category": "warzywa",
+    "energy": 188,
+    "protein": 16.14,
+    "fat": 10.79,
+    "carbohydrate": 6.59,
+    "photo": "szpinak.jpg"
+  },
+  {
+    "uid": "9c8c4b3e-ccfb-4708-9b28-e14e34da2d4c",
+    "name": "pieczarki",
+    "category": "warzywa",
+    "energy": 216,
+    "protein": 23.2,
+    "fat": 5.46,
+    "carbohydrate": 18.51,
+    "photo": "pieczarki.jpg"
+  },
+  {
+    "uid": "8fdefce6-0f6d-4250-8770-a3481601fb4a",
+    "name": "sałata",
+    "category": "warzywa",
+    "energy": 16,
+    "protein": 0.06,
+    "fat": 0,
+    "carbohydrate": 3.93,
+    "photo": "sałata.jpg"
+  },
+  {
+    "uid": "25946d4b-31ba-47f0-a598-341f31886461",
+    "name": "warzywa na patelnie",
+    "category": "warzywa",
+    "energy": 219,
+    "protein": 39.78,
+    "fat": 3.26,
+    "carbohydrate": 7.63,
+    "photo": "warzywa-na patelnie.jpg"
+  },
+  {
+    "uid": "331978e8-fa98-4d46-84f5-4ff4e2d9a4f5",
+    "name": "jabłko",
+    "category": "owoce",
+    "energy": 155,
+    "protein": 3.31,
+    "fat": 6.32,
+    "carbohydrate": 21.22,
+    "photo": "jabłko.jpg"
+  },
+  {
+    "uid": "8e8b4b1d-3e77-423a-88ea-2cd2ee6235c7",
+    "name": "gruszka",
+    "category": "owoce",
+    "energy": 140,
+    "protein": 19.15,
+    "fat": 0.97,
+    "carbohydrate": 13.67,
+    "photo": "gruszka.jpg"
+  },
+  {
+    "uid": "9492e669-e481-4d97-8236-8e4c1bc1a771",
+    "name": "banan",
+    "category": "owoce",
+    "energy": 76,
+    "protein": 2.23,
+    "fat": 1.88,
+    "carbohydrate": 12.54,
+    "photo": "banan.jpg"
+  },
+  {
+    "uid": "2c4aa679-56d4-4ab4-ba9a-acbcb3567a33",
+    "name": "czereśnia",
+    "category": "owoce",
+    "energy": 101,
+    "protein": 7.83,
+    "fat": 4.74,
+    "carbohydrate": 6.76,
+    "photo": "czeresnia.jpg"
+  },
+  {
+    "uid": "3d77d254-f59f-4c1a-b473-050adf7bad5f",
+    "name": "wiśnia",
+    "category": "owoce",
+    "energy": 37,
+    "protein": 0.03,
+    "fat": 0.97,
+    "carbohydrate": 7.03,
+    "photo": "wisnia.jpg"
+  },
+  {
+    "uid": "e3fe1c84-aba1-4d7d-8199-010fa06382d5",
+    "name": "cytryna",
+    "category": "owoce",
+    "energy": 158,
+    "protein": 2.76,
+    "fat": 7.96,
+    "carbohydrate": 18.84,
+    "photo": "cytryna.jpg"
+  },
+  {
+    "uid": "144fefbb-4073-40bf-b09e-98dddeefb64a",
+    "name": "pomarańcza",
+    "category": "owoce",
+    "energy": 63,
+    "protein": 1.87,
+    "fat": 1.16,
+    "carbohydrate": 11.27,
+    "photo": "pomarancza.jpg"
+  },
+  {
+    "uid": "cb1020a7-fb5b-4b01-9eb4-50ddfaaaa332",
+    "name": "mandarynka",
+    "category": "owoce",
+    "energy": 101,
+    "protein": 14.42,
+    "fat": 0.14,
+    "carbohydrate": 10.51,
+    "photo": "mandarynka.jpg"
+  },
+  {
+    "uid": "218608b8-dc6e-4eb4-baaa-1755612b6de3",
+    "name": "mango",
+    "category": "owoce",
+    "energy": 229,
+    "protein": 8.27,
+    "fat": 0.03,
+    "carbohydrate": 48.92,
+    "photo": "mango.jpg"
+  },
+  {
+    "uid": "b2c6ef1d-f0f4-46c0-8bf9-74a87b4c91f0",
+    "name": "kiwi",
+    "category": "owoce",
+    "energy": 278,
+    "protein": 23.5,
+    "fat": 2.92,
+    "carbohydrate": 39.42,
+    "photo": "kiwi.jpg"
+  },
+  {
+    "uid": "e7332549-179c-484f-a1c8-dbfd7eef23ab",
+    "name": "ananas",
+    "category": "owoce",
+    "energy": 106,
+    "protein": 3.16,
+    "fat": 0.46,
+    "carbohydrate": 22.3,
+    "photo": "ananas.jpg"
+  },
+  {
+    "uid": "284319d8-5971-4309-a77d-d7c661e072e6",
+    "name": "maliny",
+    "category": "owoce",
+    "energy": 192,
+    "protein": 14.85,
+    "fat": 0.1,
+    "carbohydrate": 32.93,
+    "photo": "maliny.jpg"
+  },
+  {
+    "uid": "92ccda05-9078-4d11-9fdf-c5edb2ffe7ee",
+    "name": "orzechy włoskie",
+    "category": "owoce",
+    "energy": 132,
+    "protein": 5.22,
+    "fat": 6.15,
+    "carbohydrate": 13.95,
+    "photo": "orzechy-włoskie.jpg"
+  },
+  {
+    "uid": "70a1113e-b872-4a93-a0fb-ede41fede515",
+    "name": "orzechy laskowe",
+    "category": "owoce",
+    "energy": 26,
+    "protein": 3.43,
+    "fat": 0.51,
+    "carbohydrate": 1.93,
+    "photo": "orzechy-laskowe.jpg"
+  },
+  {
+    "uid": "7f76c42a-1493-45f9-b83f-3283e7af5579",
+    "name": "kurczak",
+    "category": "mieso",
+    "energy": 23,
+    "protein": 1.13,
+    "fat": 0.42,
+    "carbohydrate": 3.67,
+    "photo": "kurczak.jpg"
+  },
+  {
+    "uid": "21f59979-c415-49a8-a8fa-d4c631303601",
+    "name": "kaczka",
+    "category": "mieso",
+    "energy": 130,
+    "protein": 13.31,
+    "fat": 4.99,
+    "carbohydrate": 7.96,
+    "photo": "kaczka.jpg"
+  },
+  {
+    "uid": "b539b336-fb0e-40ea-964b-15a3dcca1351",
+    "name": "gęś",
+    "category": "mieso",
+    "energy": 155,
+    "protein": 9.38,
+    "fat": 4.86,
+    "carbohydrate": 18.43,
+    "photo": "ges.jpg"
+  },
+  {
+    "uid": "31570e82-258d-4c31-affe-b8f9a864368f",
+    "name": "szynka",
+    "category": "mieso",
+    "energy": 31,
+    "protein": 5.04,
+    "fat": 1.2,
+    "carbohydrate": 0.02,
+    "photo": "szynka.jpg"
+  },
+  {
+    "uid": "495f9834-69f9-4c24-b168-5348910f6117",
+    "name": "schab",
+    "category": "mieso",
+    "energy": 76,
+    "protein": 6.74,
+    "fat": 5.31,
+    "carbohydrate": 0.32,
+    "photo": "schab.jpg"
+  },
+  {
+    "uid": "8761c6e3-87a3-4290-92bd-17d3a4005763",
+    "name": "łopatka wieprzowa",
+    "category": "mieso",
+    "energy": 167,
+    "protein": 18.97,
+    "fat": 2.42,
+    "carbohydrate": 17.33,
+    "photo": "łopatka-wieprzowa.jpg"
+  },
+  {
+    "uid": "4c6a5019-cb77-4a1c-bbba-a5c7a980031c",
+    "name": "wołowina",
+    "category": "mieso",
+    "energy": 244,
+    "protein": 5.57,
+    "fat": 5.46,
+    "carbohydrate": 43.14,
+    "photo": "wołowina.jpg"
+  },
+  {
+    "uid": "00f3bcae-1410-416a-afe1-6bb8824a2045",
+    "name": "cielęcina",
+    "category": "mieso",
+    "energy": 179,
+    "protein": 9.55,
+    "fat": 1.73,
+    "carbohydrate": 31.31,
+    "photo": "cielecina.jpg"
+  },
+  {
+    "uid": "5c82f4fe-40f1-4d31-a674-7ca864c51ca5",
+    "name": "jaja",
+    "category": "mieso",
+    "energy": 244,
+    "protein": 42.89,
+    "fat": 0.02,
+    "carbohydrate": 18.06,
+    "photo": "jaja.jpg"
+  },
+  {
+    "uid": "855eff65-7fa2-4a77-8376-5fa774339e14",
+    "name": "indyk",
+    "category": "mieso",
+    "energy": 11,
+    "protein": 1.59,
+    "fat": 0.22,
+    "carbohydrate": 0.67,
+    "photo": "indyk.jpg"
+  },
+  {
+    "uid": "39106b0c-1b3f-46e2-9780-17207d12a434",
+    "name": "kotlet schabowy",
+    "category": "mieso",
+    "energy": 182,
+    "protein": 8,
+    "fat": 0.11,
+    "carbohydrate": 37.25,
+    "photo": "kotlet-schabowy.jpg"
+  },
+  {
+    "uid": "8d6ed213-5977-45f8-8e86-aa0d1ae52fe4",
+    "name": "kotlet mielony",
+    "category": "mieso",
+    "energy": 213,
+    "protein": 14.19,
+    "fat": 4.28,
+    "carbohydrate": 29.44,
+    "photo": "kotlet-mielony.jpg"
+  },
+  {
+    "uid": "47f2ff0e-15dd-43f1-b2d2-21e6af0ade45",
+    "name": "stek",
+    "category": "mieso",
+    "energy": 280,
+    "protein": 4.1,
+    "fat": 0.54,
+    "carbohydrate": 64.69,
+    "photo": "stek.jpg"
+  },
+  {
+    "uid": "badb2250-da0a-44a2-819b-2204baf8c955",
+    "name": "karp",
+    "category": "ryby",
+    "energy": 153,
+    "protein": 5.35,
+    "fat": 3.82,
+    "carbohydrate": 24.31,
+    "photo": "karp.jpg"
+  },
+  {
+    "uid": "228762ac-19c6-43c2-99ad-0a434c1f91a8",
+    "name": "łosoś",
+    "category": "ryby",
+    "energy": 287,
+    "protein": 1.57,
+    "fat": 2.73,
+    "carbohydrate": 64.03,
+    "photo": "łosos.jpg"
+  },
+  {
+    "uid": "4eb5280a-98be-4f3e-b24f-ed746062c850",
+    "name": "pstrąg",
+    "category": "ryby",
+    "energy": 295,
+    "protein": 12.64,
+    "fat": 11.17,
+    "carbohydrate": 35.98,
+    "photo": "pstrag.jpg"
+  },
+  {
+    "uid": "5cd8cf3b-7ef9-4494-95b0-8b33308a75cd",
+    "name": "makrela",
+    "category": "ryby",
+    "energy": 104,
+    "protein": 5.61,
+    "fat": 0.51,
+    "carbohydrate": 19.25,
+    "photo": "makrela.jpg"
+  },
+  {
+    "uid": "9c671659-40a2-4567-a799-1708c744c186",
+    "name": "tuńczyk",
+    "category": "ryby",
+    "energy": 147,
+    "protein": 0.96,
+    "fat": 0.48,
+    "carbohydrate": 34.72,
+    "photo": "tunczyk.jpg"
+  },
+  {
+    "uid": "4b8218ba-103f-4dea-820b-bd6e107760da",
+    "name": "śledź",
+    "category": "ryby",
+    "energy": 223,
+    "protein": 4.33,
+    "fat": 4.76,
+    "carbohydrate": 40.72,
+    "photo": "sledz.jpg"
+  },
+  {
+    "uid": "dae9b3ab-3032-45b7-9d8e-a8eeb7acc0e7",
+    "name": "mleko 2%",
+    "category": "nabiał",
+    "energy": 230,
+    "protein": 34.22,
+    "fat": 7.57,
+    "carbohydrate": 6.25,
+    "photo": "mleko-2%.jpg"
+  },
+  {
+    "uid": "d9f98e46-9d68-428e-bfc5-46035825c575",
+    "name": "mleko 3,2%",
+    "category": "nabiał",
+    "energy": 73,
+    "protein": 1.39,
+    "fat": 6.92,
+    "carbohydrate": 1.29,
+    "photo": "mleko-3,2%.jpg"
+  },
+  {
+    "uid": "1ecd5ac3-0989-4866-b735-e93d3eff56c0",
+    "name": "mleko kozie",
+    "category": "nabiał",
+    "energy": 264,
+    "protein": 0.2,
+    "fat": 1.36,
+    "carbohydrate": 62.73,
+    "photo": "mleko-kozie.jpg"
+  },
+  {
+    "uid": "3d491099-fe93-4672-a225-d675ab383d91",
+    "name": "mleko owcze",
+    "category": "nabiał",
+    "energy": 123,
+    "protein": 2.8,
+    "fat": 2.47,
+    "carbohydrate": 22.4,
+    "photo": "mleko-owcze.jpg"
+  },
+  {
+    "uid": "fe09bed2-1d41-4354-859a-049534e67299",
+    "name": "mleko bez laktozy",
+    "category": "nabiał",
+    "energy": 275,
+    "protein": 0.23,
+    "fat": 0.34,
+    "carbohydrate": 67.75,
+    "photo": "mleko-bez laktozy.jpg"
+  },
+  {
+    "uid": "f5bfb900-aee2-40d5-89d3-8ba293f5612e",
+    "name": "ser żółty",
+    "category": "nabiał",
+    "energy": 233,
+    "protein": 4.08,
+    "fat": 5.69,
+    "carbohydrate": 41.36,
+    "photo": "ser-zołty.jpg"
+  },
+  {
+    "uid": "2872d624-2afc-4ab5-aebb-1dd1918c5710",
+    "name": "ser pleśniowy",
+    "category": "nabiał",
+    "energy": 289,
+    "protein": 0.54,
+    "fat": 2.22,
+    "carbohydrate": 66.71,
+    "photo": "ser-plesniowy.jpg"
+  },
+  {
+    "uid": "c179afc5-50ba-47f0-a565-10ea58b89b92",
+    "name": "ser kozi",
+    "category": "nabiał",
+    "energy": 243,
+    "protein": 0.53,
+    "fat": 7.7,
+    "carbohydrate": 42.9,
+    "photo": "ser-kozi.jpg"
+  },
+  {
+    "uid": "2da114b5-0264-4f57-b01a-8785e1310dfd",
+    "name": "ser twarogowy",
+    "category": "nabiał",
+    "energy": 154,
+    "protein": 10.75,
+    "fat": 2.11,
+    "carbohydrate": 23.01,
+    "photo": "ser-twarogowy.jpg"
+  },
+  {
+    "uid": "593e64de-26ad-4fd3-9cd7-9df5dc98ccd1",
+    "name": "twaróg",
+    "category": "nabiał",
+    "energy": 155,
+    "protein": 6.77,
+    "fat": 3.12,
+    "carbohydrate": 24.97,
+    "photo": "twarog.jpg"
+  },
+  {
+    "uid": "f338e86c-b57b-4c84-8239-4139f2fcd64f",
+    "name": "twarożek",
+    "category": "nabiał",
+    "energy": 122,
+    "protein": 14.2,
+    "fat": 3.76,
+    "carbohydrate": 7.83,
+    "photo": "twarozek.jpg"
+  },
+  {
+    "uid": "516f1278-fc4e-4ecc-9bbe-37d718beda2f",
+    "name": "śmietana 12%",
+    "category": "nabiał",
+    "energy": 218,
+    "protein": 13.06,
+    "fat": 13.4,
+    "carbohydrate": 11.3,
+    "photo": "smietana-12%.jpg"
+  },
+  {
+    "uid": "5ae87785-c1c4-4833-904b-3531a1ed203a",
+    "name": "śmietana 18%",
+    "category": "nabiał",
+    "energy": 272,
+    "protein": 17.23,
+    "fat": 2.92,
+    "carbohydrate": 44.21,
+    "photo": "smietana-18%.jpg"
+  },
+  {
+    "uid": "08f4fcf6-2e00-496d-bce6-421fbdd2d71b",
+    "name": "śmietana 32%",
+    "category": "nabiał",
+    "energy": 94,
+    "protein": 0.91,
+    "fat": 4.31,
+    "carbohydrate": 12.89,
+    "photo": "smietana-32%.jpg"
+  },
+  {
+    "uid": "36ebe3c0-247e-4dcc-9e2a-9569dc5fb831",
+    "name": "kefir",
+    "category": "nabiał",
+    "energy": 97,
+    "protein": 13.03,
+    "fat": 2.46,
+    "carbohydrate": 5.68,
+    "photo": "kefir.jpg"
+  },
+  {
+    "uid": "024c6d48-6907-449f-9b6c-827cfb4f9632",
+    "name": "jogurt naturalny",
+    "category": "nabiał",
+    "energy": 239,
+    "protein": 35.31,
+    "fat": 1.08,
+    "carbohydrate": 22.02,
+    "photo": "jogurt-naturalny.jpg"
+  },
+  {
+    "uid": "73255f99-60d1-4b9e-b454-ebd7ef0721bb",
+    "name": "serek wiejski",
+    "category": "nabiał",
+    "energy": 85,
+    "protein": 2.63,
+    "fat": 7.2,
+    "carbohydrate": 2.41,
+    "photo": "serek-wiejski.jpg"
+  },
+  {
+    "uid": "804f5abf-8205-40f1-bd11-0ec8d2005a09",
+    "name": "pizza",
+    "category": "fast-food",
+    "energy": 60,
+    "protein": 7.88,
+    "fat": 0.9,
+    "carbohydrate": 5.1,
+    "photo": "pizza.jpg"
+  },
+  {
+    "uid": "d5a60cdb-d9a9-4863-85fa-de180ab2725a",
+    "name": "kebab",
+    "category": "fast-food",
+    "energy": 36,
+    "protein": 3.37,
+    "fat": 0.08,
+    "carbohydrate": 5.45,
+    "photo": "kebab.jpg"
+  },
+  {
+    "uid": "4ca3008b-2dd2-4db2-8f35-f45e71ca20c2",
+    "name": "spaghetti bolognese",
+    "category": "fast-food",
+    "energy": 297,
+    "protein": 12.53,
+    "fat": 11.81,
+    "carbohydrate": 35.14,
+    "photo": "spaghetti-bolognese.jpg"
+  },
+  {
+    "uid": "5913b06e-7db2-4646-be9c-9e025608333e",
+    "name": "hamburger",
+    "category": "fast-food",
+    "energy": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbohydrate": 0,
+    "photo": "hamburger.jpg"
+  },
+  {
+    "uid": "a60fa9df-6302-494b-9f66-a358d996dbab",
+    "name": "hot-dog",
+    "category": "fast-food",
+    "energy": 174,
+    "protein": 9.07,
+    "fat": 10.38,
+    "carbohydrate": 11.08,
+    "photo": "hot-dog.jpg"
+  },
+  {
+    "uid": "62124846-d4cc-4f99-b205-afb8395f75e8",
+    "name": "zapiekanka",
+    "category": "fast-food",
+    "energy": 5,
+    "protein": 0.47,
+    "fat": 0.29,
+    "carbohydrate": 0.13,
+    "photo": "zapiekanka.jpg"
+  },
+  {
+    "uid": "c4e00123-c9aa-4424-a8e3-b8d604c96c92",
+    "name": "ryż",
+    "category": "dodatki",
+    "energy": 21,
+    "protein": 1.56,
+    "fat": 0.32,
+    "carbohydrate": 2.96,
+    "photo": "ryz.jpg"
+  },
+  {
+    "uid": "6900e599-005e-4c57-b738-a3d327234d55",
+    "name": "ryż biały",
+    "category": "dodatki",
+    "energy": 265,
+    "protein": 12.49,
+    "fat": 23.48,
+    "carbohydrate": 0.94,
+    "photo": "ryz-biały.jpg"
+  },
+  {
+    "uid": "542a8599-9342-4721-9961-ea65a5c2447b",
+    "name": "ryż basmanti",
+    "category": "dodatki",
+    "energy": 66,
+    "protein": 1.62,
+    "fat": 0.8,
+    "carbohydrate": 13.08,
+    "photo": "ryz-basmanti.jpg"
+  },
+  {
+    "uid": "a9d7c504-b8c3-44f9-a236-6cb3b68e8507",
+    "name": "ryż brązowy",
+    "category": "dodatki",
+    "energy": 72,
+    "protein": 0.24,
+    "fat": 2.25,
+    "carbohydrate": 12.7,
+    "photo": "ryz-brazowy.jpg"
+  },
+  {
+    "uid": "5b83c888-9891-4df8-a53b-e4d64e63af55",
+    "name": "makaron",
+    "category": "dodatki",
+    "energy": 185,
+    "protein": 0.3,
+    "fat": 15.88,
+    "carbohydrate": 10.22,
+    "photo": "makaron.jpg"
+  },
+  {
+    "uid": "ffe5420c-147c-44b8-9999-41633e5bef93",
+    "name": "makaron gryczany",
+    "category": "dodatki",
+    "energy": 162,
+    "protein": 21.22,
+    "fat": 8.36,
+    "carbohydrate": 0.48,
+    "photo": "makaron-gryczany.jpg"
+  },
+  {
+    "uid": "d240b404-eea9-4a57-93ec-4ef4d903a11f",
+    "name": "makaron pełnoziarnisty",
+    "category": "dodatki",
+    "energy": 181,
+    "protein": 34.48,
+    "fat": 3.37,
+    "carbohydrate": 3.19,
+    "photo": "makaron-pełnoziarnisty.jpg"
+  },
+  {
+    "uid": "b4136ecb-c0cd-44e3-8cd0-058d31971a92",
+    "name": "kasza jaglana",
+    "category": "dodatki",
+    "energy": 160,
+    "protein": 10.77,
+    "fat": 4,
+    "carbohydrate": 20.23,
+    "photo": "kasza-jaglana.jpg"
+  },
+  {
+    "uid": "782d85f8-a181-4d59-88f3-1fd2edc376b1",
+    "name": "kasz gryczana",
+    "category": "dodatki",
+    "energy": 57,
+    "protein": 0.27,
+    "fat": 3.25,
+    "carbohydrate": 6.67,
+    "photo": "kasz-gryczana.jpg"
+  },
+  {
+    "uid": "0607abbe-4ee1-4743-bdb5-39776cd24553",
+    "name": "kuskus",
+    "category": "dodatki",
+    "energy": 151,
+    "protein": 4.7,
+    "fat": 1.18,
+    "carbohydrate": 30.4,
+    "photo": "kuskus.jpg"
+  },
+  {
+    "uid": "672a501a-ce23-4c2d-a29c-12e8131dfd9e",
+    "name": "płatki kukurydziane",
+    "category": "produkty-sniadaniowe",
+    "energy": 202,
+    "protein": 14.32,
+    "fat": 12.08,
+    "carbohydrate": 9.01,
+    "photo": "płatki-kukurydziane.jpg"
+  },
+  {
+    "uid": "cbb1f702-e8a1-47dc-8cd7-0d1d4b0be7c8",
+    "name": "płatki owsiane",
+    "category": "produkty-sniadaniowe",
+    "energy": 173,
+    "protein": 3.03,
+    "fat": 0.49,
+    "carbohydrate": 39.11,
+    "photo": "płatki-owsiane.jpg"
+  },
+  {
+    "uid": "a9cc91be-1e94-4650-8642-890af375f27c",
+    "name": "płatki czekoladowe",
+    "category": "produkty-sniadaniowe",
+    "energy": 28,
+    "protein": 0.57,
+    "fat": 1.7,
+    "carbohydrate": 2.61,
+    "photo": "płatki-czekoladowe.jpg"
+  },
+  {
+    "uid": "6ffd5b4c-7fae-4be7-9263-e85f96c2b5db",
+    "name": "walfe ryżowe",
+    "category": "produkty-sniadaniowe",
+    "energy": 273,
+    "protein": 9.01,
+    "fat": 16.17,
+    "carbohydrate": 22.86,
+    "photo": "walfe-ryzowe.jpg"
+  }
+]

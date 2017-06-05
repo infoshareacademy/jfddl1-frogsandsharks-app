@@ -1,0 +1,54 @@
+.planNameStyle {
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+
+.mealStyle {
+    height: 90px;
+    min-height: auto;
+    width: 180px;
+    background-color: rgba(222,222,222, 0.8);
+}
+
+.dayStyle {
+    border: 2px solid #c3c3c3;
+    margin-bottom: 100px;
+}
+
+.dayStyle:hover {
+    background-color: rgba(87, 87, 87, 0.8);
+    border: #1e685f solid 2px;
+
+}
+
+.mealNameStyle {
+    background-color: #96dbc8;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0 0 0px;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.dayNameStyle {
+    text-align: center;
+    background-color: #cbcbcb;
+    font-size: 20px;
+}
+
+.imgStyle {
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
