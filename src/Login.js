@@ -2,6 +2,7 @@ import React from 'react'
 import {Form, FormGroup, FormControl, Col, ControlLabel, Alert} from 'react-bootstrap'
 import * as firebase from 'firebase'
 import Logo from './Logo'
+import FacebookLogin from './FacebookLogin'
 
 
 var provider = new firebase.auth.GoogleAuthProvider()
@@ -100,6 +101,7 @@ class LoginNew extends React.Component {
                             <button type="submit" className="GpButton" onClick={this.loginGoogle}>
                                 Zaloguj przez Google+
                             </button>
+                            <FacebookLogin/>
                         </Col>
                     </FormGroup>
 
